@@ -1,0 +1,60 @@
+-----------------------------------------------------------------------------------
+Medium Asset Creation Script
+-----------------------------------------------------------------------------------
+
+use App\Models\MediumAsset;
+use Illuminate\Support\Str;
+
+$relPath = 'hero.jpg';
+$originalPath = 'resources/images/'.$relPath;
+
+$asset = MediumAsset::firstOrCreate(
+    ['original_path' => $originalPath],
+    ['title' => 'Hero']
+);
+
+if (! $asset->hasMedia('default')) {
+    $asset->addMedia(resource_path('images/'.$relPath))
+          ->usingFileName(Str::slug(pathinfo($relPath, PATHINFO_FILENAME)).'.'.pathinfo($relPath, PATHINFO_EXTENSION))
+          ->preservingOriginal()
+          ->withCustomProperties(['alt' => 'Hero con Ledding'])
+          ->toMediaCollection('default');
+}
+
+$asset->getFirstMediaUrl('default', 'w-800-avif');
+
+
+-----------------------------------------------------------------------------------
+Full Asset Creation Script
+-----------------------------------------------------------------------------------
+
+
+use App\Models\FullAsset;
+
+$relPath = 'covers/landing-hq.jpg';
+$originalPath = 'resources/images/'.$relPath;
+
+$asset = FullAsset::firstOrCreate(['original_path' => $originalPath]);
+if (! $asset->hasMedia('default')) {
+    $asset->addMedia(resource_path('images/'.$relPath))
+          ->preservingOriginal()
+          ->toMediaCollection('default');
+}
+$asset->getFirstMediaUrl('default', 'w-2400-webp');
+
+-----------------------------------------------------------------------------------
+Logo Asset Creation Script
+-----------------------------------------------------------------------------------
+
+use App\Models\LogoAsset;
+
+$relPath = 'CharLogo.png';
+$originalPath = 'resources/images/'.$relPath;
+
+$asset = LogoAsset::firstOrCreate(['original_path' => $originalPath]);
+if (! $asset->hasMedia('default')) {
+    $asset->addMedia(resource_path('images/'.$relPath))
+          ->preservingOriginal()
+          ->toMediaCollection('default');
+}
+$asset->getFirstMediaUrl('default', 'w-300-avif');
