@@ -9,12 +9,12 @@ export default function initFocus() {
   gsap.timeline({
     scrollTrigger: {
       trigger: hero,
-      start: 'top top',
+      start: 'bottom bottom',
       end: '+=65%',
       scrub: true,
       pin: true,
       pinSpacing: false,
-      anticipatePin: 1,
+      anticipatePin: 0,
     }
   }).to(hero, { yPercent: -8, autoAlpha: 0, ease: 'none' }, 0);
 

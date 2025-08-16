@@ -9,12 +9,11 @@
     <div class="lg:col-span-6 order-1 lg:order-2 space-y-6" data-focus-reveal>
       <h3 class="text-xl font-semibold flex items-center gap-2">
         <svg class="h-5 w-5 text-purple-300"><use href="#icon-strength"/></svg>
-        Del diseño a un sitio rápido
+        Rendimiento que <strong>Impulsa tu Negocio</strong>
       </h3>
 
       <p class="text-gray-300">
-        Convierto el diseño en una web que <strong>carga rápido</strong>, se ve bien en cualquier pantalla
-        y se entiende a la primera. Menos espera, más acción.
+        En internet, cada segundo cuenta. Un sitio lento pierde clientes y posicionamiento en Google. Por eso, optimizamos cada línea de código para garantizar una velocidad de carga excepcional. Con la entrega en 72 horas, no solo obtienes un sitio rápido, sino una ventaja competitiva inmediata.
       </p>
 
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-300">

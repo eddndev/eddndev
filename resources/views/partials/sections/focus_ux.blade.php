@@ -4,12 +4,11 @@
     {{-- Contenido --}}
     <div id="uxui-block" class="lg:col-span-6 order-1 space-y-6 min-w-0" data-focus-reveal>
       <h3 class="text-xl font-semibold flex items-center gap-2">
-        <svg class="h-5 w-5 text-purple-300"><use href="#icon-style"/></svg> UX / UI
+        <svg class="h-5 w-5 text-purple-300"><use href="#icon-style"/></svg> Experiencias que venden
       </h3>
 
       <p class="text-gray-300">
-        Orden desde la primera mirada. Cada color, cada tamaño y cada micro-detalle
-        tiene un porqué, para que la persona encuentre lo que busca y siga avanzando.
+        Más que estética, cada detalle, desde la tipografía hasta el contraste, está diseñado estratégicamente para convertir visitantes en clientes.
       </p>
 
       {{-- Tokens (mismo layout, textos más humanos) --}}

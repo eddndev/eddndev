@@ -31,7 +31,7 @@ Full Asset Creation Script
 
 use App\Models\FullAsset;
 
-$relPath = 'covers/landing-hq.jpg';
+$relPath = 'offer.png';
 $originalPath = 'resources/images/'.$relPath;
 
 $asset = FullAsset::firstOrCreate(['original_path' => $originalPath]);
@@ -48,7 +48,7 @@ Logo Asset Creation Script
 
 use App\Models\LogoAsset;
 
-$relPath = 'CharLogo.png';
+$relPath = 'logo.png';
 $originalPath = 'resources/images/'.$relPath;
 
 $asset = LogoAsset::firstOrCreate(['original_path' => $originalPath]);

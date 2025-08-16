@@ -1,5 +1,5 @@
 import Ledding from '../ledding/ledding.js';
-import { BottomRightAligner } from '../ledding/aligners/Aligners.js';
+import { BottomRightAligner, RightAligner } from '../ledding/aligners/Aligners.js';
 import { logoPattern } from '../ledding/patterns/logo.js';
 import { Direction, Pattern } from '../ledding/utils/constants.js';
 
@@ -12,7 +12,7 @@ export default function initLeddingHero() {
     ledGap: 4,
     scaleToFit: false,
     artPattern: logoPattern,
-    aligner: BottomRightAligner,
+    aligner: RightAligner,
     colors: {
       background: 'rgba(20, 24, 32, 0)',
       base: 'rgba(45, 55, 72, 1)',
@@ -33,6 +33,6 @@ export default function initLeddingHero() {
       extinction: { min: 0.1, randomize: false },
       morph: { min: 0.1, randomize: false }
     },
-    grid: { fill: true, lifespan: 60 }
+    grid: { fill: false, lifespan: 60 }
   });
 }

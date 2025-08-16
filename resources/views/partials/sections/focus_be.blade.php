@@ -3,12 +3,11 @@
     <div class="lg:col-span-6 order-1 space-y-6 min-w-0" data-focus-reveal>
       <h3 class="text-xl font-semibold flex items-center gap-2">
         <svg class="h-5 w-5 text-purple-300"><use href="#icon-spirit"/></svg>
-        Lo que hace que todo funcione
+        Tecnología confiable
       </h3>
 
       <p class="text-gray-300">
-        Que tus formularios lleguen, tus correos se envíen y tus cambios se guarden
-        sin esperas. Silencioso por dentro, confiable por fuera.
+        El verdadero poder de un sitio web está en lo que no se ve: la seguridad de que cada formulario de contacto llegará, cada correo será profesional y tu información estará protegida. Nos encargamos de toda la infraestructura técnica para que tú solo te preocupes de atender a tus nuevos clientes.
       </p>
 
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-300">

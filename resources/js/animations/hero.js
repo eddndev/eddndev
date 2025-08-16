@@ -14,7 +14,6 @@ export default function initHero() {
   gsap.set(intro,  { autoAlpha: 0, y: 12 });
   gsap.set(badges, { autoAlpha: 0, y: 8 });
   gsap.set(ctas,   { autoAlpha: 0, y: 8 });
-  gsap.set(qnav,   { autoAlpha: 0, y: 6 });
 
   const tl = gsap.timeline({ defaults: { ease: 'power2.out', duration: 0.8 } });
   tl.from("#ledding-animation-container", { opacity: 0, scale: 0.98, duration: 1.0 })
@@ -23,7 +22,6 @@ export default function initHero() {
     .to(intro,      { autoAlpha: 1, y: 0 }, "-=0.4")
     .to(badges,     { autoAlpha: 1, y: 0, stagger: 0.06 }, "-=0.45")
     .to(ctas,       { autoAlpha: 1, y: 0, stagger: 0.08 }, "-=0.4")
-    .to(qnav,       { autoAlpha: 1, y: 0, stagger: 0.05 }, "-=0.45");
 
   // Respiración sutil (respeta reduce motion)
   if (!prefersReduced()) {
