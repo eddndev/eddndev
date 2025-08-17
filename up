@@ -48,7 +48,7 @@ Logo Asset Creation Script
 
 use App\Models\LogoAsset;
 
-$relPath = 'CharLogo.png';
+$relPath = 'LogoLetra.png';
 $originalPath = 'resources/images/'.$relPath;
 
 $asset = LogoAsset::firstOrCreate(['original_path' => $originalPath]);
@@ -58,3 +58,180 @@ if (! $asset->hasMedia('default')) {
           ->toMediaCollection('default');
 }
 $asset->getFirstMediaUrl('default', 'w-300-avif');
+
+
+@extends('layouts.app')
+
+@section('title', 'edd n\' dev')
+
+@section('content')
+
+<div id="hero" class="relative min-h-screen overflow-hidden flex items-center justify-center lg:justify-start">
+  <!-- Fondo / animación -->
+  <div id="ledding-animation-container" class="absolute inset-0 z-0"></div>
+
+  <!-- Vignette más marcada para bajar ruido a la derecha -->
+  <div id="hero-vignette"
+       class="absolute inset-0 pointer-events-none z-10
+              bg-[linear-gradient(to_left,_rgba(0,0,0,.60),_rgba(0,0,0,0)),radial-gradient(ellipse_at_right,_rgba(0,0,0,.35)_0%,_rgba(0,0,0,.90)_60%,_#000_90%)]">
+  </div>
+
+  
+
+  <div class="w-full pt-8 lg:pt-0 pb-16 lg:pb-2">
+    <div class="mx-auto px-6 sm:px-12">
+      <div class="relative z-20 flex flex-row lg:flex-row w-full items-start gap-10">
+        <!-- ===== IZQUIERDA: TÍTULOS + BADGES ===== -->
+        <section class="flex flex-col justify-center w-full text-left lg:text-left">
+          <div style="--title: clamp(4.9rem, 8vw, 7.2rem);">
+            <h1 class="sr-only">Lanzamiento de página web</h1>
+            <h2 class="font-extrabold tracking-tight text-[calc(var(--title)*0.48)] leading-[0.95]">
+              Tu sitio web
+            </h2>
+            <h2 id="name"
+              class="font-black tracking-tight hero-text-gradient text-[length:var(--title)] leading-[0.9] -mt-1">
+              <span class="inline-block align-baseline text-[calc(var(--title)*0.70)] mr-4">PUEDE SER</span>
+              <span class="inline-block align-baseline">GRATIS</span>
+            </h2>
+          </div>
+
+          <!-- Chips con blur individual: auto-ancho + wrap -->
+          <div class="mt-6 flex flex-wrap gap-4 justify-start lg:justify-start">
+            <span class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-white/5 ring-1 ring-white/10 backdrop-blur-sm whitespace-nowrap">
+              🌐 <span class="font-semibold">Dominio <b class="text-purple-400">GRATIS</b> 1er año</span>
+            </span>
+            <span class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-white/5 ring-1 ring-white/10 backdrop-blur-sm whitespace-nowrap">
+              💻 <span class="font-semibold">Hosting <b class="text-purple-400">GRATIS</b> 1er año</span>
+            </span>
+            <span class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-white/5 ring-1 ring-white/10 backdrop-blur-sm whitespace-nowrap">
+              📧 <span class="font-semibold">Correo profesional <b class="text-purple-400">GRATIS</b></span>
+            </span>
+            <span class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-white/5 ring-1 ring-white/10 backdrop-blur-sm whitespace-nowrap">
+              🔒 <span class="font-semibold">Certificado SSL<b class="text-purple-400"> INCLUIDO</b> </span>
+            </span>
+            <span class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-white/5 ring-1 ring-white/10 backdrop-blur-sm whitespace-nowrap">
+              ⚡ <span class="font-semibold">Entrega Rápida <b class="text-purple-400">(72 h)</b></span>
+            </span>
+            {{-- Red de cloudflare gratis --}}
+            <span class="inline-flex items-center gap-2 h-10 px-4 rounded-full bg-white/5 ring-1 ring-white/10 backdrop-blur-sm whitespace-nowrap">
+              ☁️ <span class="font-semibold">Cloudflare CDN <b class="text-purple-400">GRATIS</b></span>
+            </span>
+          </div>
+        </section>
+
+        <!-- ===== DERECHA: DESCRIPCIÓN breve + PRECIO protagonista ===== -->
+        <aside class=" lg:max-w-xl xl:max-w-2xl flex flex-col justify-between h-[calc(100vh-9.6rem)]">
+
+          <div class="rounded-2xl bg-black/30 ring-1 ring-white/10 backdrop-blur-md p-6 lg:p-7">
+            <p class="text-[1.2rem] lg:text-[2.5rem] leading-snug text-gray-100/95 text-balance">
+              Contrata en el lanzamiento y participa por
+              <strong>
+                5 años de servicio técnico
+                <span class="align-baseline inline-flex px-2 py-0.5 ml-1 rounded-md bg-purple-600/20 text-purple-100 ring-1 ring-purple-500/30 shadow-[inset_0_1px_0_rgba(255,255,255,.08)]">
+                  GRATIS
+                </span>
+              </strong>
+            </p>
+
+
+            <!-- Precio súper protagonista -->
+            <div class="mt-6">
+              <span class="relative inline-flex items-baseline px-7 py-5 rounded-2xl bg-purple-600 text-white
+             shadow-lg shadow-purple-600/40 ring-1 ring-white/15">
+              <span class="hidden sm:inline text-xs font-semibold uppercase tracking-wide opacity-90 mr-3">Desde</span>
+              <span class="text-7xl lg:text-8xl font-black tracking-tight">$2,999</span>
+              <span class="ml-2 text-2xl lg:text-3xl font-extrabold">MXN</span>
+              <span class="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 to-transparent"></span>
+            </span>
+
+            </div>
+            
+            <p class="mt-4 text-xs text-gray-400">
+              Vigencia: 31/08/2025. Aplican <a href="#bases" class="underline">bases y condiciones</a>.
+            </p>
+          </div>
+          <div class="mt-5 flex flex-col items-end gap-3 w-full">
+              <x-media.logo src="resources/images/LogoLetra.png" alt="edd n’ dev"
+                size="lg" class="h-14 w-auto opacity-95" />
+            </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+@include('partials.sections.focus')
+@include('partials.sections.projects')
+@include('partials.sections.pricing')
+
+<section id="contacto-medida" class="bg-black text-white border-t border-white/10">
+    <div class="mx-auto max-w-3xl px-6 sm:px-12 py-16 text-center">
+        <h2 class="text-3xl font-black tracking-tight">¿Tu Proyecto es Único?</h2>
+        <p class="mt-4 text-gray-300 max-w-xl mx-auto">
+            Los planes son una guía, pero cada idea es diferente. Si tienes necesidades más grandes o específicas, estoy para ayudarte a construir una solución a la medida.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20a%20medida." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center w-full sm:w-auto rounded-lg px-6 py-3 text-sm font-semibold transition-colors bg-purple-600 hover:bg-purple-500 text-white">
+                Contactar por WhatsApp
+            </a>
+            <a href="mailto:contacto@eddndev.com"
+               class="inline-flex items-center justify-center w-full sm:w-auto rounded-lg px-6 py-3 text-sm font-semibold transition-colors bg-white/10 hover:bg-white/15 ring-1 ring-white/15 text-white">
+                Enviar un Email
+            </a>
+        </div>
+    </div>
+</section>
+@endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hello = document.getElementById('hello');
+    const name  = document.getElementById('name');
+    if (!hello || !name) return;
+
+    function debounce(func, delay) {
+        let timeoutId;
+        return function(...args) {
+            // Cada vez que se llama, se limpia el temporizador anterior.
+            clearTimeout(timeoutId);
+            // Se establece un nuevo temporizador.
+            timeoutId = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    }
+
+    function fit() {
+        // 1. Quitamos nuestro estilo en línea para que la clase de CSS tome efecto.
+        hello.style.removeProperty('font-size');
+
+        // 2. Leemos el tamaño de fuente que el CSS (clamp) quiere aplicar AHORA.
+        const base = parseFloat(getComputedStyle(hello).fontSize);
+        if (!base) return;
+
+        // 3. Medimos los anchos para obtener la proporción correcta.
+        const ratio = name.offsetWidth / hello.offsetWidth;
+
+        // 4. Aplicamos nuestro tamaño calculado con '!important' para tomar el control de nuevo.
+        hello.style.setProperty('font-size', (base * ratio) + 'px', 'important');
+    }
+
+    // Creamos una versión "debounced" de nuestra función fit.
+    // 150ms es un buen valor, se siente responsivo pero no es pesado.
+    const debouncedFit = debounce(fit, 150);
+
+    // Usamos la versión DEBOUNCED en el observador.
+    const container = hello.parentElement;
+    if(container) {
+        const ro = new ResizeObserver(debouncedFit); // ¡Usamos la nueva función aquí!
+        ro.observe(container);
+    }
+
+    // El primer ajuste al cargar la página sí debe ser inmediato.
+    fit();
+});
+</script>
+@endpush
