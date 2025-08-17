@@ -48,7 +48,7 @@ Logo Asset Creation Script
 
 use App\Models\LogoAsset;
 
-$relPath = 'logo.png';
+$relPath = 'CharLogo.png';
 $originalPath = 'resources/images/'.$relPath;
 
 $asset = LogoAsset::firstOrCreate(['original_path' => $originalPath]);

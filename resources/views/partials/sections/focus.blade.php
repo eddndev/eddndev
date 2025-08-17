@@ -49,13 +49,8 @@
                 El Código para Lanzar tu Negocio.
             </h2>
             <p class="mt-4 text-white/90">
-                Un gran negocio merece un gran comienzo. Mi desarrollo no es solo sobre tecnología, es sobre construir la <strong>herramienta que necesitas para empezar a vender</strong> y atraer clientes. <br><br>Nuestra oferta de lanzamiento es la oportunidad perfecta para dar ese primer paso con una <strong>base técnica sólida y profesional.</strong>
+                Tu negocio merece un lanzamiento potente. Mi desarrollo no es solo código: es la herramienta para empezar a vender y captar clientes. <br><br>Un sitio impactante, rápido y orientado a convertir que refuerza tu marca y genera confianza. Aprovecha la oferta de lanzamiento y arranca con una base técnica profesional lista para crecer.
             </p>
-            <a href="#proyectos"
-               class="inline-flex items-center gap-2 mt-6 rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold
-                      hover:bg-white/15 ring-1 ring-white/15 transition-colors">
-                Ver Paquete de Lanzamiento
-            </a>
         </div>
     </div>
 </section>
