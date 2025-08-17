@@ -66,8 +66,8 @@
             Ver paquetes
           </a>
 
-          <a data-cta href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20a%20medida."
-             class="inline-flex items-center justify-center group font-semibold py-3 px-6 rounded-lg text-purple-200 bg-white/0 border border-purple-400/40 hover:bg-purple-600/90 hover:text-white hover:border-transparent transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 ring-offset-2 ring-offset-black">
+          <a data-cta href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20a%20medida." target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center group font-semibold py-3 px-6 rounded-lg text-purple-200 bg-white/0 border border-purple-400/40 hover:bg-purple-600/90 hover:text-white hover:border-transparent transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 ring-offset-2 ring-offset-black" onclick="fbq('track', 'Contact');">
             Hablemos
             <svg class="ml-2 size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none">
               <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -93,12 +93,12 @@
             Los planes son una guía, pero cada idea es diferente. Si tienes necesidades más grandes o específicas, estoy para ayudarte a construir una solución a la medida.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20a%20medida." 
+            <a href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20a%20medida." onclick="fbq('track', 'Contact');"
                target="_blank" rel="noopener"
                class="inline-flex items-center justify-center w-full sm:w-auto rounded-lg px-6 py-3 text-sm font-semibold transition-colors bg-purple-600 hover:bg-purple-500 text-white">
                 Contactar por WhatsApp
             </a>
-            <a href="mailto:contacto@eddndev.com"
+            <a href="mailto:contacto@eddndev.com" onclick="fbq('track', 'Contact');" 
                class="inline-flex items-center justify-center w-full sm:w-auto rounded-lg px-6 py-3 text-sm font-semibold transition-colors bg-white/10 hover:bg-white/15 ring-1 ring-white/15 text-white">
                 Enviar un Email
             </a>

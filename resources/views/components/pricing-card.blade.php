@@ -44,6 +44,7 @@
 
     <div class="mt-8">
         <a href="{{ $cta_href }}" target="_blank" rel="noopener noreferrer"
+           onclick="fbq('track', 'Contact');"
            class="inline-flex items-center justify-center w-full rounded-lg py-3 text-sm font-semibold transition-colors
                   {{ $highlight ? 'bg-purple-600 hover:bg-purple-500 text-white' : 'bg-white/10 hover:bg-white/15 ring-1 ring-white/15 text-white' }}">
             {{ $cta_label }}

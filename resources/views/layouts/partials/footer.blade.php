@@ -21,7 +21,9 @@
                     </p>
                     <a href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20empezar%20mi%20proyecto%20web." target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white
-                              shadow-sm transition-colors hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400 ring-offset-2 ring-offset-black">
+                              shadow-sm transition-colors hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400 ring-offset-2 ring-offset-black"
+                            onclick="fbq('track', 'Contact');"
+                              >
                         <svg class="h-4 w-4" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
                         Empecemos tu proyecto
                     </a>
@@ -51,7 +53,7 @@
                 <div class="space-y-4" data-reveal>
                     <h4 class="text-sm font-semibold text-white">Contacto</h4>
 
-                    <a href="mailto:contacto@eddndev.com"
+                    <a href="mailto:contacto@eddndev.com" onclick="fbq('track', 'Contact');"
                        class="group flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm
                               transition hover:border-white/20 hover:bg-white/8">
                         <svg class="h-5 w-5 text-purple-200 transition group-hover:scale-110" aria-hidden="true">
@@ -60,7 +62,7 @@
                         <span class="text-gray-200">contacto@eddndev.com</span>
                     </a>
 
-                    <a href="https://wa.me/5215622101391" target="_blank" rel="noopener"
+                    <a href="https://wa.me/5215622101391" target="_blank" rel="noopener" onclick="fbq('track', 'Contact');"
                        class="group flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm
                               transition hover:border-white/20 hover:bg-white/8">
                         <svg class="h-5 w-5 text-green-400 transition group-hover:scale-110" aria-hidden="true">
@@ -101,7 +103,9 @@
 
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
                         <p class="text-sm text-gray-200">¿Tienes un reto técnico o de diseño?</p>
-                        <a href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Tengo%20un%20reto%20t%C3%A9cnico%2Fde%20dise%C3%B1o%20del%20que%20me%20gustar%C3%ADa%20hablar." target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-purple-200 hover:text-white">
+                        <a href="https://wa.me/5215622101391?text=%C2%A1Hola!%20Tengo%20un%20reto%20t%C3%A9cnico%2Fde%20dise%C3%B1o%20del%20que%20me%20gustar%C3%ADa%20hablar." 
+                        onclick="fbq('track', 'Contact');"
+                        target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-purple-200 hover:text-white">
                             Hablemos <svg class="h-4 w-4"><use href="#icon-arrow-right" /></svg>
                         </a>
                     </div>

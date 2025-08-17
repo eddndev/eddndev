@@ -73,7 +73,8 @@
                 </p>
             @endif
             @if($cta)
-                <a href="{{ $cta['href'] ?? '#' }}"
+                <a href="{{ $cta['href'] ?? '#' }}" onclick="fbq('track', 'Contact');"
+                   target="_blank" rel="noopener"
                    class="inline-flex items-center justify-center mt-6 bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-base">
                    {{ $cta['label'] ?? 'Comenzar' }}
                 </a>
