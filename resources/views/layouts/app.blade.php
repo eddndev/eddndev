@@ -10,7 +10,7 @@
     <title>@yield('title', config('app.name', 'Laravel'))</title>
 
     {{-- Meta Descripción (bueno para SEO) --}}
-    <meta name="description" content="@yield('description', 'Portafolio profesional de Eduardo.')">
+    <meta name="description" content="@yield('description', 'Oferta especial de lanzamiento.')">
 
     {{-- Favicons - Coloca estos archivos en tu carpeta /public --}}
     <link rel="icon" href="favicon.ico" type="image/x-icon">
