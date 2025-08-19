@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('demo/maquinaria', function () {
     return view('demo.maquinaria');
 });
+
+Route::get('demo/licencias', function () {
+    return view('demo.licencias');
+});
