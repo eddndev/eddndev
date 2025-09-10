@@ -1,61 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+  <h1>
+    Hola, soy Eduardo 👋
+    <br/>
+    <a href="https://eddndev.com">
+      <img src="https://img.shields.io/badge/Portafolio-eddndev.com-8A2BE2?style=for-the-badge"/>
+    </a>
+  </h1>
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### 👨‍💻 Full-Stack Web Developer
 
-## About Laravel
+*“Apasionado por enfrentarme a retos de todo tipo y crear nuevas tecnologías para una mejor experiencia en sociedad.”*
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🚀 Sobre Mí
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Soy un desarrollador con una profunda curiosidad que abarca desde la programación y el desarrollo web hasta la electrónica, el análisis de datos y el diseño de experiencias de usuario (UX). Mi alma máter es el **Instituto Politécnico Nacional (IPN)**, donde inicié mi formación como técnico en sistemas computacionales.
 
-## Learning Laravel
+De forma autodidacta, me especialicé en desarrollo web, y actualmente he decidido volver a mis raíces académicas para profundizar mis conocimientos y construir tecnologías más robustas y escalables.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Actualmente, mis esfuerzos están enfocados en:
+- 🧠 Prepararme para el concurso de emprendimiento de **Junior Achievement 2026**.
+- 📚 Cursar mi carrera para fortalecer mis bases como ingeniero.
+- 💡 Crear proyectos y herramientas de código abierto para la comunidad.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+En mis tiempos libres, me dedico a construir plugins de UI, investigar sobre ciberseguridad para blindar mis aplicaciones y explorar micro-optimizaciones que, a gran escala, resultan en sistemas más sustentables. ¡Siempre estoy abierto a la colaboración y a la creación de proyectos innovadores!
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+### 🛠️ Mi Arsenal de Tecnologías (Tech Stack)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <h3 align="center">Backend</h3>
+      <div align="center">
+        <a href="https://www.php.net/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/php-original.svg" alt="PHP" height="50" /></a>
+        <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>
+        <a href="https://laravel.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/laravel-plain-wordmark.svg" alt="Laravel" height="50" /></a>
+        <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>
+        <a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>
+        <a href="https://firebase.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/firebase.png" alt="Firebase" height="50" /></a>
+      </div>
+    </td>
+    <td valign="top" width="50%">
+      <h3 align="center">Frontend</h3>
+      <div align="center">
+        <a href="https://tailwindcss.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" height="50" /></a>
+        <a href="https://alpinejs.dev/" target="_blank"><img style="margin: 10px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/alpinejs/alpinejs-original.svg" alt="Alpine.js" height="50" /></a>
+        <a href="https://laravel.com/docs/blade" target="_blank"><img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/laravel/laravel-plain.svg" alt="Blade" height="50" /></a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%">
+      <h3 align="center">Lenguajes Adicionales</h3>
+      <div align="center">
+        <a href="https://www.cprogramming.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" height="50" /></a>
+        <a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" /></a>
+      </div>
+    </td>
+    <td valign="top" width="50%">
+      <h3 align="center">Testing y Herramientas</h3>
+      <div align="center">
+        <a href="https://phpunit.de/" target="_blank"><img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/phpunit/phpunit-original.svg" alt="PHPUnit" height="50" /></a>
+        <a href="https://pestphp.com/" target="_blank"><img style="margin: 10px" src="https://raw.githubusercontent.com/pestphp/brand/main/pest-logo-without-name.svg" alt="Pest" height="50" /></a>
+        <a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
+        <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/github-original-wordmark.svg" alt="GitHub" height="50" /></a>
+      </div>
+    </td>
+  </tr>
+</table>
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### ✨ Proyecto Destacado
 
-## Contributing
+<div align="center">
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Nombre | Descripción y Reto Técnico | Stack | Enlaces |
+| :--- | :--- | :--- | :--- |
+| **Sylestudio** | Sitio web para un estudio creativo, diseñado para mostrar su portafolio fotográfico. El principal reto fue la **optimización del rendimiento** al manejar un gran volumen de imágenes. La solución implicó el uso de **colas de trabajo con Laravel Queues** y la librería `Spatie Media Library` para el procesamiento y optimización de imágenes en el lado del servidor, además de `Laravel Echo` para notificar el estado del proceso al cliente vía WebSockets. | `Laravel` `PHP` `MySQL` `Redis` `Spatie` `Echo` | [**Sitio Web**](https://sylestudio.com) <br/> [**Repositorio**](https://github.com/eddndev/sylestudio) |
 
-## Code of Conduct
+</div>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+### 📊 Mis Estadísticas en GitHub
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=eddndev&show_icons=true&theme=dracula&locale=es&count_private=true" alt="Estadísticas de Eduardo en GitHub" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eddndev&layout=compact&theme=dracula&locale=es" alt="Lenguajes más usados" />
+</div>
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 📫 ¡Hablemos!
+
+Siempre estoy dispuesto a conectar con otros desarrolladores y creativos. ¡No dudes en contactarme!
+
+<div align="center">
+  <a href="mailto:contacto@eddndev.com">
+    <img src="https://img.shields.io/badge/Email-8A2BE2?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://eddndev.com">
+    <img src="https://img.shields.io/badge/Sitio_Web-eddndev.com-8A2BE2?style=for-the-badge&logo=google-chrome&logoColor=white" />
+  </a>
+   <a href="https://eddn.dev">
+    <img src="https://img.shields.io/badge/Blog-eddn.dev-8A2BE2?style=for-the-badge&logo=blogger&logoColor=white" />
+  </a>
+</div>
