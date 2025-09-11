@@ -65,10 +65,7 @@ En mis tiempos libres, me dedico a construir plugins de UI, investigar sobre cib
     <td valign="top" width="50%">
       <h3 align="center">Testing y Herramientas</h3>
       <div align="center">
-        <a href="https://phpunit.de/" target="_blank"><img style="margin: 10px" src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/phpunit/phpunit-original.svg" alt="PHPUnit" height="50" /></a>
-        <a href="https://pestphp.com/" target="_blank"><img style="margin: 10px" src="https://raw.githubusercontent.com/pestphp/brand/main/pest-logo-without-name.svg" alt="Pest" height="50" /></a>
         <a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
-        <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/github-original-wordmark.svg" alt="GitHub" height="50" /></a>
       </div>
     </td>
   </tr>
