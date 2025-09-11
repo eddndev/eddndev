@@ -32,7 +32,7 @@ En mis tiempos libres, me dedico a construir plugins de UI, investigar sobre cib
 
 ### 🛠️ Mi Arsenal de Tecnologías (Tech Stack)
 
-<table halign="center">
+<table align="center">
   <tr>
     <td valign="top" width="50%">
       <h3 align="center">Backend</h3>
