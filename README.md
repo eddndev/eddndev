@@ -89,7 +89,7 @@ En mis tiempos libres, me dedico a construir plugins de UI, investigar sobre cib
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=eddndev&show_icons=true&theme=dracula&locale=es&count_private=true" alt="Estadísticas de Eduardo en GitHub" />
-  <br/>
+  <br/> 
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eddndev&layout=compact&theme=dracula&locale=es" alt="Lenguajes más usados" />
 </div>
 
