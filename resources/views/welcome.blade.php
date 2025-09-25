@@ -18,12 +18,12 @@
 
           <h2 id="hello"
               class="font-extrabold tracking-tight text-[calc(var(--title)*0.48)] leading-[0.95]">
-            Tu sitio web profesional
+            Tu marca en línea
           </h2>
 
           <h2 id="name"
               class="font-black tracking-tight hero-text-gradient text-[length:var(--title)] leading-[0.9] -mt-1">
-            En 72 horas
+            lista para despegar        
           </h2>
         </div>
 
