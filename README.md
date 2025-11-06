@@ -1,6 +1,6 @@
 <div align="center">
 
-# Eduardo Alonso
+# edd n'dev
 
 ### Full-Stack Developer · Software Engineer
 
