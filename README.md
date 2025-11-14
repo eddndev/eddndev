@@ -25,14 +25,6 @@ Software engineer specialized in building and optimizing scalable applications a
 ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat-square&logo=php&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat-square&logo=node.js&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat-square&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-%23DC382D.svg?style=flat-square&logo=redis&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-%2306B6D4.svg?style=flat-square&logo=tailwindcss&logoColor=white)
-
-## Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=eddndev&show_icons=true&theme=dark&bg_color=00000000&hide_border=true&count_private=true" />
-</div>
 
 ## Contact
 
