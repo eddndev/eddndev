@@ -2,8 +2,6 @@
 
 # edd n'dev
 
-*Building high-performance applications with modern web and systems programming*
-
 [![Portfolio](https://img.shields.io/badge/→_eddndev.com-000?style=for-the-badge)](https://eddndev.com)
 [![Blog](https://img.shields.io/badge/→_eddn.dev-000?style=for-the-badge)](https://eddn.dev)
 
