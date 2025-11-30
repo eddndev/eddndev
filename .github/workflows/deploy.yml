@@ -72,10 +72,6 @@ jobs:
             $PHP_BIN artisan route:cache
             $PHP_BIN artisan view:cache
 
-            # Generar Sitemap
-            echo "🗺️  Generando sitemap..."
-            $PHP_BIN artisan sitemap:generate
-
             # 5. Levantar el sitio
             $PHP_BIN artisan up
             
