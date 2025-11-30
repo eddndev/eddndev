@@ -164,30 +164,3 @@
         </div>
     </div>
 </header>
-</header>
-
-<!-- Mobile Menu Overlay -->
-<div 
-    x-show="mobileMenuOpen" 
-    x-transition:enter="transition ease-out duration-200"
-    x-transition:enter-start="opacity-0 -translate-y-2"
-    x-transition:enter-end="opacity-100 translate-y-0"
-    x-transition:leave="transition ease-in duration-150"
-    x-transition:leave-start="opacity-100 translate-y-0"
-    x-transition:leave-end="opacity-0 -translate-y-2"
-    class="fixed top-16 left-0 w-full bg-[#020202] border-b border-white/10 z-40 md:hidden"
-    style="display: none;"
-    @click.away="mobileMenuOpen = false"
->
-    <nav class="flex flex-col">
-        @foreach([
-            ['label' => 'Work', 'url' => route('home') . '#work'],
-            ['label' => 'Profile', 'url' => route('home') . '#profile'],
-            ['label' => 'Contact', 'url' => route('home') . '#contact'],
-        ] as $item)
-            <a href="{{ $item['url'] }}" class="px-6 py-4 border-b border-white/5 text-sm font-mono uppercase tracking-widest text-gray-400 hover:text-white hover:bg-white/5 transition-colors">
-                {{ $item['label'] }}
-            </a>
-        @endforeach
-    </nav>
-</div>
