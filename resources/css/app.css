@@ -11,7 +11,9 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #050505; /* Fondo casi negro para mejor contraste */
+    color: #ffffff;
 }
 
 /* Estilo para un sutil efecto de gradiente en el texto del héroe */

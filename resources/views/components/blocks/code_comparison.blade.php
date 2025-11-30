@@ -1,0 +1,30 @@
+<div class="space-y-8">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+            <h3 class="text-2xl font-bold text-white">{{ $data['heading'] }}</h3>
+            <p class="text-gray-400 text-sm mt-2 max-w-md">{{ $data['description'] }}</p>
+        </div>
+        <div class="text-xs font-mono text-gray-600 border border-white/10 px-3 py-1 rounded">
+            {{ $data['language'] ?? 'CODE' }}
+        </div>
+    </div>
+
+    <!-- Code Window -->
+    <div class="rounded-lg overflow-hidden border border-white/10 bg-[#111] shadow-2xl">
+        <div class="flex items-center gap-2 px-4 py-3 bg-[#1a1a1a] border-b border-white/5">
+            <div class="w-3 h-3 rounded-full bg-red-500/20"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/20"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/20"></div>
+        </div>
+        <div class="p-6 overflow-x-auto">
+            <pre class="font-mono text-sm leading-loose text-gray-300"><code>{{ $data['code'] }}</code></pre>
+        </div>
+    </div>
+
+    @if(isset($data['caption']))
+        <p class="text-xs font-mono text-gray-500 text-center border-l-2 border-[var(--project-color)] pl-3 ml-4">
+            {{ $data['caption'] }}
+        </p>
+    @endif
+</div>

@@ -1,8 +1,11 @@
-import Ledding from '../ledding/ledding.js';
-import { BottomRightAligner, CenterAligner, RightAligner } from '../ledding/aligners/Aligners.js';
-import { heartPattern } from '../ledding/patterns/heart.js';
-import { uiEyePattern, codeTagPattern, dbCylinderPattern } from '../ledding/patterns/edd.js';
-import { Direction, Pattern } from '../ledding/utils/constants.js';
+import { Ledding, CenterAligner, CircleRenderer, Directions, Pattern } from 'ledding';
+import { 
+  heartPattern, 
+  uiEyePattern, 
+  codeTagPattern, 
+  dbCylinderPattern, 
+  flipH 
+} from '../ledding-patterns.js';
 
 const PATTERNS = {
   ui: uiEyePattern,
@@ -59,6 +62,7 @@ export default function initLeddingPanels() {
       scaleToFit: true,
       artPattern,
       aligner: CenterAligner,
+      renderer: CircleRenderer,
       colors: {
         background: 'rgba(0,0,0,0)',
         base: 'rgba(26, 19, 34, 1)',  // morado casi negro
@@ -70,9 +74,9 @@ export default function initLeddingPanels() {
       },
       fps: 30,
       animation: {
-        scroll:     { direction: Direction.TO_TOP, speed: 18 },
-        ignition:   { pattern: Pattern.CASCADE, direction: Direction.TO_BOTTOM, delay: 0.8 },
-        extinction: { pattern: Pattern.CASCADE, direction: Direction.TO_BOTTOM, delay: 0.3 },
+        scroll:     { direction: Directions.TO_TOP, speed: 18 },
+        ignition:   { pattern: Pattern.CASCADE, direction: Directions.TO_BOTTOM, delay: 0.8 },
+        extinction: { pattern: Pattern.CASCADE, direction: Directions.TO_BOTTOM, delay: 0.3 },
       },
       transitions: {
         ignition:   { min: 0.05, randomize: false },

@@ -1,58 +1,53 @@
-<section class="bg-black text-white">
-  <div class="mx-auto max-w-7xl px-6 sm:px-12 py-14 sm:py-20 lg:py-24 grid gap-10 items-center lg:grid-cols-12">
-    <aside class="lg:col-span-6 order-2 lg:order-1">
-      <div class="relative aspect-square w-full rounded-2xl overflow-hidden mx-auto mt-10 sm:mt-12 max-w-[22rem] sm:max-w-none" data-panel-square>
-        <div class="absolute inset-0" id="ledding-fe" data-ledding data-scheme="purple" data-pattern="fe" aria-hidden="true"></div>
+<section class="bg-black text-white border-t border-white/10 relative overflow-hidden">
+   <!-- Structural Grid -->
+  <div class="absolute inset-0 pointer-events-none select-none max-w-[1800px] mx-auto px-6 sm:px-12">
+      <div class="hidden lg:block absolute left-[41.666667%] top-0 bottom-0 w-px bg-white/10 origin-top transform scale-y-0" data-line-vertical></div>
+      <div class="hidden lg:block absolute left-[41.666667%] top-0 -translate-x-1/2 -translate-y-1/2 text-purple-500">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M7.5 0V15M0 7.5H15" stroke="currentColor" stroke-width="1"/></svg>
+      </div>
+  </div>
+
+  <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 grid gap-16 items-center lg:grid-cols-12 relative z-10">
+    
+    {{-- Panel Visual (Izquierda) --}}
+    <aside class="lg:col-span-5 order-2 lg:order-1 w-full flex justify-start lg:pr-0" data-side="left">
+      <div class="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square xl:aspect-[4/3] rounded-lg bg-[#0A0A0A] border border-white/10 overflow-hidden" data-panel-reveal>
+         <div class="absolute top-0 left-0 w-full h-8 bg-white/5 border-b border-white/5 flex items-center px-3 gap-2 z-10">
+            <span class="text-[10px] font-mono text-gray-500">bash — 80x24</span>
+         </div>
+         <div class="absolute inset-0 pt-8" id="ledding-fe" data-ledding data-pattern="fe"></div>
       </div>
     </aside>
 
-    <div class="lg:col-span-6 order-1 lg:order-2 space-y-6" data-focus-reveal>
-      <h3 class="text-xl font-semibold flex items-center gap-2">
-        <svg class="h-5 w-5 text-purple-300"><use href="#icon-strength"/></svg>
-        Rendimiento que <strong>Impulsa tu Negocio</strong>
-      </h3>
-
-      <p class="text-gray-300">
-        En internet, cada segundo cuenta. Un sitio lento pierde clientes y posicionamiento en Google. Por eso, optimizamos cada línea de código para garantizar una velocidad de carga excepcional. Con la entrega en 72 horas, no solo obtienes un sitio rápido, sino una ventaja competitiva inmediata.
-      </p>
-
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-300">
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Ágil</strong></li>
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Fácil de usar</strong></li>
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Consistente</strong></li>
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Encontrable</strong></li>
-      </ul>
-
-      {{-- Métricas con etiquetas en lenguaje llano --}}
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" data-metrics>
-        <div data-metric class="rounded-lg bg-white/5 p-3">
-          <div class="text-xs text-gray-400">Carga</div>
-          <div class="text-2xl font-bold" data-metric-val="2.1">2.1s</div>
+    {{-- Contenido (Derecha) --}}
+    <div class="lg:col-span-7 order-1 lg:order-2 space-y-8 lg:pl-16 bg-black/80 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none rounded-xl p-4 lg:p-0 border border-white/5 lg:border-0">
+      <div class="space-y-4">
+        <div class="text-xs font-mono text-purple-400 tracking-widest mb-2 reveal-text">
+            [ 02 · FRONTEND ]
         </div>
-        <div data-metric class="rounded-lg bg-white/5 p-3">
-          <div class="text-xs text-gray-400">Estabilidad</div>
-          <div class="text-2xl font-bold" data-metric-val="0.02">0.02</div>
-        </div>
-        <div data-metric class="rounded-lg bg-white/5 p-3">
-          <div class="text-xs text-gray-400">Peso</div>
-          <div class="text-2xl font-bold" data-metric-val="68">68KB</div>
-        </div>
-        <div data-metric class="rounded-lg bg-white/5 p-3">
-          <div class="text-xs text-gray-400">Fluidez</div>
-          <div class="text-2xl font-bold" data-metric-val="60">60</div>
-        </div>
+        <h3 class="text-3xl font-bold tracking-tight text-white reveal-text">
+          Obsesión por el Rendimiento
+        </h3>
+        <p class="text-gray-400 text-lg leading-relaxed reveal-text max-w-xl">
+          La velocidad es la característica más importante. Optimizamos el <em class="text-white not-italic">Critical Rendering Path</em> para lograr tiempos de carga instantáneos. 
+          Sin frameworks pesados innecesarios. Solo código limpio y eficiente.
+        </p>
       </div>
 
-      {{-- Snippet se queda oculto en xs como ya lo tenías --}}
-      <div class="rounded-xl bg-black/60 p-4 hidden md:block">
-        <pre class="text-xs text-gray-300 overflow-x-auto leading-relaxed">
-&lt;picture&gt;
-  &lt;source type="image/avif" srcset="... 800w, ... 1200w" sizes="100vw"&gt;
-  &lt;source type="image/webp" srcset="... 800w, ... 1200w" sizes="100vw"&gt;
-  &lt;img src="{{ get_image('resources/images/hero.jpg') }}"
-       width="1600" height="900" loading="lazy" decoding="async" /&gt;
-&lt;/picture&gt;
-        </pre>
+      {{-- Tech Stats Minimalist --}}
+      <div class="font-mono text-sm space-y-4 text-gray-400 reveal-text max-w-md">
+         <div class="flex justify-between border-b border-white/10 pb-2">
+            <span>First Contentful Paint</span>
+            <span class="text-green-400">0.4s</span>
+         </div>
+         <div class="flex justify-between border-b border-white/10 pb-2">
+            <span>Interactive</span>
+            <span class="text-green-400">0.8s</span>
+         </div>
+         <div class="flex justify-between border-b border-white/10 pb-2">
+            <span>Layout Shift</span>
+            <span class="text-green-400">0.00</span>
+         </div>
       </div>
     </div>
   </div>

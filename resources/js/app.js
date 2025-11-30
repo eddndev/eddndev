@@ -1,11 +1,15 @@
 import './bootstrap';
+import Alpine from 'alpinejs';
 
-// Core (registra GSAP + Lenis y expone hooks)
+window.Alpine = Alpine;
+Alpine.start();
+
+import { gsap, ScrollTrigger } from './core/gsap-core';
+import './core/lenis'; // Import side-effects (smooth scroll init)
 import { onReady } from './core/dom';
-import './core/gsap-core';   // side-effect: registro de ScrollTrigger
-import './core/lenis';       // side-effect: smooth scroll + sync con GSAP
 
-// Animations / Features
+console.log('App.js loaded (v2)'); // Debug Log
+
 import initHero from './animations/hero';
 import initFocus from './animations/focus';
 import initMicro from './animations/micro';
@@ -15,6 +19,9 @@ import initDarkSections from './animations/sections';
 import initLeddingPanels from './features/ledding-panels';
 import initSections from './animations/sections';
 import initProjects from './animations/projects';
+import initFooterReveal from './animations/footer';
+import initNavigation from './features/navigation';
+import initProjectHero from './animations/project-hero';
 
 // Boot
 onReady(() => {
@@ -27,4 +34,7 @@ onReady(() => {
   initLeddingPanels();
   initSections();
   initProjects();
+  initFooterReveal();
+  initNavigation();
+  initProjectHero();
 });

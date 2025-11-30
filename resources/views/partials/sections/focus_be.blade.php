@@ -1,49 +1,51 @@
-<section class="bg-black text-white">
-  <div class="mx-auto max-w-7xl px-6 sm:px-12 py-14 sm:py-20 lg:py-24 grid gap-10 items-center lg:grid-cols-12">
-    <div class="lg:col-span-6 order-1 space-y-6 min-w-0" data-focus-reveal>
-      <h3 class="text-xl font-semibold flex items-center gap-2">
-        <svg class="h-5 w-5 text-purple-300"><use href="#icon-spirit"/></svg>
-        Tecnología confiable
-      </h3>
+<section class="bg-black text-white border-t border-white/10 relative overflow-hidden">
+   <!-- Structural Grid -->
+  <div class="absolute inset-0 pointer-events-none select-none max-w-[1800px] mx-auto px-6 sm:px-12">
+      <div class="hidden lg:block absolute left-[41.666667%] top-0 bottom-0 w-px bg-white/10 origin-top transform scale-y-0" data-line-vertical></div>
+      <div class="hidden lg:block absolute left-[41.666667%] top-0 -translate-x-1/2 -translate-y-1/2 text-purple-500">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M7.5 0V15M0 7.5H15" stroke="currentColor" stroke-width="1"/></svg>
+      </div>
+  </div>
 
-      <p class="text-gray-300">
-        El verdadero poder de un sitio web está en lo que no se ve: la seguridad de que cada formulario de contacto llegará, cada correo será profesional y tu información estará protegida. Nos encargamos de toda la infraestructura técnica para que tú solo te preocupes de atender a tus nuevos clientes.
-      </p>
-
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-300">
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Respuesta inmediata</strong></li>
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Actualización simple</strong></li>
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Sin esperas</strong></li>
-        <li class="flex items-start gap-2"><span class="mt-1 inline-block size-1.5 rounded-full bg-[var(--brand)]"></span>-<strong>Protegido</strong></li>
-      </ul>
-
-      {{-- Pipeline (tu animación se mantiene) --}}
-      <div data-pipeline class="relative rounded-xl bg-white/[.06] ring-1 ring-white/10 p-4">
-        {{-- SVG igual que el que ya tienes en tu versión corregida --}}
-        @include('partials.sections._pipeline-svg')
+  <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 grid gap-16 items-center lg:grid-cols-12 relative z-10">
+    
+    {{-- Contenido (Izquierda) --}}
+    <div class="lg:col-span-5 order-1 lg:order-1 space-y-8">
+      <div class="space-y-4">
+        <div class="text-xs font-mono text-purple-400 tracking-widest mb-2 reveal-text">
+            [ 03 · BACKEND ]
+        </div>
+        <h3 class="text-3xl font-bold tracking-tight text-white reveal-text">
+          Arquitectura Robusta
+        </h3>
+        <p class="text-gray-400 text-lg leading-relaxed reveal-text">
+          Lo invisible sostiene lo visible. Construimos sobre bases sólidas, seguras y escalables. 
+          APIs RESTful, integración continua y bases de datos optimizadas para que tu negocio crezca sin fricción técnica.
+        </p>
       </div>
 
-      <div class="rounded-xl bg-white/5 p-4 text-sm text-gray-200">
-        <div class="font-semibold">POST /contact</div>
-        <div class="text-gray-400">Respuestas sin spam · 201 Created</div>
-        <pre class="mt-2 text-xs text-gray-300 sm:hidden">
-{ "name":"Eduardo",  "message":"Hola" }
-        </pre>
-        <pre class="mt-2 text-xs text-gray-300 hidden sm:block">
-{ "name":"Eduardo",  "message":"Hola", "email":"contacto@eddndev.com" }
-        </pre>
-      </div>
-
-      <div class="flex flex-wrap gap-2 whitespace-nowrap -mx-2 px-2">
-        @foreach (['Confiable','Sin esperas','Editable','Seguro'] as $chip)
-          <span class="px-2 py-1 rounded bg-white/5 text-xs shrink-0">{{ $chip }}</span>
-        @endforeach
+      {{-- Clean API Snippet --}}
+      <div class="rounded-lg bg-[#0A0A0A] border border-white/10 p-6 font-mono text-sm overflow-hidden reveal-text">
+         <div class="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
+            <span class="text-purple-400">POST /api/v1/scale</span>
+            <span class="text-green-500 text-xs border border-green-900 bg-green-900/20 px-2 py-0.5 rounded">200 OK</span>
+         </div>
+         <div class="space-y-2 text-gray-500">
+            <p><span class="text-purple-300">"uptime"</span>: <span class="text-yellow-300">99.99</span>,</p>
+            <p><span class="text-purple-300">"security"</span>: <span class="text-blue-300">"strict"</span>,</p>
+            <p><span class="text-purple-300">"latency"</span>: <span class="text-white">"24ms"</span></p>
+         </div>
       </div>
     </div>
 
-    <aside class="lg:col-span-6 order-2">
-      <div class="relative aspect-square w-full rounded-2xl overflow-hidden mx-auto mt-10 sm:mt-12 max-w-[22rem] sm:max-w-none" data-panel-square>
-        <div class="absolute inset-0" id="ledding-be" data-ledding data-scheme="purple" data-pattern="be" aria-hidden="true"></div>
+    {{-- Panel Visual (Derecha) --}}
+    <aside class="lg:col-span-7 order-2 lg:order-2 w-full flex justify-end lg:pl-12" data-side="right">
+      <div class="relative w-full max-w-2xl aspect-[4/3] rounded-lg bg-[#0A0A0A] border border-white/10 overflow-hidden" data-panel-reveal>
+         <div class="absolute top-0 left-0 w-full h-8 bg-white/5 border-b border-white/5 flex items-center px-3 gap-2 z-10">
+            <div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+            <span class="text-[10px] font-mono text-gray-500 ml-2">server.log</span>
+         </div>
+         <div class="absolute inset-0 pt-8" id="ledding-be" data-ledding data-pattern="be"></div>
       </div>
     </aside>
   </div>

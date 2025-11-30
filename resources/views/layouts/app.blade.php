@@ -44,11 +44,13 @@ src="https://www.facebook.com/tr?id=948792990780126&ev=PageView&noscript=1"
 <body class="bg-black text-white antialiased">
     <x-svg-sprite />
 
+    {{-- Global Navigation Bar (Konpo Grid Style) --}}
+    <x-layout.header :project="$project ?? null" />
 
-    {{-- Opcional: Incluir un header parcial --}}
-    {{-- @include('layouts.partials.header') --}}
-
+    {{-- Main Content Wrapper --}}
+    <main class="min-h-screen relative z-10">
         @yield('content')
+    </main>
 
     @include('layouts.partials.footer')
 
