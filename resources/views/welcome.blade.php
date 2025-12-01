@@ -38,11 +38,11 @@
 
         <!-- CTAs -->
         <div class="lg:col-span-7 flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:justify-end">
-           <a href="#paquetes" class="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+           <a href="mailto:contacto@eddndev.com" data-cursor-text="INICIAR" class="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
               <span class="relative z-10 group-hover:text-purple-700 transition-colors">Iniciar Proyecto</span>
            </a>
            
-           <a href="https://wa.me/5215622101391" target="_blank" class="group flex items-center gap-2 text-white font-medium hover:text-purple-300 transition-colors">
+           <a href="https://wa.me/5215622101391" target="_blank" data-cursor-text="CHAT" class="group flex items-center gap-2 text-white font-medium hover:text-purple-300 transition-colors">
               <span>Hablemos por WhatsApp</span>
               <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
            </a>
@@ -56,6 +56,9 @@
 
 @include('partials.sections.focus')
 @include('partials.sections.projects')
+@include('partials.sections.focus_ux')
+@include('partials.sections.focus_fe')
+@include('partials.sections.focus_be')
 
 @endsection
 

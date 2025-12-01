@@ -31,7 +31,3 @@
         </div>
     </div>
 </section>
-
-@include('partials.sections.focus_ux')
-@include('partials.sections.focus_fe')
-@include('partials.sections.focus_be')

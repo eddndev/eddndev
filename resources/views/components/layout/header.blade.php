@@ -12,6 +12,7 @@
         
         <!-- 1. Brand / Home Link -->
         <a href="{{ route('home') }}" 
+           data-cursor-text="INICIO"
            @click="mobileMenuOpen = false"
            class="group flex items-center pl-6 sm:pl-12 pr-6 border-r border-white/10 transition-colors relative"
            :class="{ 'bg-[#020202]': !scrolled && mobileMenuOpen, 'hover:bg-white/5': !mobileMenuOpen }"> 
@@ -31,8 +32,29 @@
             </div>
         </a>
 
-        <!-- 2. Context Bar (Desktop Only) -->
-        <div class="hidden md:flex flex-1 items-center px-6 relative">
+        <!-- 2. Global Nav (Desktop) - Moved to Left -->
+        <nav class="hidden md:flex h-full">
+            @foreach([
+                ['label' => 'Proyectos', 'url' => route('work.index')],
+                ['label' => 'Perfil', 'url' => route('profile.index')],
+            ] as $index => $item)
+                <a href="{{ $item['url'] }}" data-cursor-text="NAVEGAR" 
+                   data-cursor-text="NAVIGATE"
+                   class="relative flex items-center px-10 text-sm font-bold font-sans uppercase tracking-widest text-white/70 hover:text-white bg-transparent hover:bg-white/5 transition-all border-r border-white/10 group h-full">
+                    {{ $item['label'] }}
+                    <span class="absolute top-0 left-0 w-full h-[2px] bg-[#8b5cf6] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    
+                    <div class="absolute -bottom-[5px] -right-[5px] text-white/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.5 0V9M0 4.5H9" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </div>
+                </a>
+            @endforeach
+        </nav>
+
+        <!-- 3. Context Bar (Desktop Only) - Moved to Right -->
+        <div class="hidden md:flex flex-1 justify-end items-center px-6 relative border-l border-white/10">
             @if($project)
                 <div class="flex items-center gap-3">
                     <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Estudio de Caso</span>
@@ -49,26 +71,6 @@
                 </div>
             @endif
         </div>
-
-        <!-- 3. Global Nav (Desktop) -->
-        <nav class="hidden md:flex h-full ml-auto">
-            @foreach([
-                ['label' => 'Proyectos', 'url' => route('work.index')],
-                ['label' => 'Perfil', 'url' => route('profile.index')],
-            ] as $index => $item)
-                <a href="{{ $item['url'] }}" 
-                   class="relative flex items-center px-8 text-xs font-mono uppercase tracking-widest text-gray-400 hover:text-white transition-colors border-l border-white/10 group h-full {{ $loop->last ? 'sm:pr-12' : '' }}">
-                    {{ $item['label'] }}
-                    <span class="absolute top-0 left-0 w-full h-[2px] bg-[#8b5cf6] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                    
-                    <div class="absolute -bottom-[5px] -left-[5px] text-white/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.5 0V9M0 4.5H9" stroke="currentColor" stroke-width="1"/>
-                        </svg>
-                    </div>
-                </a>
-            @endforeach
-        </nav>
 
         <!-- 4. Mobile Trigger (The "System" Button) -->
         <button 
@@ -116,7 +118,7 @@
                 ['label' => 'Proyectos', 'sub' => 'Selección de casos', 'url' => route('work.index')],
                 ['label' => 'Perfil', 'sub' => 'Acerca del estudio', 'url' => route('profile.index')],
             ] as $index => $item)
-                <a href="{{ $item['url'] }}" 
+                <a href="{{ $item['url'] }}" data-cursor-text="NAVEGAR" 
                    @click="mobileMenuOpen = false"
                    class="group relative flex-1 border-b border-white/10 flex items-center px-8 transition-all duration-300 hover:bg-white/5"
                 >

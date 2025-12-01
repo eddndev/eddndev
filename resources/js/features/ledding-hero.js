@@ -1,5 +1,5 @@
 import { Ledding, RightAligner, CircleRenderer, Directions, Pattern } from 'ledding';
-import { logoPattern } from '../ledding-patterns.js';
+import { logoPattern, dbCylinderPattern } from '../ledding-patterns.js';
 
 export default function initLeddingHero() {
   // 1. Home Hero
@@ -33,34 +33,63 @@ export default function initLeddingHero() {
     });
   }
 
-  // 2. Project Hero
+  // 2. Project Detail Hero (Restore)
   const projectTarget = document.querySelector('#ledding-project-container');
   if (projectTarget) {
     new Ledding('#ledding-project-container', {
       ledSize: 30,
       ledGap: 8,
       scaleToFit: false,
-      // Usamos el mismo patrón por ahora, o uno generado aleatorio si grid.fill es true
       artPattern: logoPattern, 
       aligner: RightAligner,
       renderer: CircleRenderer,
       colors: {
-        background: 'rgba(0, 0, 0, 0)', // Transparente total
-        base: 'rgba(255, 255, 255, 0.03)', // Puntos base muy sutiles (estrellas)
+        background: 'rgba(0, 0, 0, 0)',
+        base: 'rgba(255, 255, 255, 0.03)',
         states: {
-          1: 'rgba(139, 92, 246, 1)', // Purple 500
-          2: 'rgba(168, 85, 247, 0.8)', // Purple 400
-          3: 'rgba(192, 132, 252, 0.5)'  // Purple 300
+          1: 'rgba(139, 92, 246, 1)',
+          2: 'rgba(168, 85, 247, 0.8)',
+          3: 'rgba(192, 132, 252, 0.5)'
         }
       },
       sizes: { states: { 1: 0.8, 2: 0.5, 3: 0.2 } },
-      fps: 24, // Más cinemático/lento
+      fps: 24,
       animation: {
-        scroll: { direction: Directions.TO_LEFT, speed: 5 }, // Muy lento
+        scroll: { direction: Directions.TO_LEFT, speed: 5 },
         ignition: { pattern: Pattern.RANDOM, delay: 0.2 },
         extinction: { pattern: Pattern.RANDOM, delay: 0.1 }
       },
-      grid: { fill: true, lifespan: 120 } // Relleno aleatorio tipo "Matrix/Estrellas"
+      grid: { fill: true, lifespan: 120 }
+    });
+  }
+
+  // 3. Work Archive Hero (Database Pattern)
+  const workTarget = document.querySelector('#ledding-work-container');
+  if (workTarget) {
+    new Ledding('#ledding-work-container', {
+      ledSize: 20, // Slightly smaller for density
+      ledGap: 6,
+      scaleToFit: false,
+      artPattern: dbCylinderPattern,
+      aligner: RightAligner,
+      renderer: CircleRenderer,
+      colors: {
+        background: 'rgba(0, 0, 0, 0)',
+        base: 'rgba(30, 20, 40, 1)',    // Darker purple base
+        states: {
+          1: 'rgba(139, 92, 246, 1)', // Purple 500
+          2: 'rgba(168, 85, 247, 0.8)',
+          3: 'rgba(192, 132, 252, 0.5)'
+        }
+      },
+      sizes: { states: { 1: 0.8, 2: 0.5, 3: 0.2 } },
+      fps: 24,
+      animation: {
+        scroll: { direction: Directions.TO_BOTTOM, speed: 8 }, // Data flow feel
+        ignition: { pattern: Pattern.WAVE, delay: 0.1, direction: Directions.TO_BOTTOM },
+        extinction: { pattern: Pattern.RANDOM, delay: 0.1 }
+      },
+      grid: { fill: true, lifespan: 100 } // Matrix-like background noise
     });
   }
 }

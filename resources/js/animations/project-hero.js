@@ -4,11 +4,8 @@ export default function initProjectHero() {
   const container = document.querySelector('.project-hero-container');
   
   if (!container) {
-      console.log('Project Hero container NOT found');
       return;
   }
-
-  console.log('Project Hero initializing...');
 
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 

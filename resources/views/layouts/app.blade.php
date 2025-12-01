@@ -42,6 +42,11 @@ src="https://www.facebook.com/tr?id=948792990780126&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 </head>
 <body class="bg-black text-white antialiased">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="hidden lg:flex fixed top-0 left-0 z-[9999] pointer-events-none w-4 h-4 rounded-full bg-white mix-blend-difference items-center justify-center transform -translate-x-1/2 -translate-y-1/2 will-change-[width,height,transform]">
+        <span id="cursor-label" class="text-xs font-black text-white opacity-0 tracking-widest font-mono uppercase whitespace-nowrap"></span>
+    </div>
+
     <x-svg-sprite />
 
     {{-- Global Navigation Bar (Konpo Grid Style) --}}

@@ -82,7 +82,7 @@
             <div class="text-[10px] font-mono text-[var(--project-color)] mb-3 tracking-widest uppercase font-bold">Core Stack</div>
             <div class="flex flex-wrap gap-2">
                 @foreach($project->stack as $tech)
-                    <span class="text-xs font-mono border border-white/20 bg-white/5 px-2 py-1 rounded text-gray-300 group-hover:border-[var(--project-color)] group-hover:text-white transition-colors shadow-[0_0_0_0_transparent] group-hover:shadow-[0_0_10px_var(--project-color)]">{{ $tech }}</span>
+                    <span class="text-xs font-mono border border-white/20 bg-white/5 px-2 py-1 text-gray-300 group-hover:border-[var(--project-color)] group-hover:text-white transition-colors">{{ $tech }}</span>
                 @endforeach
             </div>
         </div>
@@ -94,26 +94,30 @@
 <div class="relative z-20 bg-[#020202] border-b border-white/10">
     <div class="grid grid-cols-1 sm:grid-cols-{{ count($project->links) > 4 ? 4 : count($project->links) }} divide-y sm:divide-y-0 sm:divide-x divide-white/10">
         @foreach($project->links as $label => $url)
-            <a href="{{ $url }}" target="_blank" class="group relative p-6 sm:p-8 flex items-center justify-between hover:bg-white/5 transition-colors">
-                <!-- Hover Glow -->
-                <div class="absolute inset-0 bg-[var(--project-color)] opacity-0 group-hover:opacity-5 transition-opacity"></div>
+            <a href="{{ $url }}" target="_blank" data-cursor-text="OPEN" class="group relative p-8 flex items-center justify-between overflow-hidden transition-all duration-500">
+                <!-- 1. Background Interaction -->
+                <div class="absolute inset-0 bg-white/[0.02] group-hover:bg-[var(--project-color)]/10 transition-colors duration-500"></div>
+                <!-- 2. Active Border Line (Bottom) -->
+                <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--project-color)] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                 
-                <div class="flex items-center gap-4 relative z-10">
-                    <div class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center group-hover:border-[var(--project-color)] group-hover:text-[var(--project-color)] transition-colors">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                <div class="flex items-center gap-5 relative z-10">
+                    <!-- Icon Container -->
+                    <div class="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 group-hover:text-white group-hover:bg-[var(--project-color)] group-hover:border-[var(--project-color)] group-hover:scale-110 group-hover:rotate-[-10deg] transition-all duration-500 shadow-[0_0_0_0_transparent] group-hover:shadow-[0_0_20px_rgba(var(--project-color-rgb),0.4)]">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                     </div>
-                    <div>
-                        <div class="text-[10px] font-mono text-gray-500 uppercase tracking-widest group-hover:text-[var(--project-color)] transition-colors">RESOURCE</div>
-                        <div class="text-lg font-bold text-white">{{ $label }}</div>
+                    
+                    <div class="flex flex-col">
+                        <span class="text-[9px] font-mono text-[var(--project-color)] uppercase tracking-widest mb-1 opacity-80 group-hover:opacity-100">External Resource</span>
+                        <span class="text-lg font-bold text-white group-hover:translate-x-1 transition-transform duration-300">{{ $label }}</span>
                     </div>
                 </div>
                 
-                <!-- Arrow -->
-                <svg class="w-5 h-5 text-gray-600 group-hover:text-white group-hover:translate-x-1 transition-all relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                <!-- Action Arrow -->
+                <div class="relative z-10 w-8 h-8 flex items-center justify-center rounded-full border border-white/10 bg-white/0 group-hover:bg-white group-hover:border-white transition-all duration-500">
+                    <svg class="w-3 h-3 text-gray-500 group-hover:text-black group-hover:-rotate-45 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </div>
             </a>
         @endforeach
-        
-        <!-- Filler cells if needed for grid balance (optional, skipping for now to keep it tight) -->
     </div>
 </div>
 @endif

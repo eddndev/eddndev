@@ -23,4 +23,11 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+}
+
+/* Ocultar cursor nativo solo en desktop para usar el custom */
+@media (min-width: 1024px) {
+    body, a, button, [role="button"] {
+        cursor: none !important;
+    }
 } 

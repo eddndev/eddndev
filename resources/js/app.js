@@ -8,7 +8,7 @@ import { gsap, ScrollTrigger } from './core/gsap-core';
 import './core/lenis'; // Import side-effects (smooth scroll init)
 import { onReady } from './core/dom';
 
-console.log('App.js loaded (v2)'); // Debug Log
+
 
 import initHero from './animations/hero';
 import initFocus from './animations/focus';
@@ -22,9 +22,11 @@ import initProjects from './animations/projects';
 import initFooterReveal from './animations/footer';
 import initNavigation from './features/navigation';
 import initProjectHero from './animations/project-hero';
+import { initCursor } from './features/cursor';
 
 // Boot
 onReady(() => {
+  initCursor(); // Cursor first to ensure it's ready
   initHero();
   initMicro();
   initVignette();

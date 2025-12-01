@@ -5,16 +5,14 @@
 @section('content')
 <section class="bg-[#020202] min-h-screen text-white pt-32 pb-20 relative overflow-hidden">
     
-    <!-- Background Grid (Sutil) -->
-    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" 
-         style="background-image: linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px); background-size: 60px 60px;">
-    </div>
-
     <div class="max-w-[1800px] mx-auto relative z-10">
         
         <!-- Header Section -->
-        <header class="mb-24 lg:mb-32 border-b border-white/10 pb-12 px-6 sm:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+        <header class="mb-24 lg:mb-32 border-b border-white/10 pb-12 px-6 sm:px-12 relative overflow-hidden">
+            <!-- Ledding Background for Work Archive -->
+            <div id="ledding-work-container" class="absolute inset-0 z-0 pointer-events-none opacity-60 mix-blend-lighten"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end relative z-10">
                 
                 <!-- Title -->
                 <div class="lg:col-span-8">

@@ -4,23 +4,23 @@
             
             <!-- Services List (Menu Style) -->
             <div class="space-y-12">
-                <h2 class="text-xs font-mono text-purple-400 tracking-widest mb-8 reveal-footer">[ 05 · CAPABILITIES ]</h2>
+                <h2 class="text-xs font-mono text-purple-400 tracking-widest mb-8 reveal-footer">[ SERVICIOS ]</h2>
                 
                 <ul class="space-y-8">
-                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-default reveal-footer">
-                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Web Development</span>
+                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Desarrollo Web</span>
                         <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">Laravel / Vue / React</span>
                     </li>
-                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-default reveal-footer">
-                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">UI/UX Design</span>
+                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Diseño UX/UI</span>
                         <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">Figma / Systems / Motion</span>
                     </li>
-                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-default reveal-footer">
-                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">E-Commerce</span>
+                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">E-commerce</span>
                         <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">Stripe / Custom / Shopify</span>
                     </li>
-                     <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-default reveal-footer">
-                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Performance</span>
+                     <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Rendimiento</span>
                         <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">SEO / Vitals / Optimization</span>
                     </li>
                 </ul>
@@ -39,7 +39,7 @@
 
                  <div class="flex flex-col sm:flex-row gap-6 reveal-footer">
                     <!-- Primary CTA (Hero Style) -->
-                    <a href="https://wa.me/5215622101391" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                    <a href="https://wa.me/521562101391" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
                         <span class="relative z-10 group-hover:text-purple-700 transition-colors">Iniciar Conversación</span>
                     </a>
                     

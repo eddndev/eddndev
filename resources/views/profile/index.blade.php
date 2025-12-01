@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Operator Profile — EDDN.DEV')
+@section('title', 'Perfil - edd n\'dev')
 
 @section('content')
 <section class="bg-[#020202] min-h-screen text-white pt-24 pb-20 relative overflow-hidden">
@@ -12,10 +12,10 @@
 
     <div class="max-w-[1600px] mx-auto px-6 sm:px-12 relative z-10 h-full">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 h-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-24 h-full">
             
             <!-- LEFT COLUMN: HARDWARE ID (3 Cols) -->
-            <div class="lg:col-span-4 flex flex-col gap-8">
+            <div class="lg:col-span-4 flex flex-col gap-8 order-last lg:order-first">
                 
                 <!-- RASTER IMAGE CARD -->
                 <div class="relative w-full aspect-[3/4] border border-white/10 bg-[#050505] p-2 group">
@@ -76,7 +76,7 @@
                 <!-- Header -->
                 <div class="mb-12 border-b border-white/10 pb-8">
                     <h1 class="text-6xl lg:text-8xl font-black tracking-tighter text-white mb-4">
-                        OPERATOR <span class="text-[#8b5cf6]">.</span>
+                        EDUARDO <span class="text-[#8b5cf6]">.</span>
                     </h1>
                     <p class="text-xl text-gray-400 max-w-2xl font-light leading-relaxed">
                         Ingeniero de software obsesionado con la arquitectura de sistemas, el rendimiento extremo y la estética funcional.
@@ -108,21 +108,11 @@
                     
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                         @foreach([
-                            'PHP' => ['cat' => 'CORE', 'icon' => 'php'],
                             'LARAVEL' => ['cat' => 'BACKEND', 'icon' => 'laravel'],
                             'RUST' => ['cat' => 'SYSTEM', 'icon' => 'rust'],
-                            'TYPESCRIPT' => ['cat' => 'CORE', 'icon' => 'typescript'],
-                            'REACT' => ['cat' => 'FRONT', 'icon' => 'react'],
-                            'VUE / NUXT' => ['cat' => 'FRONT', 'icon' => 'vue'],
                             'ASTRO' => ['cat' => 'FRONT', 'icon' => 'astro'],
                             'TAILWIND' => ['cat' => 'STYLE', 'icon' => 'tailwind'],
-                            'GSAP' => ['cat' => 'ANIM', 'icon' => 'gsap'],
-                            'THREE.JS' => ['cat' => '3D', 'icon' => 'threejs'],
-                            'MYSQL' => ['cat' => 'DATA', 'icon' => 'mysql'],
-                            'REDIS' => ['cat' => 'CACHE', 'icon' => 'redis'],
-                            'DOCKER' => ['cat' => 'INFRA', 'icon' => 'docker'],
-                            'GIT' => ['cat' => 'TOOL', 'icon' => 'git'],
-                            'FIGMA' => ['cat' => 'DESIGN', 'icon' => 'figma']
+                            'GSAP' => ['cat' => 'ANIM', 'icon' => 'gsap']
                         ] as $tech => $data)
                         <div class="group relative border border-white/10 bg-[#080808] h-24 p-3 flex flex-col justify-between hover:bg-[#8b5cf6] hover:border-[#8b5cf6] transition-colors duration-200 cursor-default">
                             

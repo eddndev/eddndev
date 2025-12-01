@@ -14,7 +14,7 @@
                         [ 04 · INDEX ]
                     </div>
                     <h2 class="text-4xl lg:text-6xl font-black tracking-tighter leading-[0.9] reveal-text">
-                        SELECTED <br> <span class="text-purple-400">WORK.</span>
+                        CASOS DE <br> <span class="text-purple-400">ESTUDIO.</span>
                     </h2>
                 </div>
             </div>
