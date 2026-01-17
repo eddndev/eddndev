@@ -4,11 +4,11 @@ interface Props {
 }
 const { items } = Astro.props;
 ---
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 border-y border-white/10 py-8">
-  {items.map(item => (
-    <div class="text-center">
-      <div class="text-2xl font-bold text-white">{item.value}</div>
-      <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">{item.label}</div>
-    </div>
-  ))}
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-y border-white/10 py-12">
+    {items.map(item => (
+        <div class="text-center md:text-left">
+            <div class="text-4xl lg:text-5xl font-black text-white mb-2 tracking-tighter">{item.value}</div>
+            <div class="text-xs font-mono text-[var(--project-color)] uppercase tracking-widest">{item.label}</div>
+        </div>
+    ))}
 </div>
