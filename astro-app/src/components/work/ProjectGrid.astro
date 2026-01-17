@@ -9,7 +9,7 @@ interface Props {
 const { projects } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
     {projects.map((project, index) => (
         <a href={`/work/${project.slug}`} 
            class="group relative flex flex-col bg-[#080808] border border-white/10 hover:border-[var(--project-color)] transition-all duration-500 overflow-hidden rounded-3xl"
