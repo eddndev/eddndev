@@ -1,0 +1,70 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="site-footer" class="bg-[#0a0a0a] text-white py-24 lg:py-32 border-t border-white/10 overflow-hidden relative z-20">
+    <div class="mx-auto max-w-[1800px] px-6 sm:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            
+            <!-- Services List (Menu Style) -->
+            <div class="space-y-12">
+                <h2 class="text-xs font-mono text-purple-400 tracking-widest mb-8 reveal-footer">[ SERVICIOS ]</h2>
+                
+                <ul class="space-y-8">
+                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Desarrollo Web</span>
+                        <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">Laravel / Vue / React</span>
+                    </li>
+                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Diseño UX/UI</span>
+                        <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">Figma / Systems / Motion</span>
+                    </li>
+                    <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">E-commerce</span>
+                        <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">Stripe / Custom / Shopify</span>
+                    </li>
+                     <li class="group flex items-baseline justify-between border-b border-white/10 pb-4 hover:border-purple-500 transition-colors cursor-none reveal-footer" data-cursor-text="MÁS INFO">
+                        <span class="text-2xl lg:text-3xl font-bold text-gray-300 group-hover:text-white transition-colors">Rendimiento</span>
+                        <span class="text-sm font-mono text-gray-600 group-hover:text-purple-400">SEO / Vitals / Optimization</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA / Contact -->
+            <div class="flex flex-col justify-between h-full">
+                 <div>
+                    <h3 class="text-5xl lg:text-7xl font-black tracking-tighter leading-[0.9] mb-8 reveal-footer">
+                        LET'S <br> <span class="text-purple-500">BUILD.</span>
+                    </h3>
+                    <p class="text-gray-400 text-lg max-w-md mb-12 reveal-footer">
+                        ¿Tienes un proyecto ambicioso? Buscamos colaborar con marcas que valoran la excelencia técnica y visual.
+                    </p>
+                 </div>
+
+                 <div class="flex flex-col sm:flex-row gap-6 reveal-footer">
+                    <!-- Primary CTA (Hero Style) -->
+                    <a href="https://wa.me/5215622101391" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                        <span class="relative z-10 group-hover:text-purple-700 transition-colors">Iniciar Conversación</span>
+                    </a>
+                    
+                    <!-- Secondary CTA (Consistent Physics) -->
+                    <a href="mailto:contacto@eddndev.com" class="group inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-full transition-all hover:scale-105 hover:bg-white/5 hover:border-white/40">
+                        contacto@eddndev.com
+                    </a>
+                 </div>
+            </div>
+
+        </div>
+
+        <!-- Minimal Footer Info -->
+        <div class="mt-24 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-600 font-mono reveal-footer">
+            <span>&copy; 2020 - {currentYear} EDDNDEV STUDIO. ALL RIGHTS RESERVED.</span>
+            <div class="flex gap-4 mt-4 sm:mt-0">
+                <a href="https://github.com/achronyme" target="_blank" class="hover:text-white transition-colors">ACHRONYME</a>
+                <a href="https://github.com/eddndev" target="_blank" class="hover:text-white transition-colors">GITHUB</a>
+                <a href="https://linkedin.com/in/eddndev" target="_blank" class="hover:text-white transition-colors">LINKEDIN</a>
+                <a href="https://instagram.com/_eddndev" target="_blank" class="hover:text-white transition-colors">INSTAGRAM</a>
+            </div>
+        </div>
+    </div>
+</footer>
