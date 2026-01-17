@@ -18,7 +18,7 @@ const navItems = [
 
 <header 
     id="main-header"
-    class="fixed top-0 left-0 w-full h-16 z-50 transition-all duration-300 bg-transparent border-b border-transparent"
+    class="fixed top-0 left-0 w-full h-16 2xl:h-20 z-50 transition-all duration-300 bg-transparent border-b border-transparent"
 >
     <!-- Inner Grid Container -->
     <div class="w-full max-w-[1800px] mx-auto h-full flex items-stretch relative z-50 bg-inherit">
@@ -32,7 +32,7 @@ const navItems = [
             <Image 
                 src={logoImg} 
                 alt="EDDN.DEV" 
-                class="h-6 w-auto object-contain" 
+                class="h-6 2xl:h-8 w-auto object-contain" 
             />
 
             <!-- Crosshair Bottom Right -->
@@ -47,7 +47,7 @@ const navItems = [
         <nav class="hidden md:flex h-full">
             {navItems.map((item) => (
                 <a href={item.url} data-cursor-text="NAVEGAR" 
-                   class="relative flex items-center px-10 text-sm font-bold font-sans uppercase tracking-widest text-white/70 hover:text-white bg-transparent hover:bg-white/5 transition-all border-r border-white/10 group h-full">
+                   class="relative flex items-center px-10 2xl:px-12 text-sm 2xl:text-base font-bold font-sans uppercase tracking-widest text-white/70 hover:text-white bg-transparent hover:bg-white/5 transition-all border-r border-white/10 group h-full">
                     {item.label}
                     <span class="absolute top-0 left-0 w-full h-[2px] bg-[#8b5cf6] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     
@@ -64,9 +64,9 @@ const navItems = [
         <div class="hidden md:flex flex-1 justify-end items-center px-6 relative border-l border-white/10">
             {project ? (
                 <div class="flex items-center gap-3">
-                    <span class="text-xs font-mono text-gray-500 uppercase tracking-wider">Estudio de Caso</span>
+                    <span class="text-xs 2xl:text-sm font-mono text-gray-500 uppercase tracking-wider">Estudio de Caso</span>
                     <span class="text-white/20">/</span>
-                    <span class="text-sm font-medium text-white">{project.title}</span>
+                    <span class="text-sm 2xl:text-base font-medium text-white">{project.title}</span>
                 </div>
             ) : (
                 <div class="flex items-center gap-2">
@@ -74,7 +74,7 @@ const navItems = [
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                     </span>
-                    <span class="text-xs font-mono text-gray-400 uppercase tracking-wider">Disponible para proyectos</span>
+                    <span class="text-xs 2xl:text-sm font-mono text-gray-400 uppercase tracking-wider">Disponible para proyectos</span>
                 </div>
             )}
         </div>
