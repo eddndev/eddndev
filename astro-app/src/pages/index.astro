@@ -7,7 +7,7 @@ import Focus from '../components/sections/Focus.astro';
 import FocusUX from '../components/sections/FocusUX.astro';
 import FocusFE from '../components/sections/FocusFE.astro';
 import FocusBE from '../components/sections/FocusBE.astro';
-import ProjectList from '../components/work/ProjectList.astro';
+import ProjectGrid from '../components/work/ProjectGrid.astro';
 
 // Get all projects for the list
 const projects = await getCollection('work');
@@ -90,8 +90,10 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
                 </div>
             </div>
     
-            <!-- Manifest Grid Component -->
-            <ProjectList projects={projects} />
+            <!-- Project Grid Component -->
+            <div class="px-6 sm:px-12 pb-32">
+                <ProjectGrid projects={projects} />
+            </div>
     
         </div>
     </section>

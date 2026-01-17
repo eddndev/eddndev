@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  projects: CollectionEntry<'work'>[];
+}
+
+const { projects } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+    {projects.map((project, index) => (
+        <a href={`/work/${project.slug}`} 
+           class="group relative flex flex-col bg-[#080808] border border-white/10 hover:border-[var(--project-color)] transition-colors duration-500 overflow-hidden"
+           style={`--project-color: ${project.data.color ?? '#ffffff'};`}>
+            
+            {/* 1. Image Container (Aspect Video) */}
+            <div class="relative w-full aspect-[16/10] overflow-hidden border-b border-white/5 bg-[#050505]">
+                {/* Image */}
+                {project.data.cover ? (
+                    <Image 
+                        src={project.data.cover} 
+                        alt={project.data.title} 
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                    />
+                ) : (
+                    <div class="w-full h-full flex items-center justify-center bg-white/5 text-white/20 font-mono text-xs">
+                        [NO SIGNAL]
+                    </div>
+                )}
+
+                {/* Overlay Gradient */}
+                <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60"></div>
+                
+                {/* ID Badge (Top Right) */}
+                <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-white/10 px-2 py-1">
+                    <span class="font-mono text-[10px] font-bold text-[var(--project-color)] tracking-widest">
+                        {(index + 1).toString().padStart(2, '0')}
+                    </span>
+                </div>
+            </div>
+
+            {/* 2. Content Body */}
+            <div class="p-6 flex flex-col flex-1 relative">
+                {/* Decorative corner */}
+                <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/10 group-hover:border-[var(--project-color)] transition-colors"></div>
+
+                {/* Header */}
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <span class="block font-mono text-[10px] text-gray-500 uppercase tracking-widest mb-1 group-hover:text-[var(--project-color)] transition-colors">
+                            {project.data.year}
+                        </span>
+                        <h3 class="text-2xl font-bold text-white tracking-tight leading-none group-hover:translate-x-1 transition-transform duration-300">
+                            {project.data.title}
+                        </h3>
+                    </div>
+                    
+                    {/* Arrow Icon */}
+                    <div class="text-gray-600 group-hover:text-white transform group-hover:-rotate-45 transition-all duration-300">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+                    </div>
+                </div>
+
+                {/* Description (Truncated) */}
+                <p class="text-sm text-gray-400 leading-relaxed mb-6 line-clamp-2">
+                    {project.data.description}
+                </p>
+
+                {/* Footer / Stack */}
+                <div class="mt-auto pt-4 border-t border-white/5 flex flex-wrap gap-2">
+                    {project.data.stack && project.data.stack.slice(0, 3).map(tech => (
+                        <span class="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-1 rounded border border-white/5 group-hover:border-[var(--project-color)]/30 group-hover:text-gray-300 transition-colors">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </a>
+    ))}
+</div>
