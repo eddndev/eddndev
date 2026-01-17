@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  caption?: string;
+}
+const { src, alt, caption } = Astro.props;
+---
+<div class="my-10 w-full">
+  <Image src={src} alt={alt} class="w-full h-auto" />
+  {caption && <p class="text-sm text-gray-500 mt-2 text-center font-mono">{caption}</p>}
+</div>

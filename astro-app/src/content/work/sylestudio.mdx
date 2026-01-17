@@ -1,0 +1,58 @@
+---
+title: "Syle Studio"
+description: "Plataforma digital integral para un estudio creativo. E-commerce de streetwear, portafolio editorial y sistema de gestión a medida."
+year: 2024
+category: "E-Commerce & Portfolio"
+color: "#ffffff"
+stack: ["Laravel", "GSAP", "Spatie Media Library", "Custom Backoffice"]
+heroStyle: "bg-gradient-to-br from-gray-900 to-black"
+links:
+  Live Site: "https://sylestudio.com"
+  GitHub: "https://github.com/eddndev/sylestudio"
+featured: true
+---
+import TextBlock from '../../components/blocks/TextBlock.astro';
+import ImageFull from '../../components/blocks/ImageFull.astro';
+import StatsGrid from '../../components/blocks/StatsGrid.astro';
+import heroImg from '../../assets/images/projects/syle/hero.png';
+import navImg from '../../assets/images/projects/syle/navegacion.png';
+import projectsImg from '../../assets/images/projects/syle/proyectos.png';
+
+<TextBlock
+  heading="Independencia Digital"
+  body="Las opciones eran claras: someterse a la homogeneidad de Shopify o construir bajo nuestros propios términos. Elegimos la libertad. Syle Studio no es solo una tienda; es una declaración de principios. Queríamos una plataforma que invitara a explorar el mundo del estudio —fotografía, eventos, comunidad— antes de pedir una transacción. Sin fees mensuales, sin plantillas genéricas."
+/>
+
+<ImageFull
+  src={heroImg}
+  alt="Hero de Syle Studio mostrando fotografía editorial de vitrales."
+  caption="Estética cinematográfica como primer impacto."
+/>
+
+<StatsGrid
+  items={[
+    {value: '100%', label: 'Custom CMS'},
+    {value: '20MB->1MB', label: 'Optimización'},
+    {value: '0%', label: 'Platform Fees'},
+    {value: 'Editorial', label: 'Enfoque Visual'},
+  ]}
+/>
+
+<TextBlock
+  heading="Ingeniería de Performance"
+  body={`El desafío real no fue el e-commerce, fue el arte. Las galerías de eventos contienen docenas de imágenes de alta resolución que matarían el rendimiento de cualquier sitio estándar.
+
+Implementamos un pipeline de procesamiento asíncrono: cada imagen subida al backoffice se procesa en segundo plano mediante colas de trabajo (Jobs), generando versiones AVIF y WebP optimizadas. El resultado se sirve vía CDN, permitiendo una experiencia visual rica sin sacrificar la velocidad de carga.`}
+/>
+
+<ImageFull
+  src={navImg}
+  alt="Grid de navegación principal del sitio."
+  caption="Navegación inmersiva: Nosotros, Tienda, Proyectos."
+/>
+
+<ImageFull
+  src={projectsImg}
+  alt="Grid de proyectos creativos."
+  caption="Galería de eventos y colecciones."
+/>

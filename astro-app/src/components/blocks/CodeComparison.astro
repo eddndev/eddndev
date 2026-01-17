@@ -1,0 +1,16 @@
+---
+interface Props {
+  heading?: string;
+  description?: string;
+  language: string;
+  code: string;
+  caption?: string;
+}
+const { heading, description, language, code, caption } = Astro.props;
+---
+<div class="my-10 border border-white/10 bg-white/5 p-6 rounded-lg">
+  {heading && <h3 class="text-xl font-bold mb-2">{heading}</h3>}
+  {description && <p class="text-gray-400 mb-4">{description}</p>}
+  <pre class="bg-black/50 p-4 rounded overflow-x-auto text-sm font-mono text-gray-200"><code>{code}</code></pre>
+  {caption && <p class="text-xs text-gray-600 mt-2 text-right font-mono">{caption}</p>}
+</div>

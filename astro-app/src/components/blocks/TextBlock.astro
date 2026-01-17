@@ -1,0 +1,11 @@
+---
+interface Props {
+  heading?: string;
+  body: string;
+}
+const { heading, body } = Astro.props;
+---
+<div class="my-10">
+  {heading && <h3 class="text-2xl font-bold mb-4">{heading}</h3>}
+  <p class="text-gray-300 leading-relaxed whitespace-pre-line">{body}</p>
+</div>
