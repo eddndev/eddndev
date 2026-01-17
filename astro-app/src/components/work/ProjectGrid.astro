@@ -12,7 +12,7 @@ const { projects } = Astro.props;
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
     {projects.map((project, index) => (
         <a href={`/work/${project.slug}`} 
-           class="group relative flex flex-col bg-[#080808] border-4 border-white/5 hover:border-[var(--project-color)] transition-all duration-500 overflow-hidden rounded-3xl"
+           class="group relative flex flex-col bg-[#080808] transition-all duration-500 overflow-hidden rounded-3xl"
            style={`--project-color: ${project.data.color ?? '#ffffff'};`}>
             
             {/* 1. Image Container (Aspect Video) */}
@@ -32,13 +32,6 @@ const { projects } = Astro.props;
 
                 {/* Overlay Gradient */}
                 <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60"></div>
-                
-                {/* ID Badge (Top Right) */}
-                <div class="absolute top-6 right-6 bg-black/50 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full">
-                    <span class="font-mono text-[10px] font-bold text-[var(--project-color)] tracking-widest">
-                        {(index + 1).toString().padStart(2, '0')}
-                    </span>
-                </div>
             </div>
 
             {/* 2. Content Body */}
