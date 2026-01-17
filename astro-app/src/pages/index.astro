@@ -4,9 +4,6 @@ import { getCollection } from 'astro:content';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import Focus from '../components/sections/Focus.astro';
-import FocusUX from '../components/sections/FocusUX.astro';
-import FocusFE from '../components/sections/FocusFE.astro';
-import FocusBE from '../components/sections/FocusBE.astro';
 import ProjectGrid from '../components/work/ProjectGrid.astro';
 
 // Get all projects for the list
@@ -97,10 +94,6 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
     
         </div>
     </section>
-
-    <FocusUX />
-    <FocusFE />
-    <FocusBE />
 
     <Footer />
 
