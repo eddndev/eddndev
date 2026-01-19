@@ -42,20 +42,20 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
         
         <div class="min-h-screen bg-black">
             
-            <!-- 1. FIXED STRUCTURE -->
+            <!-- 1. INFRASTRUCTURE (Always Visible / Fixed) -->
             <Sidebar />
+            <TopBar project={project} />
             
-            <!-- 2. NAVIGATION GRID (Overlay in Content Area) -->
-            <!-- Positioned by CSS to fit exactly in the content hole -->
+            <!-- 2. NAVIGATION GRID (Overlay under Header, right of Sidebar) -->
             <NavigationPanel />
 
-            <!-- 3. PAGE CONTENT -->
+            <!-- 3. PAGE CONTENT (Scrollable area) -->
+            <!-- Top padding creates space for the fixed TopBar -->
+            <!-- Left padding creates space for the fixed Sidebar -->
             <div 
                 id="page-content"
-                class="flex flex-col min-w-0 pt-16 lg:pt-0 lg:pl-20 2xl:pl-24 relative z-10 bg-black"
+                class="flex flex-col min-w-0 pt-16 lg:pt-20 2xl:pt-24 lg:pl-20 2xl:pl-24 relative z-10 bg-black transition-opacity duration-500"
             >
-                <TopBar project={project} />
-                
                 <main class="flex-1 relative z-10">
                     <slot />
                 </main>
@@ -82,28 +82,34 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
                     isOpen = !isOpen;
 
                     if (isOpen) {
-                        // Reveal Panel
-                        navPanel.classList.remove('opacity-0', 'pointer-events-none', 'scale-[0.98]');
+                        // 1. Lock Scroll (HTML + Body for mobile/desktop compat)
+                        document.documentElement.style.overflow = 'hidden';
                         document.body.style.overflow = 'hidden';
 
-                        // Dim Content
+                        // 2. Reveal Nav Panel
+                        navPanel.classList.remove('opacity-0', 'pointer-events-none', 'scale-[0.98]');
+
+                        // 3. Hide Content (Opacity 0)
                         if (pageContent) {
-                            gsap.to(pageContent, { opacity: 0.1, duration: 0.5, ease: "power2.out" });
-                            pageContent.style.pointerEvents = 'none'; // Prevent clicks on content
+                            gsap.to(pageContent, { opacity: 0, duration: 0.5, ease: "power2.out" });
+                            pageContent.style.pointerEvents = 'none';
                         }
 
-                        // Animate Grid Items (Stagger)
+                        // 4. Animate Grid Items
                         gsap.fromTo(navCards, 
                             { y: 20, opacity: 0 },
                             { y: 0, opacity: 1, duration: 0.4, stagger: 0.05, delay: 0.1, ease: "power2.out" }
                         );
 
                     } else {
-                        // Hide Panel
-                        navPanel.classList.add('opacity-0', 'pointer-events-none', 'scale-[0.98]');
+                        // 1. Unlock Scroll
+                        document.documentElement.style.overflow = '';
                         document.body.style.overflow = '';
 
-                        // Restore Content
+                        // 2. Hide Nav Panel
+                        navPanel.classList.add('opacity-0', 'pointer-events-none', 'scale-[0.98]');
+
+                        // 3. Restore Content
                         if (pageContent) {
                             gsap.to(pageContent, { opacity: 1, duration: 0.5, ease: "power2.out" });
                             pageContent.style.pointerEvents = 'auto';
