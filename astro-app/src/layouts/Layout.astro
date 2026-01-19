@@ -71,7 +71,7 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
             document.addEventListener('astro:page-load', () => {
                 const trigger = document.getElementById('sidebar-menu-btn');
                 const navPanel = document.getElementById('nav-panel');
-                // For nav items stagger animation
+                const pageContent = document.getElementById('page-content');
                 const navCards = document.querySelectorAll('.nav-card');
 
                 let isOpen = false;
@@ -86,6 +86,12 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
                         navPanel.classList.remove('opacity-0', 'pointer-events-none', 'scale-[0.98]');
                         document.body.style.overflow = 'hidden';
 
+                        // Dim Content
+                        if (pageContent) {
+                            gsap.to(pageContent, { opacity: 0.1, duration: 0.5, ease: "power2.out" });
+                            pageContent.style.pointerEvents = 'none'; // Prevent clicks on content
+                        }
+
                         // Animate Grid Items (Stagger)
                         gsap.fromTo(navCards, 
                             { y: 20, opacity: 0 },
@@ -96,6 +102,12 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
                         // Hide Panel
                         navPanel.classList.add('opacity-0', 'pointer-events-none', 'scale-[0.98]');
                         document.body.style.overflow = '';
+
+                        // Restore Content
+                        if (pageContent) {
+                            gsap.to(pageContent, { opacity: 1, duration: 0.5, ease: "power2.out" });
+                            pageContent.style.pointerEvents = 'auto';
+                        }
                     }
                 }
 
