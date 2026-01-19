@@ -13,6 +13,7 @@ const { projects } = Astro.props;
     {projects.map((project, index) => (
         <a href={`/work/${project.slug}`} 
            data-cursor-text="VER CASO"
+           data-project-card
            class="group relative w-full flex flex-col md:flex-row items-baseline md:items-center py-12 px-6 sm:px-12 border-b border-white/10 overflow-hidden bg-[#020202] transition-colors duration-500 hover:bg-[#050505]"
            style={`--project-color: ${project.data.color ?? '#ffffff'};`}>
             

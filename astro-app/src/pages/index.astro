@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import Focus from '../components/sections/Focus.astro';
-import ProjectGrid from '../components/work/ProjectGrid.astro';
+import ProjectList from '../components/work/ProjectList.astro';
 
 // Get all projects for the list
 const projects = await getCollection('work');
@@ -68,6 +68,8 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
     <section id="work" class="bg-black text-white border-t border-white/10 relative overflow-hidden">
         <!-- Structural Grid -->
         <div class="absolute inset-0 pointer-events-none select-none max-w-[1800px] mx-auto px-6 sm:px-12">
+            <!-- Vertical line aligned with previous sections (approx 41%) -->
+            <div class="hidden lg:block absolute left-[41.666667%] top-0 bottom-0 w-px bg-white/10 origin-top transform scale-y-0" data-line-vertical></div>
         </div>
     
         <div class="mx-auto max-w-[1800px] relative z-10">
@@ -85,9 +87,9 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
                 </div>
             </div>
     
-            <!-- Project Grid Component -->
-            <div class="px-6 sm:px-12 pb-32">
-                <ProjectGrid projects={projects} />
+            <!-- Project List Component -->
+            <div class="pb-32">
+                <ProjectList projects={projects} />
             </div>
     
         </div>

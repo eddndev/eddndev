@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SvgSprite from '../components/SvgSprite.astro';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
 	title?: string;
@@ -26,6 +27,7 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento." } 
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+        <ClientRouter />
 	</head>
 	<body class="bg-black text-white antialiased">
         <!-- Custom Cursor -->

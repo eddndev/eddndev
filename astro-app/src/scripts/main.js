@@ -1,4 +1,4 @@
-import { gsap } from './core/gsap-core';
+import { ScrollTrigger } from './core/gsap-core';
 import './core/lenis';
 import { onReady } from './core/dom';
 
@@ -15,9 +15,13 @@ import initNavigation from './features/navigation';
 import initProjectHero from './animations/project-hero';
 import { initCursor } from './features/cursor';
 
-// Boot
-onReady(() => {
+const init = () => {
   console.log('Astro app booting...');
+  
+  // Reset ScrollTrigger instances to avoid duplicates on navigation
+  ScrollTrigger.getAll().forEach(t => t.kill());
+  ScrollTrigger.clearMatchMedia();
+  
   initCursor();
   initHero();
   initMicro();
@@ -30,4 +34,7 @@ onReady(() => {
   initFooterReveal();
   initNavigation();
   initProjectHero();
-});
+};
+
+// Boot on initial load and on every page transition
+document.addEventListener('astro:page-load', init);

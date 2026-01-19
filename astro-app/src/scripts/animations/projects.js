@@ -1,7 +1,7 @@
 import { gsap, ScrollTrigger } from '../core/gsap-core';
 
 export default function initProjects() {
-  const section = document.querySelector('#proyectos');
+  const section = document.querySelector('#work');
   if (!section) return;
 
   // 1. Text Reveals
