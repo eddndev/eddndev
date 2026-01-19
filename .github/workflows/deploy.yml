@@ -1,4 +1,4 @@
-name: Deploy to Hostgator (Production)
+name: Deploy Astro to Hostgator
 
 on:
   push:
@@ -6,12 +6,10 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
-    name: Build & Deploy
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -19,12 +17,13 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install & Build Assets
+      - name: Install & Build (Astro)
+        working-directory: ./astro-app
         run: |
           npm ci
           npm run build
 
-      - name: Deploy Backend via SSH
+      - name: Clean Server Directory
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -32,57 +31,16 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 2222
           script: |
-            set -e
-            
-            # --- CONFIGURACIÓN DE RUTAS ---
-            # Tu PHP 8.3 real
-            PHP_BIN="/opt/cpanel/ea-php83/root/usr/bin/php"
-            # La ruta de Composer que encontraste
-            COMPOSER_BIN="/opt/cpanel/composer/bin/composer"
+            # Clean public_html for fresh deployment
+            rm -rf /home/edndevco/public_html/*
 
-            echo "🚀 Iniciando despliegue usando PHP 8.3 y Composer de sistema..."
-            
-            cd ${{ secrets.PROJECT_PATH }}
-
-            # 1. Poner en mantenimiento
-            $PHP_BIN artisan down || true
-
-            # 2. Descartar cambios locales y descargar código
-            git reset --hard HEAD
-            git pull origin main
-
-            # 3. Instalar dependencias
-            # Usamos $PHP_BIN delante de $COMPOSER_BIN para asegurar que Composer
-            # se ejecute con la versión 8.3 y no con la del sistema por defecto.
-            export COMPOSER_ALLOW_SUPERUSER=1
-            $PHP_BIN $COMPOSER_BIN install --no-interaction --prefer-dist --optimize-autoloader --no-dev
-
-            # 4. Migraciones, Seeds y Limpieza
-            echo "🗄️  Ejecutando migraciones..."
-            $PHP_BIN artisan migrate --force
-
-            echo "🌱 Sembrando base de datos..."
-            # Usamos --force para producción y --class=DatabaseSeeder para correr todo
-            $PHP_BIN artisan db:seed --force
-            
-            echo "🧹 Limpiando cachés..."
-            $PHP_BIN artisan optimize:clear
-            $PHP_BIN artisan config:cache
-            $PHP_BIN artisan event:cache
-            $PHP_BIN artisan route:cache
-            $PHP_BIN artisan view:cache
-
-            # 5. Levantar el sitio
-            $PHP_BIN artisan up
-            
-            echo "✅ ¡Despliegue Exitoso!"
-
-      - name: Upload Built Assets to Hostgator
+      - name: Upload Files
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 2222
-          source: "public/build"
-          target: ${{ secrets.PROJECT_PATH }}
+          source: "astro-app/dist/*"
+          target: "/home/edndevco/public_html"
+          strip_components: 2
