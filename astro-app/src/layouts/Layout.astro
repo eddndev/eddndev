@@ -82,9 +82,9 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
                     isOpen = !isOpen;
 
                     if (isOpen) {
-                        // 1. Lock Scroll (HTML + Body for mobile/desktop compat)
-                        document.documentElement.style.overflow = 'hidden';
-                        document.body.style.overflow = 'hidden';
+                        // 1. Lock Scroll (Class based)
+                        document.documentElement.classList.add('no-scroll');
+                        document.body.classList.add('no-scroll');
 
                         // 2. Reveal Nav Panel
                         navPanel.classList.remove('opacity-0', 'pointer-events-none', 'scale-[0.98]');
@@ -103,8 +103,8 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
 
                     } else {
                         // 1. Unlock Scroll
-                        document.documentElement.style.overflow = '';
-                        document.body.style.overflow = '';
+                        document.documentElement.classList.remove('no-scroll');
+                        document.body.classList.remove('no-scroll');
 
                         // 2. Hide Nav Panel
                         navPanel.classList.add('opacity-0', 'pointer-events-none', 'scale-[0.98]');

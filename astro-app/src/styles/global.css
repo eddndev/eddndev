@@ -5,26 +5,30 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+}
+
 html {
     scrollbar-gutter: stable;
 }
 
-body {
-    font-family: 'Instrument Sans', sans-serif;
-    background-color: #050505; /* Fondo casi negro para mejor contraste */
-    color: #ffffff;
+/* Scroll Lock Robusto */
+body.no-scroll, html.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
 }
 
-/* Estilo para un sutil efecto de gradiente en el texto del héroe */
 .hero-text-gradient {
-    background: linear-gradient(to right, #be88ff, #b5d8fd); /* De morado a morado claro */
+    background: linear-gradient(to right, #be88ff, #b5d8fd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
 
-/* Ocultar cursor nativo solo en desktop para usar el custom */
 @media (min-width: 1024px) {
     body, a, button, [role="button"] {
         cursor: none !important;

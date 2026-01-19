@@ -1,5 +1,4 @@
 ---
-// TopBar.astro: La barra superior horizontal ("Header con algo")
 import { Image } from 'astro:assets';
 import logoImg from '../../assets/images/logo.png';
 
@@ -14,28 +13,26 @@ const { project } = Astro.props;
 
 <header 
     id="top-bar"
-    class="sticky top-0 lg:static z-40 h-16 lg:h-20 2xl:h-24 flex items-center bg-black/90 lg:bg-transparent backdrop-blur lg:backdrop-blur-none border-b border-white/10 px-6 sm:px-8 w-full transition-all duration-300 ml-16 lg:ml-0 -mt-16 lg:mt-0"
+    class="fixed top-0 right-0 z-40 h-16 lg:h-20 2xl:h-24 flex items-center bg-black/40 backdrop-blur-xl border-b border-white/10 px-6 sm:px-12 transition-all duration-300 left-0 lg:left-20 2xl:left-24"
 >
-    <!-- Brand / Context -->
-    <div class="flex items-center gap-6 h-full w-full">
+    <div class="flex items-center gap-6 h-full w-full max-w-[1800px] mx-auto">
         
-        <!-- Logo (Visible en TopBar para dar contexto) -->
+        <!-- Contextual Logo -->
         <a href="/" class="flex items-center gap-3 group">
             <Image 
                 src={logoImg} 
                 alt="EDDN.DEV" 
-                class="h-5 lg:h-6 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity" 
+                class="h-5 lg:h-6 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity" 
             />
         </a>
 
-        <!-- Vertical Divider -->
         <div class="h-4 w-px bg-white/10 hidden sm:block"></div>
 
-        <!-- Dynamic Context (Project Title or Status) -->
+        <!-- Dynamic Context -->
         <div class="flex items-center flex-1">
             {project ? (
-                <div class="flex items-center gap-3 animate-fade-in">
-                    <span class="text-[10px] lg:text-xs font-mono text-purple-400 uppercase tracking-widest border border-purple-500/30 px-2 py-0.5 rounded bg-purple-500/10">CASE STUDY</span>
+                <div class="flex items-center gap-3 animate-in fade-in slide-in-from-left-4 duration-500">
+                    <span class="text-[9px] lg:text-[10px] font-mono text-purple-400 uppercase tracking-widest border border-purple-500/30 px-2 py-0.5 rounded bg-purple-500/10">CASE STUDY</span>
                     <span class="text-sm lg:text-base font-bold text-white tracking-tight">{project.title}</span>
                 </div>
             ) : (
@@ -51,12 +48,10 @@ const { project } = Astro.props;
             )}
         </div>
 
-        <!-- Right Side: Contact / CTA (Optional) -->
         <div class="hidden md:flex items-center gap-6">
             <a href="mailto:contacto@eddndev.com" class="text-xs font-mono text-gray-400 hover:text-white transition-colors">
                 contacto@eddndev.com
             </a>
         </div>
-
     </div>
 </header>
