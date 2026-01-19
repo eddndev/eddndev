@@ -1,0 +1,62 @@
+---
+// TopBar.astro: La barra superior horizontal ("Header con algo")
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/images/logo.png';
+
+interface Props {
+  project?: {
+    title: string;
+  };
+}
+
+const { project } = Astro.props;
+---
+
+<header 
+    id="top-bar"
+    class="sticky top-0 lg:static z-40 h-16 lg:h-20 2xl:h-24 flex items-center bg-black/90 lg:bg-transparent backdrop-blur lg:backdrop-blur-none border-b border-white/10 px-6 sm:px-8 w-full transition-all duration-300 ml-16 lg:ml-0 -mt-16 lg:mt-0"
+>
+    <!-- Brand / Context -->
+    <div class="flex items-center gap-6 h-full w-full">
+        
+        <!-- Logo (Visible en TopBar para dar contexto) -->
+        <a href="/" class="flex items-center gap-3 group">
+            <Image 
+                src={logoImg} 
+                alt="EDDN.DEV" 
+                class="h-5 lg:h-6 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity" 
+            />
+        </a>
+
+        <!-- Vertical Divider -->
+        <div class="h-4 w-px bg-white/10 hidden sm:block"></div>
+
+        <!-- Dynamic Context (Project Title or Status) -->
+        <div class="flex items-center flex-1">
+            {project ? (
+                <div class="flex items-center gap-3 animate-fade-in">
+                    <span class="text-[10px] lg:text-xs font-mono text-purple-400 uppercase tracking-widest border border-purple-500/30 px-2 py-0.5 rounded bg-purple-500/10">CASE STUDY</span>
+                    <span class="text-sm lg:text-base font-bold text-white tracking-tight">{project.title}</span>
+                </div>
+            ) : (
+                <div class="flex items-center gap-3">
+                     <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                     </span>
+                     <span class="hidden sm:inline-block text-[10px] lg:text-xs font-mono text-gray-400 uppercase tracking-widest">
+                        Available for work
+                     </span>
+                </div>
+            )}
+        </div>
+
+        <!-- Right Side: Contact / CTA (Optional) -->
+        <div class="hidden md:flex items-center gap-6">
+            <a href="mailto:contacto@eddndev.com" class="text-xs font-mono text-gray-400 hover:text-white transition-colors">
+                contacto@eddndev.com
+            </a>
+        </div>
+
+    </div>
+</header>

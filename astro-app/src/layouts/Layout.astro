@@ -2,13 +2,17 @@
 import '../styles/global.css';
 import SvgSprite from '../components/SvgSprite.astro';
 import { ClientRouter } from 'astro:transitions';
+import Sidebar from '../components/layout/Sidebar.astro';
+import TopBar from '../components/layout/TopBar.astro';
+import MobileMenu from '../components/layout/MobileMenu.astro';
 
 interface Props {
 	title?: string;
     description?: string;
+    project?: { title: string }; // Add project context support
 }
 
-const { title = "edd n' dev", description = "Oferta especial de lanzamiento." } = Astro.props;
+const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", project } = Astro.props;
 ---
 
 <!doctype html>
@@ -29,17 +33,33 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento." } 
 		<title>{title}</title>
         <ClientRouter />
 	</head>
-	<body class="bg-black text-white antialiased">
+	<body class="bg-black text-white antialiased overflow-x-hidden">
         <!-- Custom Cursor -->
         <div id="custom-cursor" class="hidden lg:flex fixed top-0 left-0 z-[9999] pointer-events-none w-4 h-4 rounded-full bg-white mix-blend-difference items-center justify-center transform -translate-x-1/2 -translate-y-1/2 will-change-[width,height,transform]">
             <span id="cursor-label" class="text-xs font-black text-white opacity-0 tracking-widest font-mono uppercase whitespace-nowrap"></span>
         </div>
 
         <SvgSprite />
+        <MobileMenu />
         
-		<main class="min-h-screen relative z-10">
-			<slot />
-		</main>
+        <!-- LAYOUT GRID -->
+        <div class="min-h-screen flex flex-col lg:grid lg:grid-cols-[auto_1fr]">
+            
+            <!-- COL 1: SIDEBAR (Sticky) -->
+            <Sidebar />
+
+            <!-- COL 2: CONTENT WRAPPER -->
+            <div class="flex flex-col min-w-0 relative">
+                <!-- ROW 1: TOP BAR (Sticky/Fixed depending on design, here sticky to content top) -->
+                <TopBar project={project} />
+                
+                <!-- ROW 2: MAIN CONTENT -->
+                <main class="flex-1 relative z-10">
+                    <slot />
+                </main>
+            </div>
+
+        </div>
         
         <script src="../scripts/main.js"></script>
 	</body>

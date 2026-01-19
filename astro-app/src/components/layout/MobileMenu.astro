@@ -1,0 +1,96 @@
+---
+// MobileMenu.astro: El overlay de navegación (controlado por Sidebar Trigger)
+const navItems = [
+  { label: 'Inicio', url: '/', sub: 'Index' },
+  { label: 'Proyectos', url: '/#work', sub: 'Casos de Estudio' },
+  { label: 'Perfil', url: '/profile', sub: 'Estudio' },
+  { label: 'Contacto', url: 'mailto:contacto@eddndev.com', sub: 'Hablemos' },
+];
+---
+
+<div 
+    id="mobile-menu-overlay"
+    class="fixed inset-0 z-[100] bg-[#050505] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] flex flex-col"
+>
+    <!-- Header dentro del menú (para cerrar) -->
+    <div class="h-16 lg:h-20 2xl:h-24 flex items-center justify-between px-6 border-b border-white/10">
+        <span class="font-mono text-xs text-gray-500 tracking-widest">[ NAVEGACIÓN ]</span>
+        <button id="menu-close-btn" class="w-10 h-10 flex items-center justify-center text-white hover:text-purple-500 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+
+    <!-- Grid Background -->
+    <div class="absolute inset-0 top-20 z-0 opacity-10 pointer-events-none" 
+         style="background-image: linear-gradient(to right, #444 1px, transparent 1px), linear-gradient(to bottom, #444 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+
+    <!-- Nav Links -->
+    <nav class="flex-1 flex flex-col justify-center px-8 lg:px-24 gap-4 relative z-10">
+        {navItems.map((item, index) => (
+            <a href={item.url} 
+               class="menu-link group flex items-baseline gap-6 py-4 border-b border-white/5 hover:border-purple-500/50 transition-colors"
+               data-astro-reload>
+                <span class="font-mono text-xs text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+                    0{index + 1}
+                </span>
+                <span class="text-4xl lg:text-6xl font-black text-white group-hover:translate-x-4 transition-transform duration-300 tracking-tighter">
+                    {item.label}
+                </span>
+                <span class="text-xs font-mono text-gray-600 uppercase tracking-widest ml-auto opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                    {item.sub}
+                </span>
+            </a>
+        ))}
+    </nav>
+    
+    <!-- Footer Context -->
+    <div class="p-8 border-t border-white/10 flex justify-between items-end text-gray-500 font-mono text-[10px] lg:text-xs">
+        <div>
+            EDDNDEV STUDIO<br>
+            EST. 2020
+        </div>
+        <div class="text-right">
+            CDMX, MX<br>
+            ONLINE
+        </div>
+    </div>
+</div>
+
+<script>
+    import { gsap } from 'gsap'; // Aseguramos que GSAP esté disponible si se usa en transiciones complejas
+    
+    const trigger = document.getElementById('sidebar-menu-btn');
+    const closeBtn = document.getElementById('menu-close-btn');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const links = document.querySelectorAll('.menu-link');
+
+    let isOpen = false;
+
+    function toggleMenu() {
+        isOpen = !isOpen;
+        if (isOpen) {
+            overlay.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+            
+            // Stagger Animation for Links
+            gsap.fromTo(links, 
+                { x: 50, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.5, stagger: 0.05, delay: 0.2, ease: "power3.out" }
+            );
+            
+        } else {
+            overlay.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if(trigger) trigger.addEventListener('click', toggleMenu);
+    if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+    
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if(isOpen) toggleMenu();
+        });
+    });
+</script>
