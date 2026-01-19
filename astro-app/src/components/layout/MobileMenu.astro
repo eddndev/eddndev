@@ -10,7 +10,7 @@ const navItems = [
 
 <div 
     id="mobile-menu-overlay"
-    class="fixed inset-0 z-[100] bg-[#050505] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] flex flex-col"
+    class="fixed inset-0 z-[100] bg-[#050505] transform -translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] flex flex-col"
 >
     <!-- Header dentro del menú (para cerrar) -->
     <div class="h-16 lg:h-20 2xl:h-24 flex items-center justify-between px-6 border-b border-white/10">
@@ -58,7 +58,7 @@ const navItems = [
 </div>
 
 <script>
-    import { gsap } from 'gsap'; // Aseguramos que GSAP esté disponible si se usa en transiciones complejas
+    import { gsap } from 'gsap';
     
     const trigger = document.getElementById('sidebar-menu-btn');
     const closeBtn = document.getElementById('menu-close-btn');
@@ -68,19 +68,21 @@ const navItems = [
     let isOpen = false;
 
     function toggleMenu() {
+        if (!overlay) return;
         isOpen = !isOpen;
+        
         if (isOpen) {
-            overlay.classList.remove('translate-x-full');
+            overlay.classList.remove('-translate-x-full');
             document.body.style.overflow = 'hidden';
             
-            // Stagger Animation for Links
+            // Stagger Animation for Links (sliding from left now)
             gsap.fromTo(links, 
-                { x: 50, opacity: 0 },
+                { x: -50, opacity: 0 },
                 { x: 0, opacity: 1, duration: 0.5, stagger: 0.05, delay: 0.2, ease: "power3.out" }
             );
             
         } else {
-            overlay.classList.add('translate-x-full');
+            overlay.classList.add('-translate-x-full');
             document.body.style.overflow = '';
         }
     }
