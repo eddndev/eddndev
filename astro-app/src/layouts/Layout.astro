@@ -40,23 +40,20 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
 
         <SvgSprite />
         
-        <!-- GLOBAL WRAPPER -->
         <div class="min-h-screen bg-black">
             
-            <!-- 1. FIXED SIDEBAR (Always on top or left) -->
+            <!-- 1. FIXED STRUCTURE -->
             <Sidebar />
-
-            <!-- 2. NAVIGATION PANEL (Hidden left by default) -->
+            
+            <!-- 2. NAVIGATION GRID (Overlay in Content Area) -->
+            <!-- Positioned by CSS to fit exactly in the content hole -->
             <NavigationPanel />
 
-            <!-- 3. PAGE CONTENT WRAPPER -->
-            <!-- This wrapper moves right when menu opens on Desktop -->
+            <!-- 3. PAGE CONTENT -->
             <div 
                 id="page-content"
-                class="flex flex-col min-w-0 pt-16 lg:pt-0 lg:pl-20 2xl:pl-24 relative z-10 bg-black transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] origin-left will-change-transform"
+                class="flex flex-col min-w-0 pt-16 lg:pt-0 lg:pl-20 2xl:pl-24 relative z-10 bg-black"
             >
-                <div class="overlay-dimmer absolute inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-500 z-50"></div>
-
                 <TopBar project={project} />
                 
                 <main class="flex-1 relative z-10">
@@ -67,63 +64,45 @@ const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", p
         
         <script src="../scripts/main.js"></script>
 
-        <!-- LAYOUT SCRIPT: MENU TOGGLE -->
+        <!-- MENU TOGGLE SCRIPT -->
         <script>
             import { gsap } from 'gsap';
 
             document.addEventListener('astro:page-load', () => {
                 const trigger = document.getElementById('sidebar-menu-btn');
-                const closeBtn = document.getElementById('nav-close-btn');
                 const navPanel = document.getElementById('nav-panel');
-                const pageContent = document.getElementById('page-content');
-                const dimmer = pageContent?.querySelector('.overlay-dimmer');
-                const navLinks = document.querySelectorAll('.nav-link');
+                // For nav items stagger animation
+                const navCards = document.querySelectorAll('.nav-card');
 
                 let isOpen = false;
 
                 function toggleMenu() {
-                    if (!navPanel || !pageContent) return;
+                    if (!navPanel) return;
                     
                     isOpen = !isOpen;
 
                     if (isOpen) {
-                        // OPEN STATE
-                        navPanel.classList.remove('-translate-x-full');
-                        
-                        // Desktop: Push Content
-                        if (window.matchMedia('(min-width: 1024px)').matches) {
-                            pageContent.style.transform = 'translateX(450px)';
-                            if(dimmer) {
-                                dimmer.classList.remove('pointer-events-none', 'opacity-0');
-                                dimmer.addEventListener('click', toggleMenu, { once: true });
-                            }
-                        } else {
-                            // Mobile: No push, just overlay (panel is z-40, content is z-10)
-                            document.body.style.overflow = 'hidden';
-                        }
+                        // Reveal Panel
+                        navPanel.classList.remove('opacity-0', 'pointer-events-none', 'scale-[0.98]');
+                        document.body.style.overflow = 'hidden';
 
-                        // Animate Links
-                        gsap.fromTo(navLinks, 
-                            { x: -30, opacity: 0 },
-                            { x: 0, opacity: 1, duration: 0.4, stagger: 0.05, delay: 0.15, ease: "power2.out" }
+                        // Animate Grid Items (Stagger)
+                        gsap.fromTo(navCards, 
+                            { y: 20, opacity: 0 },
+                            { y: 0, opacity: 1, duration: 0.4, stagger: 0.05, delay: 0.1, ease: "power2.out" }
                         );
 
                     } else {
-                        // CLOSE STATE
-                        navPanel.classList.add('-translate-x-full');
-                        pageContent.style.transform = ''; // Reset transform
-                        
-                        if(dimmer) {
-                            dimmer.classList.add('pointer-events-none', 'opacity-0');
-                        }
+                        // Hide Panel
+                        navPanel.classList.add('opacity-0', 'pointer-events-none', 'scale-[0.98]');
                         document.body.style.overflow = '';
                     }
                 }
 
                 if(trigger) trigger.addEventListener('click', toggleMenu);
-                if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
                 
-                navLinks.forEach(link => {
+                // Close on link click
+                navCards.forEach(link => {
                     link.addEventListener('click', () => {
                         if(isOpen) toggleMenu();
                     });
