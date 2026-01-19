@@ -5,6 +5,10 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     font-family: 'Instrument Sans', sans-serif;
     background-color: #050505; /* Fondo casi negro para mejor contraste */
