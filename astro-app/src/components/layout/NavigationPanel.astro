@@ -1,0 +1,70 @@
+---
+// NavigationPanel.astro: Panel lateral que empuja el contenido
+const navItems = [
+  { label: 'Inicio', url: '/', sub: 'Index' },
+  { label: 'Proyectos', url: '/#work', sub: 'Casos de Estudio' },
+  { label: 'Perfil', url: '/profile', sub: 'Estudio' },
+  { label: 'Contacto', url: 'mailto:contacto@eddndev.com', sub: 'Hablemos' },
+];
+---
+
+<aside 
+    id="nav-panel"
+    class="fixed top-0 bottom-0 z-40 bg-[#050505] border-r border-white/10 flex flex-col 
+           w-full lg:w-[450px] 
+           left-0 lg:left-20 2xl:left-24
+           transform -translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.175,1)]"
+>
+    <!-- Header interno (Solo mobile, o para cerrar explícitamente) -->
+    <div class="h-16 flex items-center justify-between px-6 border-b border-white/10 lg:hidden">
+        <span class="font-mono text-xs text-gray-500 tracking-widest">[ NAVEGACIÓN ]</span>
+        <button id="nav-close-btn" class="w-10 h-10 flex items-center justify-center text-white hover:text-purple-500 transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+
+    <!-- Background Decor -->
+    <div class="absolute inset-0 z-0 opacity-10 pointer-events-none" 
+         style="background-image: linear-gradient(to right, #444 1px, transparent 1px), linear-gradient(to bottom, #444 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+
+    <!-- Nav Links -->
+    <nav class="flex-1 flex flex-col justify-center px-8 lg:px-12 gap-2 relative z-10">
+        {navItems.map((item, index) => (
+            <a href={item.url} 
+               class="nav-link group relative block py-5 border-b border-white/5 hover:border-purple-500/30 transition-colors overflow-hidden"
+               data-astro-reload>
+                
+                <!-- Hover Background -->
+                <div class="absolute inset-0 bg-white/[0.02] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+
+                <div class="relative flex items-baseline justify-between">
+                    <div class="flex items-baseline gap-4">
+                        <span class="font-mono text-[10px] text-purple-500 opacity-60 group-hover:opacity-100 transition-opacity">
+                            0{index + 1}
+                        </span>
+                        <span class="text-3xl lg:text-4xl font-black text-white group-hover:translate-x-2 transition-transform duration-300 tracking-tight">
+                            {item.label}
+                        </span>
+                    </div>
+                    
+                    <span class="text-[9px] font-mono text-gray-600 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+                        {item.sub}
+                    </span>
+                </div>
+            </a>
+        ))}
+    </nav>
+    
+    <!-- Footer Context -->
+    <div class="p-8 border-t border-white/10 flex justify-between items-end text-gray-500 font-mono text-[10px]">
+        <div>
+            EDDNDEV STUDIO<br>
+            EST. 2020
+        </div>
+        <div class="text-right">
+            CDMX, MX<br>
+            ONLINE
+        </div>
+    </div>
+</aside>
