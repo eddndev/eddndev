@@ -32,7 +32,8 @@ jobs:
           port: 2222
           script: |
             # Clean public_html for fresh deployment
-            rm -rf /home/edndevco/public_html/*
+            # We keep cgi-bin just in case
+            find /home/edndevco/public_html/ -mindepth 1 -not -name 'cgi-bin' -delete
 
       - name: Upload Files
         uses: appleboy/scp-action@master
@@ -44,3 +45,18 @@ jobs:
           source: "astro-app/dist/*"
           target: "/home/edndevco/public_html"
           strip_components: 2
+
+      - name: Fix Permissions & Config
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 2222
+          script: |
+            cd /home/edndevco/public_html
+            # Fix standard directory permissions
+            find . -type d -exec chmod 755 {} \;
+            # Fix standard file permissions
+            find . -type f -exec chmod 644 {} \;
+            echo "✅ Permissions fixed."
