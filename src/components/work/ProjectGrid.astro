@@ -55,19 +55,13 @@ const { projects } = Astro.props;
                 </div>
 
                 {/* Description (Truncated) */}
-                <p class="text-base 2xl:text-lg text-gray-400 leading-relaxed mb-8 line-clamp-2">
+                <p class="text-base 2xl:text-lg text-gray-400 leading-relaxed line-clamp-2">
                     {project.data.description}
                 </p>
-
-                {/* Footer / Stack */}
-                <div class="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-2">
-                    {project.data.stack && project.data.stack.slice(0, 3).map(tech => (
-                        <span class="text-xs 2xl:text-sm font-mono text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10 group-hover:border-[var(--project-color)]/30 transition-colors">
-                            {tech}
-                        </span>
-                    ))}
-                </div>
             </div>
+        </a>
+    ))}
+</div>
         </a>
     ))}
 </div>
