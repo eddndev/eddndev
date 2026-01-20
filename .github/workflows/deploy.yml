@@ -18,7 +18,6 @@ jobs:
           node-version: '20'
 
       - name: Install & Build (Astro)
-        working-directory: ./astro-app
         run: |
           npm ci
           npm run build
@@ -42,9 +41,9 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 2222
-          source: "astro-app/dist/*"
+          source: "dist/*"
           target: "/home/edndevco/public_html"
-          strip_components: 2
+          strip_components: 1
 
       - name: Fix Permissions & Config
         uses: appleboy/ssh-action@master
