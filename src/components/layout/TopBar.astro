@@ -13,10 +13,22 @@ const { project } = Astro.props;
 
 <header 
     id="top-bar"
-    class="fixed top-0 right-0 z-40 h-16 lg:h-20 2xl:h-24 flex items-center bg-black/40 backdrop-blur-xl border-b border-white/10 px-6 sm:px-12 transition-all duration-300 left-0 lg:left-20 2xl:left-24"
+    class="fixed top-0 left-0 right-0 z-40 h-16 lg:h-20 2xl:h-24 flex items-center bg-black/40 backdrop-blur-xl border-b border-white/10 px-6 sm:px-12 transition-all duration-300"
 >
     <div class="flex items-center gap-6 h-full w-full max-w-[1800px] mx-auto">
         
+        <!-- Menu Trigger -->
+        <button 
+            id="sidebar-menu-btn"
+            class="group flex items-center pr-6 border-r border-white/10 h-full hover:bg-white/5 transition-colors -ml-6 sm:-ml-12 pl-6 sm:pl-12"
+            aria-label="Menu"
+        >
+            <div class="relative w-6 h-6 flex flex-col justify-center items-center gap-1.5 overflow-hidden">
+                 <span class="w-full h-[2px] bg-white transform transition-transform duration-300 group-hover:translate-x-1"></span>
+                 <span class="w-full h-[2px] bg-white transform transition-transform duration-300 group-hover:-translate-x-1"></span>
+            </div>
+        </button>
+
         <!-- Contextual Logo -->
         <a href="/" class="flex items-center gap-3 group">
             <Image 
