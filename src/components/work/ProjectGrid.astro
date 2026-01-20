@@ -13,7 +13,7 @@ const { projects } = Astro.props;
     {projects.map((project, index) => (
         <a href={`/work/${project.slug}`} 
            data-project-card
-           class="group relative flex flex-col bg-[#080808] transition-all duration-500 overflow-hidden rounded-3xl"
+           class="group relative flex flex-col bg-[#080808] overflow-hidden rounded-3xl"
            style={`--project-color: ${project.data.color ?? '#ffffff'};`}>
             
             {/* 1. Image Container (Aspect Video) */}

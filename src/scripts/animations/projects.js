@@ -13,7 +13,7 @@ export default function initProjects() {
       {
         y: 0,
         autoAlpha: 1,
-        duration: 0.8,
+        duration: 0.6,
         stagger: 0.05,
         ease: 'power3.out',
         scrollTrigger: {
@@ -33,12 +33,11 @@ export default function initProjects() {
         y: 0,
         scale: 1,
         autoAlpha: 1,
-        duration: 1,
-        delay: i * 0.1,
+        duration: 0.6,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: card,
-          start: 'top 85%',
+          start: 'top 90%',
           toggleActions: 'play none none reverse'
         }
       }
@@ -52,7 +51,7 @@ export default function initProjects() {
       { scaleY: 0 },
       {
         scaleY: 1,
-        duration: 1.5,
+        duration: 1.0,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: section,
