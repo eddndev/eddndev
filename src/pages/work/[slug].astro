@@ -31,7 +31,12 @@ function hexToRgb(hex) {
 const colorStyle = `--project-color: ${entry.data.color}; --project-color-rgb: ${hexToRgb(entry.data.color)}`;
 ---
 
-<Layout title={`${entry.data.title} — Case Study`} project={{ title: entry.data.title }}>
+<Layout 
+    title={`${entry.data.title} — Case Study`} 
+    description={entry.data.description}
+    image={entry.data.cover}
+    project={{ title: entry.data.title }}
+>
     
     <!-- Dynamic Style Wrapper -->
     <div style={colorStyle}>

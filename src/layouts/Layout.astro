@@ -8,28 +8,66 @@ import NavigationPanel from '../components/layout/NavigationPanel.astro';
 interface Props {
 	title?: string;
     description?: string;
+    image?: string | ImageMetadata;
     project?: { title: string };
 }
 
-const { title = "edd n' dev", description = "Oferta especial de lanzamiento.", project } = Astro.props;
+const { 
+    title = "edd n' dev", 
+    description = "Oferta especial de lanzamiento.", 
+    image = "/og-image.png",
+    project 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Resolve image URL
+let socialImageURL = "";
+if (typeof image === 'string') {
+    socialImageURL = new URL(image, Astro.site).href;
+} else if (image && typeof image === 'object' && 'src' in image) {
+    // Handle ImageMetadata (from Content Collections or imports)
+    // Note: Ideally use getImage() for optimized resizing, but .src works for raw asset path in build
+    socialImageURL = new URL(image.src, Astro.site).href;
+}
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        
+        <!-- SEO / Metadata -->
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={socialImageURL} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={socialImageURL} />
+
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		
         <ClientRouter />
 	</head>
 	<body class="bg-black text-white antialiased overflow-x-hidden">
