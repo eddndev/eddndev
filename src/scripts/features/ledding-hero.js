@@ -1,4 +1,4 @@
-import { Ledding, RightAligner, CircleRenderer, Directions, Pattern } from 'ledding';
+import { Ledding, RightAligner, CenterAligner, CircleRenderer, Directions, Pattern } from 'ledding';
 import { logoPattern, dbCylinderPattern } from '../ledding-patterns.js';
 
 export default function initLeddingHero() {
@@ -90,6 +90,37 @@ export default function initLeddingHero() {
         extinction: { pattern: Pattern.RANDOM, delay: 0.1 }
       },
       grid: { fill: true, lifespan: 100 } // Matrix-like background noise
+    });
+  }
+
+  // 4. Contact Hero (Same as Home but confined)
+  const contactTarget = document.querySelector('#ledding-contact-container');
+  if (contactTarget) {
+    new Ledding('#ledding-contact-container', {
+      ledSize: 25,
+      ledGap: 4,
+      scaleToFit: false,
+      artPattern: logoPattern,
+      aligner: CenterAligner,
+      renderer: CircleRenderer,
+      colors: {
+        background: 'rgba(20, 24, 32, 0)',
+        base: 'rgba(45, 55, 72, 1)',
+        states: {
+          1: 'rgba(200, 149, 255, 1)',
+          2: 'rgba(167, 86, 255, 1)',
+          3: 'rgba(167, 86, 255, 1)'
+        }
+      },
+      sizes: { states: { 1: 1.0, 2: 0.7, 3: 0.4 } },
+      fps: 30,
+      animation: {
+        scroll: { direction: Directions.TO_LEFT, speed: 15 },
+        ignition: { pattern: Pattern.CASCADE, direction: Directions.TO_BOTTOM, delay: 0.5 },
+        extinction: { pattern: Pattern.CASCADE, delay: 1.1, direction: Directions.TO_TOP, step: 8 }
+      },
+      transitions: { ignition: { min: 0.05 }, extinction: { min: 0.1 }, morph: { min: 0.1 } },
+      grid: { fill: false, lifespan: 60 }
     });
   }
 }
