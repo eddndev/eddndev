@@ -1,5 +1,5 @@
 import { Ledding, RightAligner, CenterAligner, CircleRenderer, Directions, Pattern } from 'ledding';
-import { logoPattern, dbCylinderPattern } from '../ledding-patterns.js';
+import { logoPattern, dbCylinderPattern, chatPattern } from '../ledding-patterns.js';
 
 export default function initLeddingHero() {
   // 1. Home Hero
@@ -121,6 +121,36 @@ export default function initLeddingHero() {
       },
       transitions: { ignition: { min: 0.05 }, extinction: { min: 0.1 }, morph: { min: 0.1 } },
       grid: { fill: false, lifespan: 60 }
+    });
+  }
+
+  // 5. Contact Hero Decoration (Message Bubble)
+  const contactMsgTarget = document.querySelector('#ledding-hero-message');
+  if (contactMsgTarget) {
+    new Ledding('#ledding-hero-message', {
+      ledSize: 20,
+      ledGap: 4,
+      scaleToFit: false,
+      artPattern: chatPattern,
+      aligner: CenterAligner,
+      renderer: CircleRenderer,
+      colors: {
+        background: 'rgba(0,0,0,0)',
+        base: 'rgba(255,255,255,0.05)',
+        states: {
+          1: 'rgba(232, 121, 249, 1)', // Pink/Purple 400
+          2: 'rgba(192, 132, 252, 0.8)',
+          3: 'rgba(168, 85, 247, 0.5)'
+        }
+      },
+      sizes: { states: { 1: 1.0, 2: 0.6, 3: 0.3 } },
+      fps: 20,
+      animation: {
+        scroll: { direction: Directions.TO_LEFT, speed: 0 }, // Static position
+        ignition: { pattern: Pattern.RANDOM, delay: 0.5 },
+        extinction: { pattern: Pattern.RANDOM, delay: 4.0, step: 2 } // Long hold
+      },
+      grid: { fill: false }
     });
   }
 }
