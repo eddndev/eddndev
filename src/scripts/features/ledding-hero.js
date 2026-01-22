@@ -135,12 +135,12 @@ export default function initLeddingHero() {
       aligner: CenterAligner,
       renderer: CircleRenderer,
       colors: {
-        background: 'rgba(0,0,0,0)',
-        base: 'rgba(255,255,255,0.05)',
+        background: 'rgba(20, 24, 32, 0)',
+        base: 'rgba(45, 55, 72, 1)',
         states: {
-          1: 'rgba(232, 121, 249, 1)', // Pink/Purple 400
-          2: 'rgba(192, 132, 252, 0.8)',
-          3: 'rgba(168, 85, 247, 0.5)'
+          1: 'rgba(200, 149, 255, 1)',
+          2: 'rgba(167, 86, 255, 1)',
+          3: 'rgba(167, 86, 255, 1)'
         }
       },
       sizes: { states: { 1: 1.0, 2: 0.6, 3: 0.3 } },
