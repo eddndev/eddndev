@@ -7,7 +7,6 @@ import initFocus from './animations/focus';
 import initMicro from './animations/micro';
 import initVignette from './animations/vignette';
 import initLeddingHero from './features/ledding-hero';
-import initLeddingPanels from './features/ledding-panels';
 import initSections from './animations/sections';
 import initProjects from './animations/projects';
 import initFooterReveal from './animations/footer';
@@ -28,7 +27,6 @@ const init = () => {
   initVignette();
   initLeddingHero();
   initFocus();
-  initLeddingPanels();
   initSections();
   initProjects();
   initFooterReveal();

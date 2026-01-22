@@ -16,7 +16,6 @@ import initMicro from './animations/micro';
 import initVignette from './animations/vignette';
 import initLeddingHero from './features/ledding-hero';
 import initDarkSections from './animations/sections';
-import initLeddingPanels from './features/ledding-panels';
 import initSections from './animations/sections';
 import initProjects from './animations/projects';
 import initFooterReveal from './animations/footer';
@@ -33,7 +32,6 @@ onReady(() => {
   initLeddingHero();
   initFocus(); // después del hero para tener los nodos ya presentes
   initDarkSections();
-  initLeddingPanels();
   initSections();
   initProjects();
   initFooterReveal();

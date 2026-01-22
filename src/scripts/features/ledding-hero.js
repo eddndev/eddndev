@@ -1,5 +1,5 @@
 import { Ledding, RightAligner, CenterAligner, CircleRenderer, Directions, Pattern } from 'ledding';
-import { logoPattern, dbCylinderPattern, chatPattern } from '../ledding-patterns.js';
+import { logoPattern, chatPattern } from '../ledding-patterns.js';
 
 export default function initLeddingHero() {
   // 1. Home Hero
@@ -40,7 +40,7 @@ export default function initLeddingHero() {
       ledSize: 30,
       ledGap: 8,
       scaleToFit: false,
-      artPattern: logoPattern, 
+      artPattern: logoPattern,
       aligner: RightAligner,
       renderer: CircleRenderer,
       colors: {
