@@ -13,6 +13,11 @@
 # Prevenir listado de directorios
 Options -Indexes
 
+# Desactivar MultiViews para evitar conflictos (Error 409) con archivos estáticos
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
 # Asegurar tipos MIME correctos para fuentes y assets modernos
 <IfModule mod_mime.c>
   AddType image/avif .avif
