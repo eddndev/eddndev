@@ -9,7 +9,16 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://eddndev.com',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: '_astro/[hash].js',
+          chunkFileNames: '_astro/[hash].js',
+          assetFileNames: '_astro/[hash][extname]',
+        },
+      },
+    },
   },
 
   integrations: [mdx()]
