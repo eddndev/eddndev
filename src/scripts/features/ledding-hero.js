@@ -1,5 +1,5 @@
 import { Ledding, RightAligner, CenterAligner, CircleRenderer, Directions, Pattern } from 'ledding';
-import { logoPattern, chatPattern } from '../ledding-patterns.js';
+import { logoPattern, chatPattern, dbCylinderPattern } from '../ledding-patterns.js';
 
 export default function initLeddingHero() {
   // 1. Home Hero
