@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C makes it easy to shoot yourself in the foot; C++ makes it harder." — Edd
+> **Quote of the moment:** "Software engineering is the art of telling a rock how to think." — Edd
 
 <br>
 
