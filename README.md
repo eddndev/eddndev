@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you are the garbage collector." — Edd
+> **Quote of the moment:** "C is memory with syntax; Rust is paranoia with syntax." — Edd
 
 <br>
 
