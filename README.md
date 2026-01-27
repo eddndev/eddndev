@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Systems programming is staring at strace until the problem confesses." — Edd
+> **Quote of the moment:** "Linux is user-friendly. It just chooses its friends very carefully." — Edd
 
 <br>
 
