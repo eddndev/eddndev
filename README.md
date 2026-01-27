@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C is memory with a shotgun; Rust is memory with a lawyer." — Edd
+> **Quote of the moment:** "C makes it easy to shoot yourself in the foot; C++ makes it harder." — Edd
 
 <br>
 
