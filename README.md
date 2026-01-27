@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust guarantees memory safety; C guarantees job security." — Edd
+> **Quote of the moment:** "Linux is only free if your time has no value." — Edd
 
 <br>
 
