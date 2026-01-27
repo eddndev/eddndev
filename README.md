@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Weeks of coding can save you hours of planning." — Edd
+> **Quote of the moment:** "Linux is free if your time has no value." — Edd
 
 <br>
 
