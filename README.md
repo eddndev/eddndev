@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C we trust, but in Rust we verify." — Edd
+> **Quote of the moment:** "chmod 777 is not a bug fix, it is a surrender." — Edd
 
 <br>
 
