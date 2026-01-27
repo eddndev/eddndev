@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Linux is user-friendly. It's just very selective about who its friends are." — Edd
+> **Quote of the moment:** "C is memory with a shotgun; Rust is memory with a lawyer." — Edd
 
 <br>
 
