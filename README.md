@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust: Because segmentation faults shouldn't be a lifestyle choice." — Edd
+> **Quote of the moment:** "There is no cloud, just someone else’s Linux computer." — Edd
 
 <br>
 
