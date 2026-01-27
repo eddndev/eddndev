@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you don't have a garbage collector. You are one." — Edd
+> **Quote of the moment:** "Linux is user-friendly. It's just very selective about who its friends are." — Edd
 
 <br>
 
