@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Uptime is vanity; recovery time is sanity." — Edd
+> **Quote of the moment:** "Rust: Because segmentation faults shouldn't be a lifestyle choice." — Edd
 
 <br>
 
