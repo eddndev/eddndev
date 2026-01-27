@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "The cloud is just someone else's Linux computer." — Edd
+> **Quote of the moment:** "In C we trust, but in Rust we verify." — Edd
 
 <br>
 
