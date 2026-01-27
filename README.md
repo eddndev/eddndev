@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C assumes you know what you're doing; Rust ensures you actually do." — Edd
+> **Quote of the moment:** "Uptime is vanity; recovery time is sanity." — Edd
 
 <br>
 
