@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you trust the programmer. In Rust, you trust the compiler." — Edd
+> **Quote of the moment:** "Rust is what happens when C++ finally goes to therapy." — Edd
 
 <br>
 
