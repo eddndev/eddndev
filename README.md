@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "To err is human; to segfault is C." — Edd
+> **Quote of the moment:** "Uptime is a vanity metric; recovery time is reality." — Edd
 
 <br>
 
