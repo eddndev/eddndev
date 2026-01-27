@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Linux is user-friendly. It just chooses its friends very carefully." — Edd
+> **Quote of the moment:** "Everything is a file, until it's a broken pipe." — Edd
 
 <br>
 
