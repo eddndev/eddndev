@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "chmod 777 is not a bug fix, it's a surrender." — Edd
+> **Quote of the moment:** "In C, you are the garbage collector." — Edd
 
 <br>
 
