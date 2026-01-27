@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust guarantees memory safety; C guarantees job security." — Edd
+> **Quote of the moment:** "C assumes you know what you're doing; Rust ensures you actually do." — Edd
 
 <br>
 
