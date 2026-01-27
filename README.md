@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C is memory with syntax; Rust is paranoia with syntax." — Edd
+> **Quote of the moment:** "Rust guarantees memory safety; C guarantees job security." — Edd
 
 <br>
 
