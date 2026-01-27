@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Software engineering is the art of telling a rock how to think." — Edd
+> **Quote of the moment:** "Rust is safe until you open an `unsafe` block and stare into the abyss." — Edd
 
 <br>
 
