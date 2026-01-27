@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "The compiler yells now so production doesn't panic later." — Edd
+> **Quote of the moment:** "In C, you don't have a garbage collector. You are one." — Edd
 
 <br>
 
