@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you debug the code. In Rust, you debug the borrow checker." — Edd
+> **Quote of the moment:** "Rust: The compiler that hugs you until you stop crying." — Edd
 
 <br>
 
