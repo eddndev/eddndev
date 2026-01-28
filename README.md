@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "A segmentation fault is just the kernel protecting you from yourself." — Edd
+> **Quote of the moment:** "In C, the only thing protecting memory is your own conscience." — Edd
 
 <br>
 
