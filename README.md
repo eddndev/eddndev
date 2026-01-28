@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C combines the power of assembly with the convenience of assembly." — Edd
+> **Quote of the moment:** "There is no cloud, just other people's Linux computers." — Edd
 
 <br>
 
