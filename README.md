@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Uptime is temporary; downtime is inevitable. Plan accordingly." — Edd
+> **Quote of the moment:** "Compiling is just the computer thinking about your mistakes." — Edd
 
 <br>
 
