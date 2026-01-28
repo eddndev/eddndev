@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you manage memory. In Rust, memory manages you." — Edd
+> **Quote of the moment:** "A segmentation fault is just the kernel protecting you from yourself." — Edd
 
 <br>
 
