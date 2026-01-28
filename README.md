@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "The borrow checker saves you from race conditions you haven't written yet." — Edd
+> **Quote of the moment:** "C assumes you know what you're doing. Rust proves you don't." — Edd
 
 <br>
 
