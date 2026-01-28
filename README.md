@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, the only thing protecting memory is your own conscience." — Edd
+> **Quote of the moment:** "Fighting the borrow checker is just aggressive pair programming with the compiler." — Edd
 
 <br>
 
