@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Uptime is a vanity metric; recovery time is the only reality." — Edd
+> **Quote of the moment:** "The borrow checker saves you from race conditions you haven't written yet." — Edd
 
 <br>
 
