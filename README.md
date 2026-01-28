@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Fighting the borrow checker is just aggressive pair programming with the compiler." — Edd
+> **Quote of the moment:** "Uptime is temporary; downtime is inevitable. Plan accordingly." — Edd
 
 <br>
 
