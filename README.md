@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust: The compiler screams so the production server doesn't have to." — Edd
+> **Quote of the moment:** "C combines the power of assembly with the convenience of assembly." — Edd
 
 <br>
 
