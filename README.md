@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust guarantees safety; C guarantees job security." — Edd
+> **Quote of the moment:** "Rust is just C++ with a condom and a helmet." — Edd
 
 <br>
 
