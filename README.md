@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "The compiler screams now so production doesn't crash later." — Edd
+> **Quote of the moment:** "Systems programming is 90% staring at strace output." — Edd
 
 <br>
 
