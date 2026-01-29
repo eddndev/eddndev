@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Segfaults are just the kernel's way of saying "nice try." — Edd
+> **Quote of the moment:** "To err is human; to segfault, divine." — Edd
 
 <br>
 
