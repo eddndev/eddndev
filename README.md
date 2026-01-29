@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Debugging: Being the detective in a crime where you are the murderer." — Edd
+> **Quote of the moment:** "Segfaults are just the kernel's way of saying "nice try." — Edd
 
 <br>
 
