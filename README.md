@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C assumes you know what you're doing; Rust proves you don't." — Edd
+> **Quote of the moment:** "Debugging: Being the detective in a crime where you are the murderer." — Edd
 
 <br>
 
