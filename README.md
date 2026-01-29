@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Pointer arithmetic is just playing hopscotch on a memory minefield." — Edd
+> **Quote of the moment:** "There is no cloud, just other people's Linux servers." — Edd
 
 <br>
 
