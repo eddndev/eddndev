@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you don't catch exceptions; the kernel catches you." — Edd
+> **Quote of the moment:** "In C, you don't have memory safety. You have Valgrind and prayer." — Edd
 
 <br>
 
