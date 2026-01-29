@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you don't have memory safety. You have Valgrind and prayer." — Edd
+> **Quote of the moment:** "The logs never lie, but they often speak in riddles." — Edd
 
 <br>
 
