@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "The logs never lie, but they often speak in riddles." — Edd
+> **Quote of the moment:** "Segmentation fault: the original memory safety feature." — Edd
 
 <br>
 
