@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "A segmentation fault is just the kernel's way of saying no." — Edd
+> **Quote of the moment:** "Compiling C is an act of faith; compiling Rust is a negotiation." — Edd
 
 <br>
 
