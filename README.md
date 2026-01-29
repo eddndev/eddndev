@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Compiling is just the computer thinking about your mistakes." — Edd
+> **Quote of the moment:** "Rust borrows references. C takes pointers and never calls back." — Edd
 
 <br>
 
