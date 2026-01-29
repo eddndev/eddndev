@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Segfaults are just the kernel’s way of asking for some personal space." — Edd
+> **Quote of the moment:** "C is memory with syntax; Rust is memory with anxiety." — Edd
 
 <br>
 
