@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "A segmentation fault is just the kernel saying 'I told you so'." — Edd
+> **Quote of the moment:** "Pointer arithmetic is just playing hopscotch on a memory minefield." — Edd
 
 <br>
 
