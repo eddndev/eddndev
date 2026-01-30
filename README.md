@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Systems programming is just moving bytes until the compiler stops screaming." — Edd
+> **Quote of the moment:** "C is user-friendly. It’s just very selective about who its friends are." — Edd
 
 <br>
 
