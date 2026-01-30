@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust: Because segfaults shouldn't be a lifestyle choice." — Edd
+> **Quote of the moment:** "Segfaults are just surprise memory audits." — Edd
 
 <br>
 
