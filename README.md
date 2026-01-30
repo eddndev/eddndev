@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Uptime is a metric, availability is a promise, backups are religion." — Edd
+> **Quote of the moment:** "In C, the compiler trusts you. That is your first mistake." — Edd
 
 <br>
 
