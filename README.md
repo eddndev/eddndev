@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Systems programming: Where "it works on my machine" is a threat." — Edd
+> **Quote of the moment:** "Systems programming is just moving bytes until the compiler stops screaming." — Edd
 
 <br>
 
