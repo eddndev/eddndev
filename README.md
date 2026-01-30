@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C is memory with syntax; Rust is memory with a prenup." — Edd
+> **Quote of the moment:** "Uptime is a metric, availability is a promise, backups are religion." — Edd
 
 <br>
 
