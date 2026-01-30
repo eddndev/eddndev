@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "C lets you write fast code; Rust lets you write code that works." — Edd
+> **Quote of the moment:** "C lets you shoot your foot. Rust refuses to load the gun." — Edd
 
 <br>
 
