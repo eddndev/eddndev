@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "`sudo` grants power, but logs preserve the guilt." — Edd
+> **Quote of the moment:** "A pointer is just an integer that trusts you completely." — Edd
 
 <br>
 
