@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Chmod 777 is not a debugging strategy, it is a surrender." — Edd
+> **Quote of the moment:** "The borrow checker doesn't hate you, it just has trust issues." — Edd
 
 <br>
 
