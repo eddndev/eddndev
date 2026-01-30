@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Linux is user-friendly. It's just picky about who its friends are." — Edd
+> **Quote of the moment:** "Uptime is temporary, but `rm -rf` is forever." — Edd
 
 <br>
 
