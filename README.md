@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you manage memory. In Rust, memory manages you." — Edd
+> **Quote of the moment:** "`void *` is just a systems programmer saying "trust me, bro." — Edd
 
 <br>
 
