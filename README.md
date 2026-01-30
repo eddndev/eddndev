@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "The borrow checker doesn't hate you, it just has trust issues." — Edd
+> **Quote of the moment:** "Pointer arithmetic: the most dangerous game of hopscotch ever invented." — Edd
 
 <br>
 
