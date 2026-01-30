@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, the compiler trusts you. That is your first mistake." — Edd
+> **Quote of the moment:** "`sudo` grants power, but logs preserve the guilt." — Edd
 
 <br>
 
