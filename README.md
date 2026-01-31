@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "There is no cloud, it’s just other people’s Linux computers." — Edd
+> **Quote of the moment:** "In C, you shoot your foot. In Rust, the gun refuses to fire." — Edd
 
 <br>
 
