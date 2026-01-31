@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Linux is only free if your time has no value." — Edd
+> **Quote of the moment:** "C allows you to manage memory; segfaults allow memory to manage you." — Edd
 
 <br>
 
