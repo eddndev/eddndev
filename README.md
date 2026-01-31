@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "void * is just a fancy way to say "trust me"." — Edd
+> **Quote of the moment:** "Everything is a file until it’s a broken pipe." — Edd
 
 <br>
 
