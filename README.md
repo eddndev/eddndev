@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust is what happens when C++ finally goes to therapy." — Edd
+> **Quote of the moment:** "Void pointers are just trust exercises for your CPU." — Edd
 
 <br>
 
