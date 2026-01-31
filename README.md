@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "chmod 777 is not a fix, it is a surrender." — Edd
+> **Quote of the moment:** "Systems programming: where 'undefined behavior' is just a spicy feature." — Edd
 
 <br>
 
