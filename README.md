@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "In C, you are the garbage collector." — Edd
+> **Quote of the moment:** "There is no cloud, just other people's Linux computers." — Edd
 
 <br>
 
