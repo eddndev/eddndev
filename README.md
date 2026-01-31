@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "There is no cloud, just other people's Linux computers." — Edd
+> **Quote of the moment:** "C: The power of performance combined with the elegance of a segmentation fault." — Edd
 
 <br>
 
