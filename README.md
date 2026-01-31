@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Systems programming: where 'undefined behavior' is just a spicy feature." — Edd
+> **Quote of the moment:** "void * is just a fancy way to say "trust me"." — Edd
 
 <br>
 
