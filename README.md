@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Void pointers are just trust exercises for your CPU." — Edd
+> **Quote of the moment:** "Rust: Because memory safety shouldn't rely on your daily caffeine intake." — Edd
 
 <br>
 
