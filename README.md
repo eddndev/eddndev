@@ -8,7 +8,7 @@ Software engineer specialized in building and optimizing scalable applications a
 
 <br>
 
-> **Quote of the moment:** "Rust: Finally, a compiler that screams at you before production does." — Edd
+> **Quote of the moment:** "In C, you are the garbage collector." — Edd
 
 <br>
 
