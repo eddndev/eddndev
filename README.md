@@ -18,9 +18,6 @@ Software engineer specialized in building and optimizing scalable applications a
 [![Assembly](https://img.shields.io/badge/Assembly-%236E4C13.svg?style=flat-square)](https://github.com/eddndev?tab=repositories&q=language%3Aassembly)
 [![WebAssembly](https://img.shields.io/badge/WebAssembly-%23654FF0.svg?style=flat-square&logo=webassembly&logoColor=white)](https://github.com/eddndev?tab=repositories&q=language%3Awebassembly)
 
-[![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat-square&logo=php&logoColor=white)](https://github.com/eddndev?tab=repositories&q=language%3Aphp)
-[![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=flat-square&logo=laravel&logoColor=white)](https://github.com/eddndev?tab=repositories&q=laravel)
-
 [![Git](https://img.shields.io/badge/Git-%23F05032.svg?style=flat-square&logo=git&logoColor=white)](https://github.com/eddndev?tab=repositories&q=git)
 [![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat-square&logo=mysql&logoColor=white)](https://github.com/eddndev?tab=repositories&q=mysql)
 [![Docker](https://img.shields.io/badge/Docker-%232496ED.svg?style=flat-square&logo=docker&logoColor=white)](https://github.com/eddndev?tab=repositories&q=docker)
