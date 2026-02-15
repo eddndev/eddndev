@@ -1,0 +1,388 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<Layout
+    title="Perfil — edd n' dev"
+    description="Estudio de ingeniería digital. Construimos sistemas que controlas, no plataformas que te controlan a ti."
+>
+    <!-- HERO -->
+    <div id="hero" class="relative min-h-screen w-full flex flex-col justify-center lg:justify-end pt-32 pb-0 lg:pb-24 overflow-hidden border-b border-white/10">
+      <!-- Ledding Background (higher opacity for profile) -->
+      <div id="ledding-profile-container" class="absolute inset-0 z-0 opacity-50"></div>
+
+      <!-- Gradient Orbs -->
+      <div data-profile-orb class="absolute top-[15%] right-[10%] w-[500px] h-[500px] rounded-full bg-purple-600/20 blur-[120px] pointer-events-none z-[1]"></div>
+      <div data-profile-orb class="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-violet-500/15 blur-[100px] pointer-events-none z-[1]"></div>
+
+      <!-- Floating Geometric SVGs -->
+      <svg data-profile-float data-speed="0.8" class="absolute top-[20%] right-[15%] w-16 h-16 lg:w-24 lg:h-24 text-purple-500/20 z-[2] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+        <rect x="10" y="10" width="80" height="80" rx="4" />
+        <rect x="25" y="25" width="50" height="50" rx="2" />
+      </svg>
+
+      <svg data-profile-float data-speed="1.2" class="absolute top-[35%] right-[8%] w-10 h-10 lg:w-14 lg:h-14 text-purple-400/15 z-[2] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="50" cy="50" r="40" />
+        <circle cx="50" cy="50" r="15" />
+        <line x1="50" y1="10" x2="50" y2="35" />
+        <line x1="50" y1="65" x2="50" y2="90" />
+        <line x1="10" y1="50" x2="35" y2="50" />
+        <line x1="65" y1="50" x2="90" y2="50" />
+      </svg>
+
+      <svg data-profile-float data-speed="0.5" class="absolute bottom-[25%] right-[25%] w-8 h-8 lg:w-12 lg:h-12 text-violet-400/20 z-[2] pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
+        <polygon points="50,5 95,95 5,95" opacity="0.6" />
+      </svg>
+
+      <svg data-profile-float data-speed="1.5" class="absolute top-[60%] left-[8%] w-6 h-6 lg:w-10 lg:h-10 text-purple-300/15 z-[2] pointer-events-none hidden lg:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z" />
+      </svg>
+
+      <!-- Vignettes -->
+      <div id="hero-vignette"
+           class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none z-10">
+      </div>
+
+      <!-- Grid Overlay -->
+      <div class="absolute inset-0 z-[3] pointer-events-none opacity-[0.03]"
+           style="background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px); background-size: 80px 80px;">
+      </div>
+
+      <!-- Contenido Principal -->
+      <div class="relative z-20 w-full px-6 sm:px-12 max-w-[1800px] mx-auto">
+        <header class="flex flex-col items-start" data-profile-hero>
+          <div class="flex items-center gap-3 mb-4 lg:mb-6 opacity-70">
+            <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse shadow-[0_0_8px_#a855f7]"></div>
+            <span class="font-mono text-sm sm:text-base md:text-lg lg:text-sm 2xl:text-base tracking-widest uppercase text-gray-300">eddndev studio // México</span>
+          </div>
+
+          <h1 class="font-black tracking-tighter text-white leading-[0.85] text-[clamp(3.5rem,11vw,12rem)] 2xl:text-[clamp(5rem,11vw,16rem)] mix-blend-screen">
+            CONSTRUIMOS <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">INDEPENDENCIA.</span>
+          </h1>
+
+          <div class="mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 w-full border-t border-white/10 pt-8">
+            <div class="lg:col-span-5">
+              <p class="text-lg sm:text-xl md:text-2xl lg:text-xl 2xl:text-2xl text-gray-300 font-light leading-relaxed max-w-xl 2xl:max-w-2xl">
+                Tu negocio necesita sistemas que <span class="text-white font-medium">trabajan para ti</span>, no plataformas de las que dependes. Eso es lo que hacemos.
+              </p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <!-- QUÉ NOS MUEVE -->
+    <section id="profile-about" class="bg-black text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Decorative Line SVG (scroll-drawn) -->
+        <svg data-profile-line class="absolute top-0 left-6 sm:left-12 w-px h-full pointer-events-none z-0 overflow-visible" preserveAspectRatio="none">
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.15)" stroke-width="1" class="profile-line-bg" />
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="url(#line-gradient-1)" stroke-width="1" stroke-dasharray="8 12" class="profile-line-draw" />
+        </svg>
+
+        <!-- Stroke Draw: Concentric rings -->
+        <svg data-profile-draw class="absolute top-[8%] right-[4%] w-48 h-48 lg:w-72 lg:h-72 pointer-events-none z-0" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="90" stroke="rgba(139,92,246,0.12)" stroke-width="0.5" class="draw-path" />
+            <circle cx="100" cy="100" r="65" stroke="rgba(139,92,246,0.08)" stroke-width="0.5" class="draw-path" />
+            <circle cx="100" cy="100" r="40" stroke="rgba(139,92,246,0.15)" stroke-width="0.8" class="draw-path" />
+            <circle cx="100" cy="100" r="12" stroke="rgba(168,85,247,0.2)" stroke-width="1" class="draw-path" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+                <div class="lg:col-span-5">
+                    <div class="text-xs 2xl:text-sm font-mono text-purple-400 tracking-widest mb-6 reveal-text">
+                        [ 01 · QUIÉNES SOMOS ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                        ESTUDIO DE <br> <span class="text-purple-400">INGENIERÍA <br> DIGITAL.</span>
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <div class="space-y-6 text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-3xl">
+                        <p class="reveal-text">
+                            Somos <span class="text-white font-medium">eddndev</span> — un estudio de ingeniería digital
+                            fundado en 2020 en México. Nos dedicamos a construir sistemas completos: desde la infraestructura
+                            donde vive tu proyecto hasta la interfaz que tocan tus usuarios.
+                        </p>
+                        <p class="reveal-text">
+                            Nuestro trabajo nace de una frustración real: demasiados negocios dependen de plataformas que
+                            <span class="text-white font-medium">no controlan</span>. Servicios que suben precios,
+                            proveedores que desaparecen, herramientas genéricas que nunca se ajustan del todo.
+                            Creemos que eso tiene que cambiar.
+                        </p>
+                        <p class="reveal-text">
+                            Por eso gestionamos la infraestructura en su totalidad. Servidores, seguridad, rendimiento,
+                            actualizaciones — <span class="text-white font-medium">todo pasa por nuestras manos</span>.
+                            Nuestro código es propietario porque así garantizamos la calidad, la estabilidad
+                            y la evolución continua de cada sistema que construimos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LO QUE NOS IMPORTA -->
+    <section id="profile-values" class="bg-[#050505] text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Gradient Orb -->
+        <div data-profile-orb class="absolute top-[30%] left-[50%] -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-purple-900/10 blur-[150px] pointer-events-none z-0"></div>
+
+        <!-- Corner Crosshairs -->
+        <svg class="absolute top-8 right-8 w-6 h-6 text-white/10 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <line x1="12" y1="0" x2="12" y2="24" /><line x1="0" y1="12" x2="24" y2="12" />
+        </svg>
+        <svg class="absolute bottom-8 left-8 w-6 h-6 text-white/10 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <line x1="12" y1="0" x2="12" y2="24" /><line x1="0" y1="12" x2="24" y2="12" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+
+            <div class="mb-16 lg:mb-20">
+                <div class="text-xs 2xl:text-sm font-mono text-purple-400 tracking-widest mb-6 reveal-text">
+                    [ 02 · LO QUE NOS IMPORTA ]
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                    NO VENDEMOS <br> <span class="text-purple-400">HUMO.</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+
+                <!-- Card 1 -->
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-profile-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-purple-500/0 via-purple-500/50 to-purple-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-purple-500 rounded-full group-hover:shadow-[0_0_12px_#a855f7] transition-shadow"></span>
+                        <span class="font-mono text-xs text-purple-400 tracking-widest uppercase">01</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-purple-300 transition-colors">Infraestructura gestionada</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        No montamos tu negocio sobre plataformas que mañana triplican su precio.
+                        Nosotros administramos servidores dedicados, seguridad y rendimiento.
+                        Tú te enfocas en tu negocio, <span class="text-gray-200">nosotros nos encargamos de todo lo demás</span>.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-profile-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-green-500/0 via-green-500/50 to-green-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-green-500 rounded-full group-hover:shadow-[0_0_12px_#22c55e] transition-shadow"></span>
+                        <span class="font-mono text-xs text-green-400 tracking-widest uppercase">02</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-green-300 transition-colors">Automatización con criterio</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        No automatizamos por automatizar. Identificamos los procesos que le cuestan tiempo
+                        y dinero a tu operación y construimos flujos a medida que
+                        <span class="text-gray-200">trabajan sin que tengas que pensar en ellos</span>.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-profile-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-orange-500/0 via-orange-500/50 to-orange-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-orange-500 rounded-full group-hover:shadow-[0_0_12px_#f97316] transition-shadow"></span>
+                        <span class="font-mono text-xs text-orange-400 tracking-widest uppercase">03</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-orange-300 transition-colors">Velocidad que se siente</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Un sistema lento es un sistema que pierde clientes. Construimos software
+                        que responde en milisegundos y consume menos recursos —
+                        lo que se traduce en <span class="text-gray-200">menos gasto mensual</span> para tu negocio.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-profile-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                        <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">04</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-blue-300 transition-colors">Sistemas, no páginas</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Entendemos que un error puede costarte dinero o problemas legales.
+                        No hacemos "sitios web" — diseñamos la lógica completa de tu operación
+                        digital para que <span class="text-gray-200">funcione con la misma seriedad que tu negocio exige</span>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section id="profile-process" class="bg-black text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Vertical circuit line (right side) -->
+        <svg data-profile-line class="absolute top-0 right-6 sm:right-12 w-px h-full pointer-events-none z-0 overflow-visible hidden lg:block" preserveAspectRatio="none">
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.1)" stroke-width="1" />
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.3)" stroke-width="1" stroke-dasharray="4 16" class="profile-line-draw" />
+        </svg>
+
+        <!-- Floating Orbital SVG -->
+        <svg data-profile-orbital class="absolute top-[15%] right-[8%] w-40 h-40 lg:w-64 lg:h-64 pointer-events-none z-0 opacity-[0.06]" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="0.5">
+            <circle cx="100" cy="100" r="95" stroke-dasharray="4 8" />
+            <circle cx="100" cy="100" r="70" stroke-dasharray="2 6" />
+            <circle cx="100" cy="100" r="45" />
+            <circle cx="100" cy="100" r="4" fill="white" stroke="none" />
+            <!-- Orbital dots -->
+            <circle cx="100" cy="5" r="3" fill="white" stroke="none" class="profile-orbital-dot" />
+            <circle cx="170" cy="100" r="2" fill="white" stroke="none" class="profile-orbital-dot" />
+            <circle cx="55" cy="100" r="2.5" fill="white" stroke="none" class="profile-orbital-dot" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+                <div class="lg:col-span-5">
+                    <div class="text-xs 2xl:text-sm font-mono text-purple-400 tracking-widest mb-6 reveal-text">
+                        [ 03 · PROCESO ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] mb-8 reveal-text">
+                        CÓMO <br> <span class="text-purple-400">TRABAJAMOS.</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-xl reveal-text">
+                        Cada proyecto es diferente, pero nuestra obsesión es la misma:
+                        que lo que construyamos <span class="text-white font-medium">resuelva un problema real</span> y que no necesites
+                        un manual de 200 páginas para usarlo.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="space-y-0">
+
+                        <div class="border-b border-white/10 py-8 lg:py-10 group reveal-text relative" data-profile-step>
+                            <!-- Active indicator on hover -->
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-purple-500/30 transition-colors leading-none">01</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-purple-300 transition-colors">Entender antes de proponer</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Antes de escribir una sola línea, entendemos cómo opera tu negocio,
+                                        qué le duele y qué necesita para crecer. Si la mejor solución es no construir nada, te lo decimos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-white/10 py-8 lg:py-10 group reveal-text relative" data-profile-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-purple-500/30 transition-colors leading-none">02</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-purple-300 transition-colors">Diseñar con intención</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Cada decisión de diseño y arquitectura tiene una razón.
+                                        No agregamos complejidad innecesaria ni funciones que nadie va a usar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-white/10 py-8 lg:py-10 group reveal-text relative" data-profile-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-purple-500/30 transition-colors leading-none">03</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-purple-300 transition-colors">Construir para durar</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Elegimos las herramientas correctas para el problema, no las de moda.
+                                        Lo que entregamos funciona hoy y sigue funcionando en tres años.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="py-8 lg:py-10 group reveal-text relative" data-profile-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-purple-500/30 transition-colors leading-none">04</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-purple-300 transition-colors">Operar sin que lo notes</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Nos encargamos de la infraestructura, las actualizaciones y la seguridad de forma continua.
+                                        Tu sistema evoluciona y se mantiene estable sin que tengas que intervenir.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILOSOFÍA / CTA -->
+    <section id="profile-cta" class="relative z-20 bg-[#6A0DAD] text-white overflow-hidden py-24 lg:py-32">
+
+        <!-- Decorative SVG pattern background -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.04] z-0"
+             style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <!-- Floating shapes -->
+        <svg data-profile-float data-speed="0.6" class="absolute top-[10%] left-[5%] w-24 h-24 lg:w-40 lg:h-40 text-white/10 pointer-events-none z-0" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
+            <circle cx="50" cy="50" r="45" />
+            <circle cx="50" cy="50" r="30" stroke-dasharray="4 4" />
+            <circle cx="50" cy="50" r="15" />
+        </svg>
+
+        <svg data-profile-float data-speed="1.0" class="absolute bottom-[15%] right-[10%] w-16 h-16 lg:w-28 lg:h-28 text-white/10 pointer-events-none z-0" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+            <rect x="15" y="15" width="70" height="70" transform="rotate(45, 50, 50)" />
+        </svg>
+
+        <div class="relative mx-auto max-w-[1800px] px-6 sm:px-12 z-10">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 relative">
+                    <div class="text-xs sm:text-sm md:text-base lg:text-xs font-mono text-purple-200 tracking-widest mb-6 reveal-text">
+                        [ 04 · FILOSOFÍA ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                        TU PROYECTO. <br>
+                        <span class="text-purple-200">NUESTRA OBSESIÓN.</span>
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-end pl-0 lg:pl-12">
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-xl 2xl:text-2xl text-purple-100 font-light leading-relaxed max-w-2xl mb-8 reveal-text">
+                        Gestionamos cada capa de tu proyecto para que
+                        <span class="text-white font-medium">funcione sin fricciones</span> — infraestructura, código,
+                        seguridad y evolución continua. No te vendemos una solución y desaparecemos.
+                        Nos quedamos para que todo siga corriendo.
+                    </p>
+                    <div class="reveal-text">
+                        <a href="/contact" class="group relative inline-flex items-center gap-3 px-8 py-4 2xl:px-10 2xl:py-5 bg-white text-[#6A0DAD] font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                            <span class="relative z-10 group-hover:text-purple-900 transition-colors 2xl:text-lg">Hablemos de tu proyecto</span>
+                            <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
+
+<!-- SVG Gradient Definitions -->
+<svg class="absolute w-0 h-0" aria-hidden="true">
+    <defs>
+        <linearGradient id="line-gradient-1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(139,92,246,0)" />
+            <stop offset="30%" stop-color="rgba(139,92,246,0.6)" />
+            <stop offset="70%" stop-color="rgba(139,92,246,0.6)" />
+            <stop offset="100%" stop-color="rgba(139,92,246,0)" />
+        </linearGradient>
+    </defs>
+</svg>
