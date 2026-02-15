@@ -124,7 +124,38 @@ export default function initLeddingHero() {
     });
   }
 
-  // 5. Profile Hero (Shield/Logo — higher presence)
+  // 5. Services Hero
+  const servicesTarget = document.querySelector('#ledding-services-container');
+  if (servicesTarget) {
+    new Ledding('#ledding-services-container', {
+      ledSize: 22,
+      ledGap: 5,
+      scaleToFit: false,
+      artPattern: logoPattern,
+      aligner: RightAligner,
+      renderer: CircleRenderer,
+      colors: {
+        background: 'rgba(0, 0, 0, 0)',
+        base: 'rgba(35, 25, 55, 1)',
+        states: {
+          1: 'rgba(168, 85, 247, 1)',
+          2: 'rgba(139, 92, 246, 0.8)',
+          3: 'rgba(192, 132, 252, 0.5)'
+        }
+      },
+      sizes: { states: { 1: 0.9, 2: 0.6, 3: 0.3 } },
+      fps: 28,
+      animation: {
+        scroll: { direction: Directions.TO_LEFT, speed: 12 },
+        ignition: { pattern: Pattern.WAVE, direction: Directions.TO_RIGHT, delay: 0.3 },
+        extinction: { pattern: Pattern.CASCADE, delay: 0.9, direction: Directions.TO_BOTTOM, step: 6 }
+      },
+      transitions: { ignition: { min: 0.05 }, extinction: { min: 0.08 }, morph: { min: 0.08 } },
+      grid: { fill: false, lifespan: 70 }
+    });
+  }
+
+  // 6. Profile Hero (Shield/Logo — higher presence)
   const profileTarget = document.querySelector('#ledding-profile-container');
   if (profileTarget) {
     new Ledding('#ledding-profile-container', {
@@ -155,7 +186,7 @@ export default function initLeddingHero() {
     });
   }
 
-  // 6. Contact Hero Decoration (Message Bubble)
+  // 7. Contact Hero Decoration (Message Bubble)
   const contactMsgTarget = document.querySelector('#ledding-hero-message');
   if (contactMsgTarget) {
     new Ledding('#ledding-hero-message', {

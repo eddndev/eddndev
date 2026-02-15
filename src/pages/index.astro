@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Footer from '../components/layout/Footer.astro';
 import Focus from '../components/sections/Focus.astro';
+import Services from '../components/sections/Services.astro';
 import ProjectGrid from '../components/work/ProjectGrid.astro';
 
 // Get all projects for the list
@@ -61,6 +62,7 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
 
     <!-- SECTIONS -->
     <Focus />
+    <Services />
 
     <!-- PROJECTS PREVIEW -->
     <section id="work" class="bg-black text-white border-t border-white/10 relative overflow-hidden">
@@ -74,7 +76,7 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div class="lg:col-span-5">
                         <div class="text-xs 2xl:text-sm font-mono text-purple-400 tracking-widest mb-4 reveal-text">
-                            [ 04 · INDEX ]
+                            [ 03 · INDEX ]
                         </div>
                         <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
                             NUESTRO <br> <span class="text-purple-400">TRABAJO.</span>

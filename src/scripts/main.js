@@ -13,6 +13,7 @@ import initFooterReveal from './animations/footer';
 import initNavigation from './features/navigation';
 import initProjectHero from './animations/project-hero';
 import initProfile from './animations/profile';
+import initServices from './animations/services';
 import { initCursor } from './features/cursor';
 
 const init = () => {
@@ -34,6 +35,7 @@ const init = () => {
   initNavigation();
   initProjectHero();
   initProfile();
+  initServices();
 };
 
 // Boot on initial load and on every page transition

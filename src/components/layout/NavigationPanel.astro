@@ -2,6 +2,7 @@
 // NavigationPanel.astro: Grid que ocupa SOLO el área de contenido
 const navItems = [
   { label: 'Inicio', url: '/', sub: 'Index', col: 'col-span-1' },
+  { label: 'Servicios', url: '/services', sub: 'Lo que hacemos', col: 'col-span-1' },
   { label: 'Proyectos', url: '/work', sub: 'Casos de Estudio', col: 'col-span-1' },
   { label: 'Contacto', url: '/contact', sub: 'Hablemos', col: 'col-span-1' },
 ];
@@ -26,12 +27,8 @@ const navItems = [
     <div class="flex-1 w-full h-full overflow-y-auto overscroll-contain p-6 lg:p-12 relative z-10">
         
         <div class="max-w-[1600px] mx-auto h-full flex flex-col justify-center">
-            <h2 class="text-xs font-mono text-gray-500 mb-8 tracking-widest uppercase border-b border-white/10 pb-4">
-                [ DIRECTORIO DEL SISTEMA ]
-            </h2>
-
             <!-- THE GRID -->
-            <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 h-auto lg:h-3/4">
+            <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 h-auto lg:h-3/4">
                 {navItems.map((item, index) => (
                     <a href={item.url} 
                        class={`nav-card group relative border border-white/10 bg-white/5 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 flex flex-col justify-between p-8 rounded-sm overflow-hidden ${item.col}`}
@@ -60,12 +57,6 @@ const navItems = [
                     </a>
                 ))}
             </nav>
-            
-            <!-- Footer Context in Nav -->
-            <div class="mt-auto pt-8 flex justify-between text-[10px] font-mono text-gray-600">
-                <span>SYSTEM STATUS: NORMAL</span>
-                <span>EDDNDEV_VER_2.0</span>
-            </div>
         </div>
     </div>
 </aside>
