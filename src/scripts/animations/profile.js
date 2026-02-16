@@ -47,9 +47,9 @@ export default function initProfile() {
         ease: 'none',
         scrollTrigger: {
           trigger: trigger,
-          start: 'top 90%',
-          end: 'bottom 20%',
-          scrub: 1.2 + (i * 0.3), // stagger the scrub slightly per path
+          start: 'top 95%',
+          end: 'center 70%',
+          scrub: 0.6 + (i * 0.15),
         }
       });
     });
@@ -109,8 +109,8 @@ export default function initProfile() {
       scrollTrigger: {
         trigger: section,
         start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1,
+        end: 'center center',
+        scrub: 0.6,
       }
     });
   });

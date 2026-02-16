@@ -8,7 +8,7 @@ import Footer from '../components/layout/Footer.astro';
     description="Estudio de ingeniería digital. Construimos sistemas que controlas, no plataformas que te controlan a ti."
 >
     <!-- HERO -->
-    <div id="hero" class="relative min-h-screen w-full flex flex-col justify-center lg:justify-end pt-32 pb-0 lg:pb-24 overflow-hidden border-b border-white/10">
+    <div id="hero" class="relative min-h-[100dvh] w-full flex flex-col justify-center lg:justify-end pt-32 pb-0 lg:pb-24 overflow-hidden border-b border-white/10">
       <!-- Ledding Background (higher opacity for profile) -->
       <div id="ledding-profile-container" class="absolute inset-0 z-0 opacity-50"></div>
 
@@ -41,14 +41,14 @@ import Footer from '../components/layout/Footer.astro';
 
       <!-- Stroke Draw: Large crosshair/scope in hero -->
       <svg data-profile-draw class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] pointer-events-none z-[2] opacity-60" viewBox="0 0 200 200" fill="none">
-          <circle cx="100" cy="100" r="90" stroke="rgba(139,92,246,0.06)" stroke-width="0.3" class="draw-path" />
-          <circle cx="100" cy="100" r="60" stroke="rgba(139,92,246,0.08)" stroke-width="0.4" class="draw-path" />
-          <circle cx="100" cy="100" r="30" stroke="rgba(168,85,247,0.1)" stroke-width="0.5" class="draw-path" />
+          <circle cx="100" cy="100" r="90" stroke="rgba(139,92,246,0.2)" stroke-width="1" class="draw-path" />
+          <circle cx="100" cy="100" r="60" stroke="rgba(139,92,246,0.25)" stroke-width="1.2" class="draw-path" />
+          <circle cx="100" cy="100" r="30" stroke="rgba(168,85,247,0.3)" stroke-width="1.5" class="draw-path" />
           <!-- Crosshair lines -->
-          <line x1="100" y1="5" x2="100" y2="70" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
-          <line x1="100" y1="130" x2="100" y2="195" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
-          <line x1="5" y1="100" x2="70" y2="100" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
-          <line x1="130" y1="100" x2="195" y2="100" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
+          <line x1="100" y1="5" x2="100" y2="70" stroke="rgba(139,92,246,0.18)" stroke-width="0.8" class="draw-path" />
+          <line x1="100" y1="130" x2="100" y2="195" stroke="rgba(139,92,246,0.18)" stroke-width="0.8" class="draw-path" />
+          <line x1="5" y1="100" x2="70" y2="100" stroke="rgba(139,92,246,0.18)" stroke-width="0.8" class="draw-path" />
+          <line x1="130" y1="100" x2="195" y2="100" stroke="rgba(139,92,246,0.18)" stroke-width="0.8" class="draw-path" />
       </svg>
 
       <!-- Vignettes -->
@@ -90,16 +90,16 @@ import Footer from '../components/layout/Footer.astro';
 
         <!-- Decorative Line SVG (scroll-drawn) -->
         <svg data-profile-line class="absolute top-0 left-6 sm:left-12 w-px h-full pointer-events-none z-0 overflow-visible" preserveAspectRatio="none">
-            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.15)" stroke-width="1" class="profile-line-bg" />
-            <line x1="0" y1="0" x2="0" y2="100%" stroke="url(#line-gradient-1)" stroke-width="1" stroke-dasharray="8 12" class="profile-line-draw" />
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.3)" stroke-width="1" class="profile-line-bg" />
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="url(#line-gradient-1)" stroke-width="1.5" stroke-dasharray="8 12" class="profile-line-draw" />
         </svg>
 
         <!-- Stroke Draw: Concentric rings -->
         <svg data-profile-draw class="absolute top-[8%] right-[4%] w-48 h-48 lg:w-72 lg:h-72 pointer-events-none z-0" viewBox="0 0 200 200" fill="none">
-            <circle cx="100" cy="100" r="90" stroke="rgba(139,92,246,0.12)" stroke-width="0.5" class="draw-path" />
-            <circle cx="100" cy="100" r="65" stroke="rgba(139,92,246,0.08)" stroke-width="0.5" class="draw-path" />
-            <circle cx="100" cy="100" r="40" stroke="rgba(139,92,246,0.15)" stroke-width="0.8" class="draw-path" />
-            <circle cx="100" cy="100" r="12" stroke="rgba(168,85,247,0.2)" stroke-width="1" class="draw-path" />
+            <circle cx="100" cy="100" r="90" stroke="rgba(139,92,246,0.3)" stroke-width="1.2" class="draw-path" />
+            <circle cx="100" cy="100" r="65" stroke="rgba(139,92,246,0.22)" stroke-width="1" class="draw-path" />
+            <circle cx="100" cy="100" r="40" stroke="rgba(139,92,246,0.35)" stroke-width="1.5" class="draw-path" />
+            <circle cx="100" cy="100" r="12" stroke="rgba(168,85,247,0.45)" stroke-width="1.8" class="draw-path" />
         </svg>
 
         <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
@@ -155,9 +155,9 @@ import Footer from '../components/layout/Footer.astro';
 
         <!-- Stroke Draw: Hexagonal frame -->
         <svg data-profile-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
-            <path d="M100 10 L180 55 L180 145 L100 190 L20 145 L20 55 Z" stroke="rgba(139,92,246,0.1)" stroke-width="0.8" class="draw-path" />
-            <path d="M100 40 L155 67 L155 133 L100 160 L45 133 L45 67 Z" stroke="rgba(168,85,247,0.08)" stroke-width="0.5" class="draw-path" />
-            <circle cx="100" cy="100" r="25" stroke="rgba(192,132,252,0.12)" stroke-width="0.6" class="draw-path" />
+            <path d="M100 10 L180 55 L180 145 L100 190 L20 145 L20 55 Z" stroke="rgba(139,92,246,0.25)" stroke-width="1.5" class="draw-path" />
+            <path d="M100 40 L155 67 L155 133 L100 160 L45 133 L45 67 Z" stroke="rgba(168,85,247,0.2)" stroke-width="1.2" class="draw-path" />
+            <circle cx="100" cy="100" r="25" stroke="rgba(192,132,252,0.3)" stroke-width="1.2" class="draw-path" />
         </svg>
 
         <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
@@ -242,12 +242,12 @@ import Footer from '../components/layout/Footer.astro';
 
         <!-- Vertical circuit line (right side) -->
         <svg data-profile-line class="absolute top-0 right-6 sm:right-12 w-px h-full pointer-events-none z-0 overflow-visible hidden lg:block" preserveAspectRatio="none">
-            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.1)" stroke-width="1" />
-            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.3)" stroke-width="1" stroke-dasharray="4 16" class="profile-line-draw" />
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.25)" stroke-width="1" />
+            <line x1="0" y1="0" x2="0" y2="100%" stroke="rgba(139,92,246,0.5)" stroke-width="1.5" stroke-dasharray="4 16" class="profile-line-draw" />
         </svg>
 
         <!-- Floating Orbital SVG -->
-        <svg data-profile-orbital class="absolute top-[15%] right-[8%] w-40 h-40 lg:w-64 lg:h-64 pointer-events-none z-0 opacity-[0.06]" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="0.5">
+        <svg data-profile-orbital class="absolute top-[15%] right-[8%] w-40 h-40 lg:w-64 lg:h-64 pointer-events-none z-0 opacity-[0.15]" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1">
             <circle cx="100" cy="100" r="95" stroke-dasharray="4 8" />
             <circle cx="100" cy="100" r="70" stroke-dasharray="2 6" />
             <circle cx="100" cy="100" r="45" />
@@ -261,16 +261,16 @@ import Footer from '../components/layout/Footer.astro';
         <!-- Stroke Draw: Connected nodes (process flow) -->
         <svg data-profile-draw class="absolute bottom-[5%] left-[4%] w-32 h-64 lg:w-40 lg:h-80 pointer-events-none z-0 hidden lg:block" viewBox="0 0 100 250" fill="none">
             <!-- Vertical spine -->
-            <line x1="50" y1="20" x2="50" y2="230" stroke="rgba(139,92,246,0.06)" stroke-width="0.5" class="draw-path" />
+            <line x1="50" y1="20" x2="50" y2="230" stroke="rgba(139,92,246,0.18)" stroke-width="1" class="draw-path" />
             <!-- Nodes -->
-            <circle cx="50" cy="35" r="10" stroke="rgba(139,92,246,0.15)" stroke-width="0.8" class="draw-path" />
-            <circle cx="50" cy="105" r="10" stroke="rgba(168,85,247,0.12)" stroke-width="0.8" class="draw-path" />
-            <circle cx="50" cy="175" r="10" stroke="rgba(192,132,252,0.1)" stroke-width="0.8" class="draw-path" />
-            <circle cx="50" cy="230" r="6" stroke="rgba(139,92,246,0.18)" stroke-width="1" class="draw-path" />
+            <circle cx="50" cy="35" r="10" stroke="rgba(139,92,246,0.35)" stroke-width="1.5" class="draw-path" />
+            <circle cx="50" cy="105" r="10" stroke="rgba(168,85,247,0.3)" stroke-width="1.5" class="draw-path" />
+            <circle cx="50" cy="175" r="10" stroke="rgba(192,132,252,0.25)" stroke-width="1.5" class="draw-path" />
+            <circle cx="50" cy="230" r="6" stroke="rgba(139,92,246,0.4)" stroke-width="1.8" class="draw-path" />
             <!-- Branches -->
-            <line x1="60" y1="35" x2="90" y2="35" stroke="rgba(139,92,246,0.08)" stroke-width="0.5" class="draw-path" />
-            <line x1="40" y1="105" x2="10" y2="105" stroke="rgba(168,85,247,0.08)" stroke-width="0.5" class="draw-path" />
-            <line x1="60" y1="175" x2="90" y2="175" stroke="rgba(192,132,252,0.08)" stroke-width="0.5" class="draw-path" />
+            <line x1="60" y1="35" x2="90" y2="35" stroke="rgba(139,92,246,0.22)" stroke-width="1" class="draw-path" />
+            <line x1="40" y1="105" x2="10" y2="105" stroke="rgba(168,85,247,0.22)" stroke-width="1" class="draw-path" />
+            <line x1="60" y1="175" x2="90" y2="175" stroke="rgba(192,132,252,0.22)" stroke-width="1" class="draw-path" />
         </svg>
 
         <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
@@ -366,9 +366,9 @@ import Footer from '../components/layout/Footer.astro';
 
         <!-- Stroke Draw: Arc frame for CTA -->
         <svg data-profile-draw class="absolute top-[50%] left-[3%] -translate-y-1/2 w-40 h-40 lg:w-56 lg:h-56 pointer-events-none z-0 hidden lg:block" viewBox="0 0 200 200" fill="none">
-            <circle cx="100" cy="100" r="90" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" class="draw-path" />
-            <path d="M100 15 A85 85 0 0 1 185 100" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="draw-path" />
-            <path d="M100 185 A85 85 0 0 1 15 100" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="draw-path" />
+            <circle cx="100" cy="100" r="90" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" class="draw-path" />
+            <path d="M100 15 A85 85 0 0 1 185 100" stroke="rgba(255,255,255,0.35)" stroke-width="1.8" class="draw-path" />
+            <path d="M100 185 A85 85 0 0 1 15 100" stroke="rgba(255,255,255,0.35)" stroke-width="1.8" class="draw-path" />
         </svg>
 
         <!-- Floating shapes -->
@@ -421,8 +421,8 @@ import Footer from '../components/layout/Footer.astro';
     <defs>
         <linearGradient id="line-gradient-1" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="rgba(139,92,246,0)" />
-            <stop offset="30%" stop-color="rgba(139,92,246,0.6)" />
-            <stop offset="70%" stop-color="rgba(139,92,246,0.6)" />
+            <stop offset="30%" stop-color="rgba(139,92,246,0.85)" />
+            <stop offset="70%" stop-color="rgba(139,92,246,0.85)" />
             <stop offset="100%" stop-color="rgba(139,92,246,0)" />
         </linearGradient>
     </defs>

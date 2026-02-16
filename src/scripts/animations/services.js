@@ -64,9 +64,9 @@ export default function initServices() {
         ease: 'none',
         scrollTrigger: {
           trigger: trigger,
-          start: 'top 90%',
-          end: 'bottom 20%',
-          scrub: 1.2 + (i * 0.3),
+          start: 'top 95%',
+          end: 'center 70%',
+          scrub: 0.6 + (i * 0.15),
         }
       });
     });
