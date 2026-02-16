@@ -1,0 +1,614 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<Layout
+    title="Agentes de Automatización — edd n' dev"
+    description="Construimos agentes de IA que capturan datos, toman decisiones y ejecutan acciones reales dentro de tu operación — sin intervención humana."
+>
+    <!-- HERO -->
+    <div id="hero" class="relative min-h-[100dvh] w-full flex flex-col justify-center lg:justify-end pt-32 pb-0 lg:pb-24 overflow-hidden border-b border-white/10" data-automation-hero>
+      <!-- Ledding Background -->
+      <div id="ledding-automation-container" class="absolute inset-0 z-0 opacity-40"></div>
+
+      <!-- Gradient Orbs -->
+      <div data-automation-orb class="absolute top-[15%] right-[10%] w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[120px] pointer-events-none z-[1]"></div>
+      <div data-automation-orb class="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-blue-500/15 blur-[100px] pointer-events-none z-[1]"></div>
+
+      <!-- Floating Geometric SVGs -->
+      <svg data-automation-float data-speed="0.8" class="absolute top-[20%] right-[15%] w-16 h-16 lg:w-24 lg:h-24 text-blue-500/20 z-[2] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="50" cy="50" r="40" />
+        <circle cx="50" cy="50" r="20" />
+        <line x1="50" y1="10" x2="50" y2="30" />
+        <line x1="50" y1="70" x2="50" y2="90" />
+        <line x1="10" y1="50" x2="30" y2="50" />
+        <line x1="70" y1="50" x2="90" y2="50" />
+      </svg>
+
+      <svg data-automation-float data-speed="1.2" class="absolute top-[35%] right-[8%] w-10 h-10 lg:w-14 lg:h-14 text-blue-400/15 z-[2] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="20" y="20" width="60" height="60" rx="4" />
+        <rect x="35" y="35" width="30" height="30" rx="2" />
+      </svg>
+
+      <svg data-automation-float data-speed="0.5" class="absolute bottom-[25%] right-[25%] w-8 h-8 lg:w-12 lg:h-12 text-blue-400/20 z-[2] pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+        <polygon points="50,10 90,50 50,90 10,50" />
+      </svg>
+
+      <svg data-automation-float data-speed="1.5" class="absolute top-[60%] left-[8%] w-6 h-6 lg:w-10 lg:h-10 text-blue-300/15 z-[2] pointer-events-none hidden lg:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="50" cy="50" r="35" stroke-dasharray="6 4" />
+        <circle cx="50" cy="50" r="10" />
+      </svg>
+
+      <!-- Stroke Draw: Scope/gear in hero -->
+      <svg data-automation-draw class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] lg:w-[700px] lg:h-[700px] pointer-events-none z-[2] opacity-60" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="90" stroke="rgba(59,130,246,0.15)" stroke-width="1" class="draw-path" />
+          <circle cx="100" cy="100" r="60" stroke="rgba(59,130,246,0.22)" stroke-width="1.2" class="draw-path" />
+          <circle cx="100" cy="100" r="30" stroke="rgba(59,130,246,0.3)" stroke-width="1.5" class="draw-path" />
+          <!-- Gear teeth -->
+          <path d="M100 8 L104 18 L96 18 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.2" class="draw-path" />
+          <path d="M192 100 L182 104 L182 96 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.2" class="draw-path" />
+          <path d="M100 192 L96 182 L104 182 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.2" class="draw-path" />
+          <path d="M8 100 L18 96 L18 104 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.2" class="draw-path" />
+          <path d="M165 35 L158 43 L153 38 Z" stroke="rgba(59,130,246,0.2)" stroke-width="1" class="draw-path" />
+          <path d="M165 165 L158 157 L153 162 Z" stroke="rgba(59,130,246,0.2)" stroke-width="1" class="draw-path" />
+          <path d="M35 165 L43 158 L38 153 Z" stroke="rgba(59,130,246,0.2)" stroke-width="1" class="draw-path" />
+          <path d="M35 35 L43 43 L38 38 Z" stroke="rgba(59,130,246,0.2)" stroke-width="1" class="draw-path" />
+      </svg>
+
+      <!-- Vignette -->
+      <div id="hero-vignette"
+           class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none z-10">
+      </div>
+
+      <!-- Grid Overlay -->
+      <div class="absolute inset-0 z-[3] pointer-events-none opacity-[0.03]"
+           style="background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px); background-size: 80px 80px;">
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-20 w-full px-6 sm:px-12 max-w-[1800px] mx-auto">
+        <header class="flex flex-col items-start">
+          <div class="flex items-center gap-3 mb-4 lg:mb-6 opacity-70">
+            <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse shadow-[0_0_8px_#3b82f6]"></div>
+            <span class="font-mono text-sm sm:text-base md:text-lg lg:text-sm 2xl:text-base tracking-widest uppercase text-gray-300">eddndev studio // automatización</span>
+          </div>
+
+          <h1 class="font-black tracking-tighter text-white leading-[0.85] text-[clamp(2.5rem,10vw,12rem)] 2xl:text-[clamp(5rem,11vw,16rem)] mix-blend-screen">
+            AGENTES QUE <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">TRABAJAN.</span>
+          </h1>
+
+          <div class="mt-8 lg:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 w-full border-t border-white/10 pt-8">
+            <div class="lg:col-span-6">
+              <p class="text-lg sm:text-xl md:text-2xl lg:text-xl 2xl:text-2xl text-gray-300 font-light leading-relaxed max-w-xl 2xl:max-w-2xl">
+                No vendemos promesas de IA. Construimos agentes que capturan datos, toman decisiones y ejecutan acciones reales dentro de tu operación — <span class="text-white font-medium">sin intervención humana</span>.
+              </p>
+              <div class="flex flex-wrap items-center gap-4 mt-8">
+                <a href="/contact" class="group relative inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                  <span class="relative z-10 2xl:text-lg">Agenda una consulta gratis</span>
+                  <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#automation-problem" class="group flex items-center gap-2 text-gray-400 hover:text-blue-300 font-medium transition-colors 2xl:text-lg">
+                  <span>Ver cómo funciona</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <!-- EL PROBLEMA -->
+    <section id="automation-problem" class="bg-[#050505] text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Stroke Draw: Warning triangle -->
+        <svg data-automation-draw class="absolute top-[8%] right-[4%] w-48 h-48 lg:w-72 lg:h-72 pointer-events-none z-0" viewBox="0 0 200 200" fill="none">
+            <polygon points="100,20 180,170 20,170" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" class="draw-path" />
+            <polygon points="100,50 160,150 40,150" stroke="rgba(59,130,246,0.15)" stroke-width="1" class="draw-path" />
+            <line x1="100" y1="80" x2="100" y2="120" stroke="rgba(59,130,246,0.3)" stroke-width="1.5" class="draw-path" />
+            <circle cx="100" cy="135" r="4" stroke="rgba(59,130,246,0.3)" stroke-width="1.5" class="draw-path" />
+        </svg>
+
+        <!-- Floating SVG -->
+        <svg data-automation-float data-speed="0.8" class="absolute top-[20%] right-[12%] w-12 h-12 lg:w-20 lg:h-20 pointer-events-none z-0 opacity-20" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="50" cy="50" r="40" class="text-blue-400" />
+          <circle cx="50" cy="50" r="15" class="text-blue-400" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+                <div class="lg:col-span-5">
+                    <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                        [ 01 · EL PROBLEMA ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                        TU EQUIPO <br> <span class="text-blue-400">MERECE MEJOR.</span>
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-3xl mb-10 reveal-text">
+                        Tu equipo pasa horas en tareas repetitivas que una máquina podría hacer en segundos. Mientras tanto, los procesos críticos dependen de una sola persona, los datos viven en silos y <span class="text-white font-medium">escalar significa contratar más gente para hacer lo mismo</span>.
+                    </p>
+
+                    <!-- Pain-point cards 2x2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+                        <div class="bg-[#050505] p-8 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                                <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">01</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Horas en data entry</h3>
+                            <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                Mover datos entre CRM, hojas de cálculo y correos. Una y otra vez, todos los días.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#050505] p-8 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                                <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">02</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Procesos que dependen de alguien</h3>
+                            <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                Si esa persona falta, el proceso se detiene. Un solo punto de falla en tu operación.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#050505] p-8 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                                <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">03</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Errores humanos repetitivos</h3>
+                            <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                Copiar mal un número, olvidar un paso, enviar el archivo equivocado. Errores que cuestan dinero.
+                            </p>
+                        </div>
+
+                        <div class="bg-[#050505] p-8 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                                <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">04</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Escala imposible</h3>
+                            <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                Más clientes = más trabajo manual = más contrataciones. Un ciclo que no termina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LA SOLUCIÓN -->
+    <section id="automation-solution" class="bg-black text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Stroke Draw: Connected nodes -->
+        <svg data-automation-draw class="absolute bottom-[5%] left-[4%] w-32 h-64 lg:w-40 lg:h-80 pointer-events-none z-0 hidden lg:block" viewBox="0 0 100 250" fill="none">
+            <line x1="50" y1="20" x2="50" y2="230" stroke="rgba(59,130,246,0.18)" stroke-width="1" class="draw-path" />
+            <circle cx="50" cy="35" r="10" stroke="rgba(59,130,246,0.35)" stroke-width="1.5" class="draw-path" />
+            <circle cx="50" cy="105" r="10" stroke="rgba(59,130,246,0.3)" stroke-width="1.5" class="draw-path" />
+            <circle cx="50" cy="175" r="10" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
+            <circle cx="50" cy="230" r="6" stroke="rgba(59,130,246,0.4)" stroke-width="1.8" class="draw-path" />
+            <line x1="60" y1="35" x2="90" y2="35" stroke="rgba(59,130,246,0.22)" stroke-width="1" class="draw-path" />
+            <line x1="40" y1="105" x2="10" y2="105" stroke="rgba(59,130,246,0.22)" stroke-width="1" class="draw-path" />
+            <line x1="60" y1="175" x2="90" y2="175" stroke="rgba(59,130,246,0.22)" stroke-width="1" class="draw-path" />
+        </svg>
+
+        <!-- Gradient Orb -->
+        <div data-automation-orb class="absolute top-[30%] left-[50%] -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-blue-900/10 blur-[150px] pointer-events-none z-0"></div>
+
+        <!-- Floating SVG -->
+        <svg data-automation-float data-speed="1.0" class="absolute bottom-[15%] right-[10%] w-12 h-12 lg:w-20 lg:h-20 pointer-events-none z-0 opacity-20" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="15" y="15" width="70" height="70" rx="8" class="text-blue-400" />
+          <circle cx="50" cy="50" r="15" class="text-blue-400" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-16">
+
+                <div class="lg:col-span-5">
+                    <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                        [ 02 · LA SOLUCIÓN ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                        AUTOMATIZACIÓN <br> <span class="text-blue-400">A MEDIDA.</span>
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-3xl reveal-text">
+                        No construimos chatbots genéricos. Diseñamos <span class="text-white font-medium">agentes inteligentes que entienden tu negocio</span> — capturan información, toman decisiones basadas en tus reglas y ejecutan acciones reales en tus sistemas existentes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 Capability Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-white/10">
+                <div class="bg-black p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                        <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">Captura</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-blue-300 transition-colors">Captura y procesa</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Extrae datos de correos, PDFs, formularios y cualquier fuente automáticamente. Sin copiar y pegar.
+                    </p>
+                </div>
+
+                <div class="bg-black p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                        <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">Decide</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-blue-300 transition-colors">Decide y ejecuta</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Toma decisiones basadas en reglas y contexto de tu negocio. Ejecuta acciones sin esperar aprobación manual.
+                    </p>
+                </div>
+
+                <div class="bg-black p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                        <span class="font-mono text-xs text-blue-400 tracking-widest uppercase">Conecta</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 group-hover:text-blue-300 transition-colors">Conecta y escala</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Se integra con tus herramientas existentes — CRM, ERP, correo, hojas de cálculo — y crece contigo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE USO -->
+    <section id="automation-cases" class="bg-[#050505] text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Stroke Draw: Grid pattern -->
+        <svg data-automation-draw class="absolute top-[8%] right-[4%] w-48 h-48 lg:w-72 lg:h-72 pointer-events-none z-0" viewBox="0 0 200 200" fill="none">
+            <rect x="20" y="20" width="70" height="70" rx="4" stroke="rgba(59,130,246,0.2)" stroke-width="1" class="draw-path" />
+            <rect x="110" y="20" width="70" height="70" rx="4" stroke="rgba(59,130,246,0.15)" stroke-width="1" class="draw-path" />
+            <rect x="20" y="110" width="70" height="70" rx="4" stroke="rgba(59,130,246,0.15)" stroke-width="1" class="draw-path" />
+            <rect x="110" y="110" width="70" height="70" rx="4" stroke="rgba(59,130,246,0.2)" stroke-width="1" class="draw-path" />
+            <line x1="90" y1="55" x2="110" y2="55" stroke="rgba(59,130,246,0.18)" stroke-width="1" class="draw-path" />
+            <line x1="90" y1="145" x2="110" y2="145" stroke="rgba(59,130,246,0.18)" stroke-width="1" class="draw-path" />
+            <line x1="55" y1="90" x2="55" y2="110" stroke="rgba(59,130,246,0.18)" stroke-width="1" class="draw-path" />
+            <line x1="145" y1="90" x2="145" y2="110" stroke="rgba(59,130,246,0.18)" stroke-width="1" class="draw-path" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+
+            <div class="mb-16 lg:mb-20">
+                <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                    [ 03 · CASOS DE USO ]
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                    QUÉ PUEDES <br> <span class="text-blue-400">AUTOMATIZAR.</span>
+                </h2>
+            </div>
+
+            <!-- 2x3 Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Soporte al cliente</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Respuestas instantáneas 24/7 que entienden contexto, resuelven dudas y escalan solo cuando es necesario.
+                    </p>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Calificación de leads</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Solo habla con quien va a comprar. El agente califica, prioriza y enruta automáticamente.
+                    </p>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Data entry y documentos</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Cero horas copiando datos. El agente extrae, valida y distribuye información entre tus sistemas.
+                    </p>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Reportes automáticos</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        De 8 horas a 15 minutos. Genera reportes consolidados desde múltiples fuentes sin tocar una hoja de cálculo.
+                    </p>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Workflows internos</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Tus herramientas, conectadas. Automatiza aprobaciones, notificaciones y flujos entre departamentos.
+                    </p>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full group-hover:shadow-[0_0_12px_#3b82f6] transition-shadow"></span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Inventario y alertas</h3>
+                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                        Anticípate a los problemas. Monitorea niveles, detecta anomalías y actúa antes de que sea tarde.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="automation-process" class="bg-black text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Floating Orbital SVG -->
+        <svg data-automation-draw class="absolute top-[15%] right-[8%] w-40 h-40 lg:w-64 lg:h-64 pointer-events-none z-0 opacity-[0.15]" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1">
+            <circle cx="100" cy="100" r="95" stroke-dasharray="4 8" class="draw-path" />
+            <circle cx="100" cy="100" r="70" stroke-dasharray="2 6" class="draw-path" />
+            <circle cx="100" cy="100" r="45" class="draw-path" />
+            <circle cx="100" cy="100" r="4" fill="white" stroke="none" />
+            <circle cx="100" cy="5" r="3" fill="white" stroke="none" />
+            <circle cx="170" cy="100" r="2" fill="white" stroke="none" />
+            <circle cx="55" cy="100" r="2.5" fill="white" stroke="none" />
+        </svg>
+
+        <!-- Floating SVG -->
+        <svg data-automation-float data-speed="0.6" class="absolute bottom-[20%] left-[5%] w-10 h-10 lg:w-16 lg:h-16 pointer-events-none z-0 opacity-20 hidden lg:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="50" cy="50" r="40" stroke-dasharray="4 4" class="text-blue-400" />
+          <circle cx="50" cy="50" r="20" class="text-blue-400" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+                <div class="lg:col-span-5">
+                    <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                        [ 04 · CÓMO FUNCIONA ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] mb-8 reveal-text">
+                        DE IDEA A <br> AGENTE EN <br> <span class="text-blue-400">SEMANAS.</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-xl reveal-text">
+                        Un proceso claro y probado para que tu primer agente esté operando <span class="text-white font-medium">lo más rápido posible</span>, sin sacrificar calidad.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="space-y-0">
+
+                        <div class="border-b border-white/10 py-8 lg:py-10 group reveal-text relative" data-automation-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-blue-500/30 transition-colors leading-none">01</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Diagnóstico</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Mapeamos tus flujos actuales e identificamos las oportunidades de automatización con mayor impacto en tu operación.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-white/10 py-8 lg:py-10 group reveal-text relative" data-automation-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-blue-500/30 transition-colors leading-none">02</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Diseño</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Arquitectamos el agente, sus guardrails y puntos de integración. Definimos qué puede y qué no puede hacer.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-white/10 py-8 lg:py-10 group reveal-text relative" data-automation-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-blue-500/30 transition-colors leading-none">03</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Construcción</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Construimos, probamos y refinamos hasta que funcione impecablemente en tu entorno real.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="py-8 lg:py-10 group reveal-text relative" data-automation-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-blue-500/30 transition-colors leading-none">04</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">Operación</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        Monitoreamos, optimizamos y evolucionamos el agente contigo. No te dejamos solo después del lanzamiento.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section id="automation-results" class="bg-[#050505] text-white border-b border-white/10 relative overflow-hidden">
+
+        <!-- Gradient Orb -->
+        <div data-automation-orb class="absolute top-[30%] right-[20%] w-[500px] h-[500px] rounded-full bg-blue-900/10 blur-[150px] pointer-events-none z-0"></div>
+
+        <!-- Stroke Draw: Upward arrow/chart -->
+        <svg data-automation-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
+            <line x1="20" y1="180" x2="180" y2="180" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" class="draw-path" />
+            <line x1="20" y1="180" x2="20" y2="20" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" class="draw-path" />
+            <path d="M40 160 L80 120 L120 140 L160 40" stroke="rgba(59,130,246,0.35)" stroke-width="2" fill="none" class="draw-path" />
+            <circle cx="160" cy="40" r="5" stroke="rgba(59,130,246,0.4)" stroke-width="1.5" class="draw-path" />
+            <path d="M150 35 L160 40 L155 30" stroke="rgba(59,130,246,0.3)" stroke-width="1.2" fill="none" class="draw-path" />
+        </svg>
+
+        <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+
+            <div class="mb-16 lg:mb-20">
+                <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                    [ 05 · RESULTADOS ]
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                    ANTES Y <br> <span class="text-blue-400">DESPUÉS.</span>
+                </h2>
+            </div>
+
+            <!-- 2x2 Metrics Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <h3 class="text-lg sm:text-xl 2xl:text-2xl font-bold mb-6 text-gray-300">Tiempo de respuesta</h3>
+                    <div class="flex items-center gap-4 sm:gap-6">
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-2">Antes</div>
+                            <div class="text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/30 line-through decoration-red-500/40">4 horas</div>
+                        </div>
+                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-blue-400 tracking-widest uppercase mb-2">Después</div>
+                            <div class="text-3xl sm:text-4xl 2xl:text-5xl font-black text-blue-400">12 seg</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <h3 class="text-lg sm:text-xl 2xl:text-2xl font-bold mb-6 text-gray-300">Data entry semanal</h3>
+                    <div class="flex items-center gap-4 sm:gap-6">
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-2">Antes</div>
+                            <div class="text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/30 line-through decoration-red-500/40">20 hrs</div>
+                        </div>
+                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-blue-400 tracking-widest uppercase mb-2">Después</div>
+                            <div class="text-3xl sm:text-4xl 2xl:text-5xl font-black text-blue-400">0 hrs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <h3 class="text-lg sm:text-xl 2xl:text-2xl font-bold mb-6 text-gray-300">Calificación de leads</h3>
+                    <div class="flex items-center gap-4 sm:gap-6">
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-2">Antes</div>
+                            <div class="text-2xl sm:text-3xl 2xl:text-4xl font-black text-white/30 line-through decoration-red-500/40">Manual, al día siguiente</div>
+                        </div>
+                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-blue-400 tracking-widest uppercase mb-2">Después</div>
+                            <div class="text-2xl sm:text-3xl 2xl:text-4xl font-black text-blue-400">Instantánea, 24/7</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <h3 class="text-lg sm:text-xl 2xl:text-2xl font-bold mb-6 text-gray-300">Generación de reportes</h3>
+                    <div class="flex items-center gap-4 sm:gap-6">
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-2">Antes</div>
+                            <div class="text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/30 line-through decoration-red-500/40">1 día</div>
+                        </div>
+                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-blue-400 tracking-widest uppercase mb-2">Después</div>
+                            <div class="text-3xl sm:text-4xl 2xl:text-5xl font-black text-blue-400">15 min</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="relative z-20 bg-[#6A0DAD] text-white overflow-hidden py-24 lg:py-32">
+        <!-- Dot pattern background -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.04] z-0"
+             style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <!-- Floating shapes -->
+        <svg data-automation-float data-speed="0.6" class="absolute top-[10%] left-[5%] w-24 h-24 lg:w-40 lg:h-40 text-white/10 pointer-events-none z-0" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
+            <circle cx="50" cy="50" r="45" />
+            <circle cx="50" cy="50" r="30" stroke-dasharray="4 4" />
+            <circle cx="50" cy="50" r="15" />
+        </svg>
+
+        <svg data-automation-float data-speed="1.0" class="absolute bottom-[15%] right-[10%] w-16 h-16 lg:w-28 lg:h-28 text-white/10 pointer-events-none z-0" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+            <rect x="15" y="15" width="70" height="70" transform="rotate(45, 50, 50)" />
+        </svg>
+
+        <div class="relative mx-auto max-w-[1800px] px-6 sm:px-12 z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 relative">
+                    <div class="text-xs sm:text-sm md:text-base lg:text-xs font-mono text-purple-200 tracking-widest mb-6 reveal-text">
+                        [ SIGUIENTE PASO ]
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                        TU PRIMER AGENTE <br> PUEDE ESTAR <br> FUNCIONANDO EN <br>
+                        <span class="text-purple-200">SEMANAS.</span>
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-end pl-0 lg:pl-12">
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-xl 2xl:text-2xl text-purple-100 font-light leading-relaxed max-w-2xl mb-8 reveal-text">
+                        Cuéntanos qué procesos te quitan más tiempo y te decimos honestamente
+                        <span class="text-white font-medium">cómo un agente puede resolverlo</span> — o si no somos la opción correcta.
+                    </p>
+                    <div class="reveal-text">
+                        <a href="/contact" class="group relative inline-flex items-center gap-3 px-8 py-4 2xl:px-10 2xl:py-5 bg-white text-[#6A0DAD] font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                            <span class="relative z-10 group-hover:text-purple-900 transition-colors 2xl:text-lg">Iniciar conversación</span>
+                            <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>

@@ -15,6 +15,7 @@ import initProjectHero from './animations/project-hero';
 import initProfile from './animations/profile';
 import initServices from './animations/services';
 import initCaseContent from './animations/case-content';
+import initAutomation from './animations/automation';
 import { initCursor } from './features/cursor';
 
 const init = () => {
@@ -38,6 +39,7 @@ const init = () => {
   initProfile();
   initServices();
   initCaseContent();
+  initAutomation();
 };
 
 // Boot on initial load and on every page transition
