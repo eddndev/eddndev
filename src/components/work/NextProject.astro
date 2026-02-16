@@ -34,6 +34,9 @@ const nextColorRgb = hexToRgb(nextColor);
   style={`--next-color: ${nextColor}; --next-color-rgb: ${nextColorRgb};`}
   data-next-project
 >
+  <!-- Ambient blob -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[var(--next-color)] opacity-[0.04] blur-[150px] pointer-events-none z-0"></div>
+
   <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
