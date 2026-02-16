@@ -1,56 +1,73 @@
 ---
-// NavigationPanel.astro: Grid que ocupa SOLO el área de contenido
+// NavigationPanel.astro: Bento-box navigation grid
 const navItems = [
+  { label: 'Proyectos', url: '/work', sub: 'Casos de Estudio', col: 'col-span-2', featured: true },
   { label: 'Inicio', url: '/', sub: 'Index', col: 'col-span-1' },
   { label: 'Servicios', url: '/services', sub: 'Lo que hacemos', col: 'col-span-1' },
-  { label: 'Proyectos', url: '/work', sub: 'Casos de Estudio', col: 'col-span-1' },
-  { label: 'Contacto', url: '/contact', sub: 'Hablemos', col: 'col-span-1' },
+  { label: 'Perfil', url: '/profile', sub: 'El estudio', col: 'col-span-1' },
+  { label: 'Contacto', url: '/contact', sub: 'Hablemos', col: 'col-span-1', accent: true },
 ];
 ---
 
-<aside 
+<aside
     id="nav-panel"
-    class="fixed inset-0 z-30 bg-black/95 backdrop-blur-3xl flex flex-col 
-           /* Mobile: Full screen minus header if needed, usually full overlay */
-           top-16 lg:top-20 2xl:top-24 
+    class="fixed inset-0 z-30 bg-black/95 backdrop-blur-3xl flex flex-col
+           top-16 lg:top-20 2xl:top-24
            left-0
-           /* Transition State: Hidden by default */
            opacity-0 pointer-events-none scale-[0.98]
            transition-all duration-300 ease-out origin-top"
 >
     <!-- Background Grid Effect -->
-    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none border-t border-white/10" 
+    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none border-t border-white/10"
          style="background-image: linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px); background-size: 60px 60px;">
     </div>
 
     <!-- Content Container -->
-    <div class="flex-1 w-full h-full overflow-y-auto overscroll-contain p-6 lg:p-12 relative z-10">
-        
-        <div class="max-w-[1600px] mx-auto h-full flex flex-col justify-center">
-            <!-- THE GRID -->
-            <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 h-auto lg:h-3/4">
+    <div class="flex-1 w-full h-full overflow-y-auto overscroll-contain p-4 md:p-6 lg:p-12 relative z-10">
+
+        <div class="max-w-[1600px] mx-auto h-full flex flex-col">
+            <!-- BENTO GRID -->
+            <nav class="flex-1 grid grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-2 md:gap-4 lg:gap-6">
                 {navItems.map((item, index) => (
-                    <a href={item.url} 
-                       class={`nav-card group relative border border-white/10 bg-white/5 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 flex flex-col justify-between p-8 rounded-sm overflow-hidden ${item.col}`}
+                    <a href={item.url}
+                       class:list={[
+                         'nav-card group relative flex flex-col justify-between p-4 md:p-6 lg:p-8 rounded-sm overflow-hidden transition-all duration-300',
+                         item.col,
+                         item.accent
+                           ? 'border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 hover:border-purple-400/60'
+                           : 'border border-white/10 bg-white/5 hover:bg-white/10 hover:border-purple-500/50',
+                       ]}
                        data-astro-reload>
-                        
+
                         <!-- Hover Glow -->
-                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-500/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                        <div class:list={[
+                          'absolute -right-10 -bottom-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none',
+                          item.accent ? 'w-52 h-52 bg-purple-500/30 blur-[60px]' : 'w-40 h-40 bg-purple-500/20 blur-[50px]',
+                        ]}></div>
 
                         <!-- Top Info -->
                         <div class="flex justify-between items-start">
-                            <span class="font-mono text-xs text-purple-400 opacity-60 group-hover:opacity-100">
+                            <span class:list={[
+                              'font-mono text-xs opacity-60 group-hover:opacity-100',
+                              item.accent ? 'text-purple-300' : 'text-purple-400',
+                            ]}>
                                 0{index + 1}
                             </span>
-                            <svg class="w-6 h-6 text-gray-600 group-hover:text-white group-hover:-rotate-45 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-gray-600 group-hover:text-white group-hover:-rotate-45 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                         </div>
 
                         <!-- Label -->
                         <div>
-                            <span class="block font-mono text-[10px] text-gray-400 uppercase tracking-widest mb-2 group-hover:text-purple-300 transition-colors">
+                            <span class:list={[
+                              'block font-mono text-[10px] uppercase tracking-widest mb-1 md:mb-2 transition-colors',
+                              item.accent ? 'text-purple-300/70 group-hover:text-purple-200' : 'text-gray-400 group-hover:text-purple-300',
+                            ]}>
                                 {item.sub}
                             </span>
-                            <span class="block text-4xl lg:text-5xl font-black text-white tracking-tight group-hover:translate-x-2 transition-transform duration-300">
+                            <span class:list={[
+                              'block font-black text-white tracking-tight group-hover:translate-x-2 transition-transform duration-300',
+                              item.featured ? 'text-3xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-4xl lg:text-5xl',
+                            ]}>
                                 {item.label}
                             </span>
                         </div>
