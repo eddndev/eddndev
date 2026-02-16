@@ -145,6 +145,10 @@ const colorStyle = `--project-color: ${entry.data.color}; --project-color-rgb: $
 
         <!-- CONTENT STREAM -->
         <main class="bg-[#050505] relative z-10 pb-32 min-h-screen">
+            <!-- Ambient blobs -->
+            <div class="absolute top-[10%] -left-[200px] w-[600px] h-[600px] rounded-full bg-[var(--project-color)] opacity-[0.06] blur-[150px] pointer-events-none z-0"></div>
+            <div class="absolute bottom-[20%] -right-[150px] w-[500px] h-[500px] rounded-full bg-[var(--project-color)] opacity-[0.05] blur-[120px] pointer-events-none z-0"></div>
+
             <!-- 1. Vertical Guides -->
             <div class="absolute inset-0 max-w-[1800px] mx-auto pointer-events-none px-6 sm:px-12">
                 <div class="absolute left-6 sm:left-12 top-0 bottom-0 w-px bg-white/5"></div>
