@@ -21,6 +21,40 @@ export default function initProfile() {
     }
   }
 
+  // ── SVG Stroke Drawing (scroll-driven) ──
+  document.querySelectorAll('[data-profile-draw]').forEach(svg => {
+    const paths = svg.querySelectorAll('.draw-path');
+    if (!paths.length) return;
+
+    const trigger = svg.closest('section') || svg.closest('#hero') || svg.closest('div');
+
+    paths.forEach((path, i) => {
+      // getTotalLength works on line, circle, path, rect, polygon, etc.
+      let len;
+      try {
+        len = path.getTotalLength();
+      } catch {
+        return; // skip elements that don't support getTotalLength
+      }
+
+      gsap.set(path, {
+        strokeDasharray: len,
+        strokeDashoffset: len,
+      });
+
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top 90%',
+          end: 'bottom 20%',
+          scrub: 1.2 + (i * 0.3), // stagger the scrub slightly per path
+        }
+      });
+    });
+  });
+
   // ── Floating SVGs (Scroll-driven parallax) ──
   gsap.utils.toArray('[data-profile-float]').forEach(el => {
     const speed = parseFloat(el.dataset.speed) || 1;

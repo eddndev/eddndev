@@ -39,6 +39,18 @@ import Footer from '../components/layout/Footer.astro';
         <path d="M50 5 L95 50 L50 95 L5 50 Z" />
       </svg>
 
+      <!-- Stroke Draw: Large crosshair/scope in hero -->
+      <svg data-profile-draw class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] pointer-events-none z-[2] opacity-60" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="90" stroke="rgba(139,92,246,0.06)" stroke-width="0.3" class="draw-path" />
+          <circle cx="100" cy="100" r="60" stroke="rgba(139,92,246,0.08)" stroke-width="0.4" class="draw-path" />
+          <circle cx="100" cy="100" r="30" stroke="rgba(168,85,247,0.1)" stroke-width="0.5" class="draw-path" />
+          <!-- Crosshair lines -->
+          <line x1="100" y1="5" x2="100" y2="70" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
+          <line x1="100" y1="130" x2="100" y2="195" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
+          <line x1="5" y1="100" x2="70" y2="100" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
+          <line x1="130" y1="100" x2="195" y2="100" stroke="rgba(139,92,246,0.05)" stroke-width="0.3" class="draw-path" />
+      </svg>
+
       <!-- Vignettes -->
       <div id="hero-vignette"
            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none z-10">
@@ -57,7 +69,7 @@ import Footer from '../components/layout/Footer.astro';
             <span class="font-mono text-sm sm:text-base md:text-lg lg:text-sm 2xl:text-base tracking-widest uppercase text-gray-300">eddndev studio // México</span>
           </div>
 
-          <h1 class="font-black tracking-tighter text-white leading-[0.85] text-[clamp(3.5rem,11vw,12rem)] 2xl:text-[clamp(5rem,11vw,16rem)] mix-blend-screen">
+          <h1 class="font-black tracking-tighter text-white leading-[0.85] text-[clamp(2.5rem,10vw,12rem)] 2xl:text-[clamp(5rem,11vw,16rem)] mix-blend-screen">
             CONSTRUIMOS <br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">INDEPENDENCIA.</span>
           </h1>
@@ -139,6 +151,13 @@ import Footer from '../components/layout/Footer.astro';
         </svg>
         <svg class="absolute bottom-8 left-8 w-6 h-6 text-white/10 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
             <line x1="12" y1="0" x2="12" y2="24" /><line x1="0" y1="12" x2="24" y2="12" />
+        </svg>
+
+        <!-- Stroke Draw: Hexagonal frame -->
+        <svg data-profile-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
+            <path d="M100 10 L180 55 L180 145 L100 190 L20 145 L20 55 Z" stroke="rgba(139,92,246,0.1)" stroke-width="0.8" class="draw-path" />
+            <path d="M100 40 L155 67 L155 133 L100 160 L45 133 L45 67 Z" stroke="rgba(168,85,247,0.08)" stroke-width="0.5" class="draw-path" />
+            <circle cx="100" cy="100" r="25" stroke="rgba(192,132,252,0.12)" stroke-width="0.6" class="draw-path" />
         </svg>
 
         <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
@@ -239,6 +258,21 @@ import Footer from '../components/layout/Footer.astro';
             <circle cx="55" cy="100" r="2.5" fill="white" stroke="none" class="profile-orbital-dot" />
         </svg>
 
+        <!-- Stroke Draw: Connected nodes (process flow) -->
+        <svg data-profile-draw class="absolute bottom-[5%] left-[4%] w-32 h-64 lg:w-40 lg:h-80 pointer-events-none z-0 hidden lg:block" viewBox="0 0 100 250" fill="none">
+            <!-- Vertical spine -->
+            <line x1="50" y1="20" x2="50" y2="230" stroke="rgba(139,92,246,0.06)" stroke-width="0.5" class="draw-path" />
+            <!-- Nodes -->
+            <circle cx="50" cy="35" r="10" stroke="rgba(139,92,246,0.15)" stroke-width="0.8" class="draw-path" />
+            <circle cx="50" cy="105" r="10" stroke="rgba(168,85,247,0.12)" stroke-width="0.8" class="draw-path" />
+            <circle cx="50" cy="175" r="10" stroke="rgba(192,132,252,0.1)" stroke-width="0.8" class="draw-path" />
+            <circle cx="50" cy="230" r="6" stroke="rgba(139,92,246,0.18)" stroke-width="1" class="draw-path" />
+            <!-- Branches -->
+            <line x1="60" y1="35" x2="90" y2="35" stroke="rgba(139,92,246,0.08)" stroke-width="0.5" class="draw-path" />
+            <line x1="40" y1="105" x2="10" y2="105" stroke="rgba(168,85,247,0.08)" stroke-width="0.5" class="draw-path" />
+            <line x1="60" y1="175" x2="90" y2="175" stroke="rgba(192,132,252,0.08)" stroke-width="0.5" class="draw-path" />
+        </svg>
+
         <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
@@ -329,6 +363,13 @@ import Footer from '../components/layout/Footer.astro';
         <div class="absolute inset-0 pointer-events-none opacity-[0.04] z-0"
              style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 40px 40px;">
         </div>
+
+        <!-- Stroke Draw: Arc frame for CTA -->
+        <svg data-profile-draw class="absolute top-[50%] left-[3%] -translate-y-1/2 w-40 h-40 lg:w-56 lg:h-56 pointer-events-none z-0 hidden lg:block" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="90" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" class="draw-path" />
+            <path d="M100 15 A85 85 0 0 1 185 100" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="draw-path" />
+            <path d="M100 185 A85 85 0 0 1 15 100" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="draw-path" />
+        </svg>
 
         <!-- Floating shapes -->
         <svg data-profile-float data-speed="0.6" class="absolute top-[10%] left-[5%] w-24 h-24 lg:w-40 lg:h-40 text-white/10 pointer-events-none z-0" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
