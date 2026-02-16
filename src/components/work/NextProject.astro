@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  current: CollectionEntry<'work'>;
+  projects: CollectionEntry<'work'>[];
+}
+
+const { current, projects } = Astro.props;
+
+// Find current index and wrap around to next
+const currentIndex = projects.findIndex(p => p.slug === current.slug);
+const nextIndex = (currentIndex + 1) % projects.length;
+const next = projects[nextIndex];
+
+function hexToRgb(hex: string) {
+  let c;
+  if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+    c = hex.substring(1).split('');
+    if (c.length === 3) c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+    c = '0x' + c.join('');
+    return [(+c >> 16) & 255, (+c >> 8) & 255, +c & 255].join(',');
+  }
+  return '255,255,255';
+}
+
+const nextColor = next.data.color ?? '#ffffff';
+const nextColorRgb = hexToRgb(nextColor);
+---
+
+<section
+  class="relative z-10 bg-[#020202] border-t border-white/10 overflow-hidden"
+  style={`--next-color: ${nextColor}; --next-color-rgb: ${nextColorRgb};`}
+  data-next-project
+>
+  <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+      {/* Left column — Label + Link */}
+      <div class="lg:col-span-5 flex flex-col justify-between gap-8">
+        <div class="space-y-6">
+          <span class="font-mono text-xs tracking-widest uppercase text-[var(--next-color)]">
+            [ SIGUIENTE PROYECTO ]
+          </span>
+          <div class="h-px bg-white/10"></div>
+        </div>
+
+        <a href="/work" class="group inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-gray-500 hover:text-white transition-colors">
+          <span class="h-px w-8 bg-white/20 group-hover:w-12 group-hover:bg-white transition-all"></span>
+          VER TODOS
+        </a>
+      </div>
+
+      {/* Right column — Next project card */}
+      <div class="lg:col-span-7">
+        <a href={`/work/${next.slug}`} data-cursor-text="VER" class="group relative block overflow-hidden border border-white/10 bg-[#050505] transition-colors duration-500 hover:bg-[#080808]">
+
+          {/* Ghost background image */}
+          {next.data.cover && (
+            <div class="absolute inset-0 z-0 pointer-events-none opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-700 mix-blend-luminosity">
+              <Image
+                src={next.data.cover}
+                alt=""
+                class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s]"
+              />
+            </div>
+          )}
+
+          {/* Content */}
+          <div class="relative z-10 p-8 sm:p-12 space-y-6">
+            {/* Category */}
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 bg-[var(--next-color)] shadow-[0_0_8px_var(--next-color)]"></div>
+              <span class="font-mono text-xs text-[var(--next-color)] uppercase tracking-widest">{next.data.category}</span>
+            </div>
+
+            {/* Title */}
+            <h3 class="text-5xl lg:text-7xl font-black text-white tracking-tighter leading-[0.9] group-hover:translate-x-2 transition-transform duration-500">
+              {next.data.title.toUpperCase()}<span class="text-[var(--next-color)]">.</span>
+            </h3>
+
+            {/* Description + Meta */}
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-4 border-t border-white/10">
+              <p class="text-base text-gray-400 font-light leading-relaxed line-clamp-2 max-w-lg">
+                {next.data.description}
+              </p>
+
+              <div class="flex items-center gap-4 shrink-0">
+                <span class="font-mono text-sm font-bold text-gray-500">{next.data.year}</span>
+                <div class="w-10 h-10 border border-white/20 flex items-center justify-center bg-white/5 group-hover:bg-[var(--next-color)] group-hover:border-[var(--next-color)] transition-all duration-300 group-hover:rotate-[-45deg]">
+                  <svg class="w-4 h-4 text-gray-200 group-hover:text-black transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -2,16 +2,18 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Footer from '../../components/layout/Footer.astro';
+import NextProject from '../../components/work/NextProject.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('work');
-  return projects.map(entry => ({
+  const sorted = [...projects].sort((a, b) => Number(b.data.year) - Number(a.data.year));
+  return sorted.map(entry => ({
     params: { slug: entry.slug },
-    props: { entry },
+    props: { entry, projects: sorted },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry, projects } = Astro.props;
 const { Content } = await entry.render();
 
 // Dynamic CSS variable for project color
@@ -31,21 +33,21 @@ function hexToRgb(hex) {
 const colorStyle = `--project-color: ${entry.data.color}; --project-color-rgb: ${hexToRgb(entry.data.color)}`;
 ---
 
-<Layout 
-    title={`${entry.data.title} — Case Study`} 
+<Layout
+    title={`${entry.data.title} — Case Study`}
     description={entry.data.description}
     image={entry.data.cover}
     project={{ title: entry.data.title }}
 >
-    
+
     <!-- Dynamic Style Wrapper -->
     <div style={colorStyle}>
         <!-- BLUEPRINT HERO -->
         <header class={`relative w-full min-h-screen flex flex-col justify-between overflow-hidden border-b border-white/10 project-hero-container group ${entry.data.heroStyle || 'bg-[#020202]'}`}>
-            
+
             <!-- 1. Dynamic Background & Ledding -->
             <div id="ledding-project-container" class="absolute inset-0 z-0 opacity-40 mix-blend-screen pointer-events-none"></div>
-            
+
             <!-- Decorators -->
             <div class="absolute top-0 left-0 w-8 h-8 border-t border-l border-[var(--project-color)] opacity-50 z-10"></div>
             <div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-[var(--project-color)] opacity-50 z-10"></div>
@@ -62,7 +64,7 @@ const colorStyle = `--project-color: ${entry.data.color}; --project-color-rgb: $
                 <h1 class="hero-title text-[12vw] leading-[0.8] font-black tracking-tighter text-white select-none mix-blend-normal drop-shadow-[0_0_30px_rgba(var(--project-color-rgb),0.3)]">
                     {entry.data.title.toUpperCase()}<span class="text-[var(--project-color)] inline-block animate-pulse drop-shadow-[0_0_15px_var(--project-color)]">.</span>
                 </h1>
-                
+
                 <!-- Abstract -->
                 <div class="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <div class="lg:col-span-6 lg:col-start-1 hero-meta-item opacity-0">
@@ -120,18 +122,18 @@ const colorStyle = `--project-color: ${entry.data.color}; --project-color-rgb: $
                     <a href={url} target="_blank" data-cursor-text="OPEN" class="group relative p-8 flex items-center justify-between overflow-hidden transition-all duration-500">
                         <div class="absolute inset-0 bg-white/[0.02] group-hover:bg-[var(--project-color)]/10 transition-colors duration-500"></div>
                         <div class="absolute bottom-0 left-0 w-full h-[2px] bg-[var(--project-color)] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                        
+
                         <div class="flex items-center gap-5 relative z-10">
                             <div class="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 group-hover:text-white group-hover:bg-[var(--project-color)] group-hover:border-[var(--project-color)] group-hover:scale-110 group-hover:rotate-[-10deg] transition-all duration-500 shadow-[0_0_0_0_transparent] group-hover:shadow-[0_0_20px_rgba(var(--project-color-rgb),0.4)]">
                                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                             </div>
-                            
+
                             <div class="flex flex-col">
                                 <span class="text-[9px] font-mono text-[var(--project-color)] uppercase tracking-widest mb-1 opacity-80 group-hover:opacity-100">External Resource</span>
                                 <span class="text-lg font-bold text-white group-hover:translate-x-1 transition-transform duration-300">{label}</span>
                             </div>
                         </div>
-                        
+
                         <div class="relative z-10 w-8 h-8 flex items-center justify-center rounded-full border border-white/10 bg-white/0 group-hover:bg-white group-hover:border-white transition-all duration-500">
                             <svg class="w-3 h-3 text-gray-500 group-hover:text-black group-hover:-rotate-45 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                         </div>
@@ -151,11 +153,15 @@ const colorStyle = `--project-color: ${entry.data.color}; --project-color-rgb: $
             </div>
 
             <!-- 2. Central Reading Column -->
-            <div class="max-w-4xl mx-auto relative">
-                <!-- Content Injection -->
-                <Content />
+            <div class="mx-auto max-w-[1800px] px-6 sm:px-12 relative" data-case-content>
+                <div class="max-w-4xl mx-auto space-y-24 lg:space-y-32 py-24 lg:py-32">
+                    <Content />
+                </div>
             </div>
         </main>
+
+        <!-- NEXT PROJECT -->
+        <NextProject current={entry} projects={projects} />
     </div>
 
     <Footer />

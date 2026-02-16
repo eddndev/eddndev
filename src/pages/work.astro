@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/layout/Footer.astro';
+import ProjectList from '../components/work/ProjectList.astro';
 import { getCollection } from 'astro:content';
 
 // Obtener proyectos (para SEO o uso futuro en esta misma página)
@@ -47,8 +48,8 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
     </div>
 
     <!-- MAIN CONTENT AREA -->
-    <main class="min-h-[50vh] bg-black relative z-10">
-        <!-- Contenido de la sección de trabajo se incluirá aquí -->
+    <main class="bg-black relative z-10">
+        <ProjectList projects={projects} />
     </main>
 
     <Footer />

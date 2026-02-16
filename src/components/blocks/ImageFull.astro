@@ -7,19 +7,19 @@ interface Props {
 }
 const { src, alt, caption } = Astro.props;
 ---
-<div class="space-y-4">
-    <div class="relative w-full rounded-sm overflow-hidden border border-white/10 bg-[#111] group">
-        <Image 
-            src={src} 
-            alt={alt} 
-            class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
+<div class="space-y-4" data-case-block>
+    <div class="relative w-full overflow-hidden border border-white/10 bg-[#111] group reveal-text">
+        <Image
+            src={src}
+            alt={alt}
+            class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.01]"
         />
-        <!-- Scanline effect overlay (simulated with CSS since we might lack the png) -->
+        <!-- Scanline effect overlay -->
         <div class="absolute inset-0 bg-repeat opacity-10 pointer-events-none mix-blend-overlay" style="background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .3) 25%, rgba(255, 255, 255, .3) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .3) 75%, rgba(255, 255, 255, .3) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .3) 25%, rgba(255, 255, 255, .3) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .3) 75%, rgba(255, 255, 255, .3) 76%, transparent 77%, transparent); background-size: 4px 4px;"></div>
     </div>
 
     {caption && (
-        <figcaption class="flex items-center justify-end gap-3 text-xs font-mono text-gray-500">
+        <figcaption class="flex items-center justify-end gap-3 text-xs font-mono text-gray-500 reveal-text">
             <span class="h-px w-8 bg-white/20"></span>
             {caption}
         </figcaption>
