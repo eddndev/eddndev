@@ -65,4 +65,37 @@ export default function initFocus() {
       }
     });
   });
+
+  // 4. SVG Stroke Drawing (index decorations)
+  document.querySelectorAll('[data-index-draw]').forEach(svg => {
+    const paths = svg.querySelectorAll('.draw-path');
+    if (!paths.length) return;
+
+    const trigger = svg.closest('section') || svg.closest('#hero') || svg.closest('div');
+
+    paths.forEach((path, i) => {
+      let len;
+      try {
+        len = path.getTotalLength();
+      } catch {
+        return;
+      }
+
+      gsap.set(path, {
+        strokeDasharray: len,
+        strokeDashoffset: len,
+      });
+
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top 95%',
+          end: 'center 70%',
+          scrub: 0.6 + (i * 0.15),
+        }
+      });
+    });
+  });
 }
