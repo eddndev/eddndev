@@ -6,9 +6,9 @@ export default function initAutomation() {
   if (!hero) return; // Not on automation page
 
   // ── Hero Entrance ──
-  const tl = gsap.timeline({ defaults: { ease: 'power2.out', duration: 0.8 } });
-  tl.from('#ledding-automation-container', { opacity: 0, scale: 0.96, duration: 1.2 })
-    .from(hero.children, { y: 30, opacity: 0, stagger: 0.12, duration: 0.9 }, '-=0.7');
+  const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+  tl.from('#ledding-automation-container', { opacity: 0, duration: 0.6 })
+    .from(hero.children, { opacity: 0, stagger: 0.08, duration: 0.5 }, '-=0.3');
 
   // ── Ledding Breathing ──
   if (!prefersReduced()) {
@@ -95,40 +95,35 @@ export default function initAutomation() {
     });
   });
 
-  // ── Process Steps (staggered scroll reveal) ──
+  // ── Process Steps (opacity reveal) ──
   const steps = gsap.utils.toArray('[data-automation-step]');
   if (steps.length) {
     steps.forEach((step, i) => {
-      const num = step.querySelector('span');
-      if (num) {
-        gsap.from(num, {
-          x: -20,
-          opacity: 0,
-          duration: 0.6,
-          delay: i * 0.05,
-          scrollTrigger: {
-            trigger: step,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
-          }
-        });
-      }
+      gsap.from(step, {
+        opacity: 0,
+        duration: 0.4,
+        delay: i * 0.03,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: step,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        }
+      });
     });
   }
 
-  // ── Cards (scale reveal on scroll) ──
+  // ── Cards (opacity reveal on scroll) ──
   gsap.utils.toArray('[data-automation-card]').forEach((card, i) => {
     gsap.from(card, {
-      scale: 0.95,
-      y: 30,
       opacity: 0,
-      duration: 0.7,
-      delay: i * 0.08,
-      ease: 'power3.out',
+      duration: 0.4,
+      delay: i * 0.04,
+      ease: 'power2.out',
       scrollTrigger: {
         trigger: card,
-        start: 'top 90%',
-        toggleActions: 'play none none reverse',
+        start: 'top 92%',
+        toggleActions: 'play none none none',
       }
     });
   });

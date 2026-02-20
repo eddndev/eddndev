@@ -26,42 +26,39 @@ export default function initFocus() {
       scrollTrigger: {
         trigger: line.closest('section'),
         start: 'top 85%', 
-        toggleActions: 'play none none reverse'
+        toggleActions: 'play none none none'
       }
     });
   });
 
-  // 2. Text Reveals (Staggered)
+  // 2. Text Reveals (Staggered, opacity only)
   gsap.utils.toArray('section').forEach(section => {
     const texts = section.querySelectorAll('.reveal-text');
     if (texts.length > 0) {
       gsap.from(texts, {
-        y: 30,
         autoAlpha: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power3.out',
+        duration: 0.5,
+        stagger: 0.06,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: section,
           start: 'top 85%',
-          toggleActions: 'play none none reverse'
+          toggleActions: 'play none none none'
         }
       });
     }
   });
 
-  // 3. Panels Reveal (Scale & Fade)
+  // 3. Panels Reveal (opacity only)
   gsap.utils.toArray('[data-panel-reveal]').forEach(panel => {
     gsap.from(panel, {
-      y: 40,
-      scale: 0.95,
       autoAlpha: 0,
-      duration: 1,
-      ease: 'power3.out',
+      duration: 0.5,
+      ease: 'power2.out',
       scrollTrigger: {
         trigger: panel,
         start: 'top 85%',
-        toggleActions: 'play none none reverse'
+        toggleActions: 'play none none none'
       }
     });
   });
