@@ -1,0 +1,62 @@
+---
+import { processSteps } from '../../data/automation';
+---
+
+<section id="automation-process" class="bg-black text-white border-b border-white/10 relative overflow-hidden">
+
+    <!-- Floating Orbital SVG -->
+    <svg data-automation-draw class="absolute top-[15%] right-[8%] w-40 h-40 lg:w-64 lg:h-64 pointer-events-none z-0 opacity-[0.15]" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="1">
+        <circle cx="100" cy="100" r="95" stroke-dasharray="4 8" class="draw-path" />
+        <circle cx="100" cy="100" r="70" stroke-dasharray="2 6" class="draw-path" />
+        <circle cx="100" cy="100" r="45" class="draw-path" />
+        <circle cx="100" cy="100" r="4" fill="white" stroke="none" />
+        <circle cx="100" cy="5" r="3" fill="white" stroke="none" />
+        <circle cx="170" cy="100" r="2" fill="white" stroke="none" />
+        <circle cx="55" cy="100" r="2.5" fill="white" stroke="none" />
+    </svg>
+
+    <!-- Floating SVG -->
+    <svg data-automation-float data-speed="0.6" class="absolute bottom-[20%] left-[5%] w-10 h-10 lg:w-16 lg:h-16 pointer-events-none z-0 opacity-20 hidden lg:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="50" cy="50" r="40" stroke-dasharray="4 4" class="text-blue-400" />
+      <circle cx="50" cy="50" r="20" class="text-blue-400" />
+    </svg>
+
+    <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+            <div class="lg:col-span-5">
+                <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                    [ 04 · CÓMO FUNCIONA ]
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] mb-8 reveal-text">
+                    DE IDEA A <br> AGENTE EN <br> <span class="text-blue-400">SEMANAS.</span>
+                </h2>
+                <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-xl reveal-text">
+                    Un proceso claro y probado para que tu primer agente esté operando <span class="text-white font-medium">lo más rápido posible</span>, sin sacrificar calidad.
+                </p>
+            </div>
+
+            <div class="lg:col-span-7">
+                <div class="space-y-0">
+                    {processSteps.map((step, i) => (
+                        <div class:list={[
+                            'py-8 lg:py-10 group reveal-text relative',
+                            i < processSteps.length - 1 && 'border-b border-white/10',
+                        ]} data-automation-step>
+                            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+                            <div class="flex items-start gap-6 pl-4">
+                                <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-blue-500/30 transition-colors leading-none">{step.number}</span>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl 2xl:text-3xl font-bold mb-3 group-hover:text-blue-300 transition-colors">{step.title}</h3>
+                                    <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">
+                                        {step.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

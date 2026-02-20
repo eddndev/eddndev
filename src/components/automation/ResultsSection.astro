@@ -1,0 +1,61 @@
+---
+import { results } from '../../data/automation';
+---
+
+<section id="automation-results" class="bg-[#050505] text-white border-b border-white/10 relative overflow-hidden">
+
+    <!-- Gradient Orb -->
+    <div data-automation-orb class="absolute top-[30%] right-[20%] w-[500px] h-[500px] rounded-full bg-blue-900/10 blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- Stroke Draw: Upward arrow/chart -->
+    <svg data-automation-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
+        <line x1="20" y1="180" x2="180" y2="180" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" class="draw-path" />
+        <line x1="20" y1="180" x2="20" y2="20" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" class="draw-path" />
+        <path d="M40 160 L80 120 L120 140 L160 40" stroke="rgba(59,130,246,0.35)" stroke-width="2" fill="none" class="draw-path" />
+        <circle cx="160" cy="40" r="5" stroke="rgba(59,130,246,0.4)" stroke-width="1.5" class="draw-path" />
+        <path d="M150 35 L160 40 L155 30" stroke="rgba(59,130,246,0.3)" stroke-width="1.2" fill="none" class="draw-path" />
+    </svg>
+
+    <div class="mx-auto max-w-[1800px] px-6 sm:px-12 py-24 lg:py-32 relative z-10">
+
+        <div class="mb-16 lg:mb-20">
+            <div class="text-xs 2xl:text-sm font-mono text-blue-400 tracking-widest mb-6 reveal-text">
+                [ 05 · RESULTADOS ]
+            </div>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] reveal-text">
+                ANTES Y <br> <span class="text-blue-400">DESPUÉS.</span>
+            </h2>
+        </div>
+
+        <!-- 2x2 Metrics Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
+            {results.map((result) => (
+                <div class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden" data-automation-card>
+                    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <h3 class="text-lg sm:text-xl 2xl:text-2xl font-bold mb-6 text-gray-300">{result.title}</h3>
+                    <div class="flex items-center gap-4 sm:gap-6">
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-2">Antes</div>
+                            <div class:list={[
+                                'font-black text-white/30 line-through decoration-red-500/40',
+                                result.compact
+                                    ? 'text-2xl sm:text-3xl 2xl:text-4xl'
+                                    : 'text-3xl sm:text-4xl 2xl:text-5xl',
+                            ]}>{result.before}</div>
+                        </div>
+                        <svg class="w-6 h-6 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        <div class="flex-1">
+                            <div class="text-xs font-mono text-blue-400 tracking-widest uppercase mb-2">Después</div>
+                            <div class:list={[
+                                'font-black text-blue-400',
+                                result.compact
+                                    ? 'text-2xl sm:text-3xl 2xl:text-4xl'
+                                    : 'text-3xl sm:text-4xl 2xl:text-5xl',
+                            ]}>{result.after}</div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
