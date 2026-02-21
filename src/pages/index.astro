@@ -4,6 +4,9 @@ import { getCollection } from 'astro:content';
 import Footer from '../components/layout/Footer.astro';
 import Focus from '../components/sections/Focus.astro';
 import Services from '../components/sections/Services.astro';
+import TechStack from '../components/sections/TechStack.astro';
+import Philosophy from '../components/sections/Philosophy.astro';
+import HomeCta from '../components/sections/HomeCta.astro';
 import ProjectGrid from '../components/work/ProjectGrid.astro';
 
 // Get all projects for the list
@@ -61,7 +64,9 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
     </div>
 
     <!-- SECTIONS -->
+    <TechStack />
     <Focus />
+    <Philosophy />
     <Services />
 
     <!-- PROJECTS PREVIEW -->
@@ -92,6 +97,8 @@ projects.sort((a, b) => (Number(b.data.year) - Number(a.data.year)));
     
         </div>
     </section>
+
+    <HomeCta />
 
     <Footer />
 

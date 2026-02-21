@@ -70,19 +70,31 @@ const colorMap: Record<string, { dot: string; text: string; num: string; glow: s
             <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
                 {services.map((service) => {
                     const c = colorMap[service.color];
+                    const isAutomation = service.id === 'agentes-de-automatizacion';
                     return (
                         <a
-                            href={`/services#${service.id}`}
-                            class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden block"
+                            href={isAutomation ? "/automation" : `/services#${service.id}`}
+                            class="bg-[#050505] p-8 sm:p-12 group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden flex flex-col justify-between"
                             data-service-card
                         >
                             <div class={`absolute top-0 left-0 w-full h-px bg-gradient-to-r ${c.gradient} scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
-                            <div class="flex items-center gap-3 mb-6">
-                                <span class={`w-2 h-2 ${c.dot} rounded-full ${c.glow} transition-shadow`}></span>
-                                <span class={`font-mono text-xs ${c.num} tracking-widest uppercase`}>{service.number}</span>
+                            <div>
+                                <div class="flex items-center gap-3 mb-6">
+                                    <span class={`w-2 h-2 ${c.dot} rounded-full ${c.glow} transition-shadow`}></span>
+                                    <span class={`font-mono text-xs ${c.num} tracking-widest uppercase`}>{service.number}</span>
+                                </div>
+                                <h3 class={`text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 ${c.text} transition-colors`}>{service.title}</h3>
+                                <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg mb-8">{service.tagline}</p>
                             </div>
-                            <h3 class={`text-2xl sm:text-3xl 2xl:text-4xl font-bold mb-4 ${c.text} transition-colors`}>{service.title}</h3>
-                            <p class="text-gray-400 font-light leading-relaxed 2xl:text-lg">{service.tagline}</p>
+                            
+                            {isAutomation && (
+                                <div class="mt-auto pt-4 border-t border-white/5 flex items-center justify-between text-blue-400 font-medium text-sm lg:text-base group-hover:text-blue-300 transition-colors">
+                                    <span>Ver cómo funciona</span>
+                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14M13 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+                            )}
                         </a>
                     );
                 })}
