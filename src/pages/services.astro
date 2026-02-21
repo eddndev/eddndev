@@ -187,11 +187,23 @@ const svgDecos = [
                 </ul>
 
                 <!-- CTA -->
-                <div class="reveal-text">
-                  <a href="/contact" class={`group flex items-center gap-2 text-white font-medium 2xl:text-lg ${c.ctaHover} transition-colors`}>
-                    <span>Hablemos de este servicio</span>
-                    <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                  </a>
+                <div class="reveal-text flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                  {service.id === 'agentes-de-automatizacion' ? (
+                    <>
+                      <a href="/automation" data-cursor-text="EXPLORAR" class="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105">
+                          <span class="relative z-10 group-hover:text-blue-600 transition-colors">Ver cómo funciona</span>
+                      </a>
+                      <a href="/contact" class={`group flex items-center gap-2 text-white/70 font-medium 2xl:text-lg ${c.ctaHover} transition-colors`}>
+                        <span>Solicitar cotización</span>
+                        <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                      </a>
+                    </>
+                  ) : (
+                    <a href="/contact" data-cursor-text="CONTACTO" class={`group flex items-center gap-2 text-white font-medium 2xl:text-lg ${c.ctaHover} transition-colors`}>
+                      <span>Hablemos de este servicio</span>
+                      <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                  )}
                 </div>
               </div>
 
