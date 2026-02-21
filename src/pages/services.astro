@@ -47,15 +47,15 @@ const colorMap: Record<string, {
 
 // SVG decoratives per service (unique shapes)
 const svgDecos = [
-  // Software a medida — circuit/nodes
-  `<svg data-service-draw class="absolute top-[8%] right-[4%] w-48 h-48 lg:w-72 lg:h-72 pointer-events-none z-0" viewBox="0 0 200 200" fill="none">
-    <rect x="20" y="20" width="160" height="160" rx="8" stroke="rgba(168,85,247,0.25)" stroke-width="1.2" class="draw-path" />
-    <rect x="50" y="50" width="100" height="100" rx="4" stroke="rgba(168,85,247,0.2)" stroke-width="1" class="draw-path" />
-    <circle cx="100" cy="100" r="20" stroke="rgba(168,85,247,0.35)" stroke-width="1.5" class="draw-path" />
-    <line x1="100" y1="20" x2="100" y2="80" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
-    <line x1="100" y1="120" x2="100" y2="180" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
-    <line x1="20" y1="100" x2="80" y2="100" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
-    <line x1="120" y1="100" x2="180" y2="100" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
+  // Agentes de automatización — gear/loop
+  `<svg data-service-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
+    <circle cx="100" cy="100" r="80" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" stroke-dasharray="6 4" class="draw-path" />
+    <circle cx="100" cy="100" r="50" stroke="rgba(59,130,246,0.28)" stroke-width="1.5" class="draw-path" />
+    <circle cx="100" cy="100" r="20" stroke="rgba(59,130,246,0.35)" stroke-width="1.8" class="draw-path" />
+    <path d="M100 20 L108 35 L92 35 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
+    <path d="M180 100 L165 108 L165 92 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
+    <path d="M100 180 L92 165 L108 165 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
+    <path d="M20 100 L35 92 L35 108 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
   </svg>`,
   // Sitios web — browser frame
   `<svg data-service-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
@@ -75,15 +75,15 @@ const svgDecos = [
     <line x1="45" y1="70" x2="155" y2="70" stroke="rgba(249,115,22,0.2)" stroke-width="1" class="draw-path" />
     <circle cx="100" cy="120" r="15" stroke="rgba(249,115,22,0.22)" stroke-width="1.2" class="draw-path" />
   </svg>`,
-  // Agentes de automatización — gear/loop
-  `<svg data-service-draw class="absolute bottom-[10%] right-[6%] w-36 h-36 lg:w-56 lg:h-56 pointer-events-none z-0 hidden md:block" viewBox="0 0 200 200" fill="none">
-    <circle cx="100" cy="100" r="80" stroke="rgba(59,130,246,0.2)" stroke-width="1.2" stroke-dasharray="6 4" class="draw-path" />
-    <circle cx="100" cy="100" r="50" stroke="rgba(59,130,246,0.28)" stroke-width="1.5" class="draw-path" />
-    <circle cx="100" cy="100" r="20" stroke="rgba(59,130,246,0.35)" stroke-width="1.8" class="draw-path" />
-    <path d="M100 20 L108 35 L92 35 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
-    <path d="M180 100 L165 108 L165 92 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
-    <path d="M100 180 L92 165 L108 165 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
-    <path d="M20 100 L35 92 L35 108 Z" stroke="rgba(59,130,246,0.25)" stroke-width="1.5" class="draw-path" />
+  // Software a medida — circuit/nodes
+  `<svg data-service-draw class="absolute top-[8%] right-[4%] w-48 h-48 lg:w-72 lg:h-72 pointer-events-none z-0" viewBox="0 0 200 200" fill="none">
+    <rect x="20" y="20" width="160" height="160" rx="8" stroke="rgba(168,85,247,0.25)" stroke-width="1.2" class="draw-path" />
+    <rect x="50" y="50" width="100" height="100" rx="4" stroke="rgba(168,85,247,0.2)" stroke-width="1" class="draw-path" />
+    <circle cx="100" cy="100" r="20" stroke="rgba(168,85,247,0.35)" stroke-width="1.5" class="draw-path" />
+    <line x1="100" y1="20" x2="100" y2="80" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
+    <line x1="100" y1="120" x2="100" y2="180" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
+    <line x1="20" y1="100" x2="80" y2="100" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
+    <line x1="120" y1="100" x2="180" y2="100" stroke="rgba(168,85,247,0.18)" stroke-width="1" class="draw-path" />
   </svg>`,
 ];
 ---

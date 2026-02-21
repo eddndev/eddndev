@@ -10,19 +10,19 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: 'software-a-medida',
+    id: 'agentes-de-automatizacion',
     number: '01',
-    title: 'Software a medida',
-    tagline: 'Sistemas que resuelven la lógica real del negocio',
+    title: 'Agentes de automatización',
+    tagline: 'Procesos que se ejecutan solos',
     description:
-      'Tu operación tiene reglas que ningún software genérico cubre. Diseñamos y construimos sistemas completos — desde la base de datos hasta la interfaz — que reflejan exactamente cómo funciona tu negocio. Sin parches, sin dependencias de terceros que no controlas.',
+      'Hay tareas en tu operación que se repiten cada día y que nadie debería hacer a mano. Construimos agentes inteligentes que ejecutan flujos completos — desde capturar datos hasta tomar decisiones — sin intervención humana.',
     highlights: [
-      'Plataformas internas y paneles de gestión',
-      'APIs y microservicios propietarios',
-      'Integraciones con tus herramientas actuales',
-      'Arquitectura escalable desde el día uno',
+      'Automatización de procesos repetitivos',
+      'Agentes con IA para tareas complejas',
+      'Flujos conectados entre tus herramientas',
+      'Monitoreo y alertas en tiempo real',
     ],
-    color: 'purple',
+    color: 'blue',
   },
   {
     id: 'sitios-web',
@@ -55,18 +55,18 @@ export const services: Service[] = [
     color: 'orange',
   },
   {
-    id: 'agentes-de-automatizacion',
+    id: 'software-a-medida',
     number: '04',
-    title: 'Agentes de automatización',
-    tagline: 'Procesos que se ejecutan solos',
+    title: 'Software a medida',
+    tagline: 'Sistemas que resuelven la lógica real del negocio',
     description:
-      'Hay tareas en tu operación que se repiten cada día y que nadie debería hacer a mano. Construimos agentes inteligentes que ejecutan flujos completos — desde capturar datos hasta tomar decisiones — sin intervención humana.',
+      'Tu operación tiene reglas que ningún software genérico cubre. Diseñamos y construimos sistemas completos — desde la base de datos hasta la interfaz — que reflejan exactamente cómo funciona tu negocio. Sin parches, sin dependencias de terceros que no controlas.',
     highlights: [
-      'Automatización de procesos repetitivos',
-      'Agentes con IA para tareas complejas',
-      'Flujos conectados entre tus herramientas',
-      'Monitoreo y alertas en tiempo real',
+      'Plataformas internas y paneles de gestión',
+      'APIs y microservicios propietarios',
+      'Integraciones con tus herramientas actuales',
+      'Arquitectura escalable desde el día uno',
     ],
-    color: 'blue',
-  },
+    color: 'purple',
+  }
 ];
