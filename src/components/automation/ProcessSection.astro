@@ -25,13 +25,13 @@ import { processSteps } from '../../data/automation';
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
             <div class="lg:col-span-5">
-                <div class="text-xs 2xl:text-sm font-mono text-amber-400 tracking-widest mb-6 reveal-text">
+                <div class="text-xs 2xl:text-sm font-mono text-amber-400 tracking-widest mb-6">
                     [ 04 · CÓMO FUNCIONA ]
                 </div>
-                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] mb-8 reveal-text">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl font-black tracking-tighter leading-[0.9] mb-8">
                     DE IDEA A <br> AGENTE EN <br> <span class="text-amber-400">SEMANAS.</span>
                 </h2>
-                <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-xl reveal-text">
+                <p class="text-gray-300 text-lg sm:text-xl lg:text-lg 2xl:text-xl font-light leading-relaxed max-w-xl">
                     Un proceso claro y probado para que tu primer agente esté operando <span class="text-white font-medium">lo más rápido posible</span>, sin sacrificar calidad.
                 </p>
             </div>
@@ -40,9 +40,9 @@ import { processSteps } from '../../data/automation';
                 <div class="space-y-0">
                     {processSteps.map((step, i) => (
                         <div class:list={[
-                            'py-8 lg:py-10 group reveal-text relative',
+                            'py-8 lg:py-10 group relative',
                             i < processSteps.length - 1 && 'border-b border-white/10',
-                        ]} data-automation-step>
+                        ]}>
                             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-amber-500 scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
                             <div class="flex items-start gap-6 pl-4">
                                 <span class="font-mono text-3xl sm:text-4xl 2xl:text-5xl font-black text-white/10 group-hover:text-amber-500/30 transition-colors leading-none">{step.number}</span>

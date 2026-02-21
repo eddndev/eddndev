@@ -34,3 +34,11 @@ body.no-scroll, html.no-scroll {
         cursor: none !important;
     }
 }
+
+/* Accesibilidad (A11y): Estilos globales para navegación por teclado */
+:focus-visible {
+    outline: 2px solid #a855f7; /* purple-500 */
+    outline-offset: 4px;
+    border-radius: 4px;
+    transition: outline-color 0.2s ease;
+}
