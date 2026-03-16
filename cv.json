@@ -40,7 +40,7 @@
 		"title": "Sobre mí",
 		"columns": 1,
 		"hidden": false,
-		"content": "<p>Especializado en sitios estáticos de alto rendimiento desplegados en edge, con experiencia liderando desarrollo frontend para eventos de gran escala. Estudiante de Ingeniería en Sistemas Computacionales en el IPN.</p>"
+		"content": "<p>Especializado en sitios estáticos de alto rendimiento, con experiencia liderando desarrollo frontend para eventos de gran escala. Estudiante de Ingeniería en Sistemas Computacionales en el IPN.</p>"
 	},
 	"sections": {
 		"profiles": {
@@ -100,7 +100,7 @@
 						"label": "festivaldango.com"
 					},
 					"roles": [],
-					"description": "<ul><li><p>Sitio estático optimizado para rendimiento — Lighthouse 98 en escritorio, SEO 100. Animaciones con GSAP y estilos con Tailwind CSS</p></li><li><p>Diseño responsivo fiel a la identidad visual del evento</p></li><li><p>Coordinación con el equipo creativo para trasladar el diseño a web</p></li></ul>"
+					"description": "<ul><li><p>Sitio estático optimizado para rendimiento — Lighthouse 98/92/100/100 en escritorio. Animaciones con GSAP y estilos con Tailwind CSS</p></li><li><p>Diseño responsivo fiel a la identidad visual del evento</p></li><li><p>Coordinación con el equipo creativo para trasladar el diseño a web</p></li></ul>"
 				}
 			]
 		},
