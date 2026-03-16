@@ -1,0 +1,356 @@
+{
+	"picture": {
+		"hidden": true,
+		"url": "",
+		"size": 100,
+		"rotation": 0,
+		"aspectRatio": 1,
+		"borderRadius": 0,
+		"borderColor": "rgba(0, 0, 0, 0.5)",
+		"borderWidth": 0,
+		"shadowColor": "rgba(0, 0, 0, 0.5)",
+		"shadowWidth": 0
+	},
+	"basics": {
+		"name": "Eduardo Alonso",
+		"headline": "Desarrollador Web · Frontend & Rendimiento",
+		"email": "",
+		"phone": "",
+		"location": "Ciudad de México, MX (100% remoto)",
+		"website": {
+			"url": "https://eddn.dev",
+			"label": "eddn.dev"
+		},
+		"customFields": [
+			{
+				"id": "a1b2c3d4-0001-4000-8000-000000000001",
+				"icon": "github-logo",
+				"text": "github.com/eddndev",
+				"link": "https://github.com/eddndev"
+			},
+			{
+				"id": "a1b2c3d4-0001-4000-8000-000000000002",
+				"icon": "code",
+				"text": "LeetCode Guardian",
+				"link": "https://leetcode.com/u/eddndev"
+			}
+		]
+	},
+	"summary": {
+		"title": "Sobre mí",
+		"columns": 1,
+		"hidden": false,
+		"content": "<p>Desarrollador web y estudiante de Ingeniería en Sistemas Computacionales en el IPN. He liderado el desarrollo frontend de sitios para eventos y construido un compilador en Rust desde cero. Publico artículos técnicos y soluciones algorítmicas en mi blog.</p>"
+	},
+	"sections": {
+		"profiles": {
+			"title": "Perfiles",
+			"columns": 1,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-1001-4000-8000-000000000001",
+					"hidden": false,
+					"icon": "github-logo",
+					"network": "GitHub",
+					"username": "eddndev",
+					"website": {
+						"url": "https://github.com/eddndev",
+						"label": "github.com/eddndev"
+					}
+				},
+				{
+					"id": "a1b2c3d4-1001-4000-8000-000000000002",
+					"hidden": false,
+					"icon": "linkedin-logo",
+					"network": "LinkedIn",
+					"username": "eddndev",
+					"website": {
+						"url": "https://linkedin.com/in/eddndev",
+						"label": "linkedin.com/in/eddndev"
+					}
+				},
+				{
+					"id": "a1b2c3d4-1001-4000-8000-000000000003",
+					"hidden": false,
+					"icon": "x-logo",
+					"network": "X",
+					"username": "eddndev",
+					"website": {
+						"url": "https://x.com/eddndev",
+						"label": "x.com/eddndev"
+					}
+				}
+			]
+		},
+		"experience": {
+			"title": "Experiencia",
+			"columns": 1,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-2001-4000-8000-000000000001",
+					"hidden": false,
+					"company": "Festival Dango Teotihuacán 2026",
+					"position": "Lead Developer",
+					"location": "Ciudad de México (Remoto)",
+					"period": "2024 – Presente",
+					"website": {
+						"url": "https://festivaldango.com",
+						"label": "festivaldango.com"
+					},
+					"roles": [],
+					"description": "<ul><li><p>Desarrollo del sitio web estático del festival — diseño responsivo y maquetación fiel a la identidad visual del evento</p></li><li><p>Coordinación con el equipo creativo para trasladar el diseño a web</p></li></ul>"
+				},
+				{
+					"id": "a1b2c3d4-2001-4000-8000-000000000002",
+					"hidden": false,
+					"company": "Achronyme",
+					"position": "Creador & Core Developer",
+					"location": "Remoto",
+					"period": "2025 – Presente",
+					"website": {
+						"url": "https://achrony.me",
+						"label": "achrony.me"
+					},
+					"roles": [],
+					"description": "<ul><li><p>Diseño e implementación de un lenguaje de programación moderno y compilador para circuitos Zero-Knowledge, construido en Rust</p></li><li><p>Arquitectura de software desde cero: lexer, parser, análisis semántico y generación de código</p></li><li><p>Desarrollo de documentación técnica y sitio web del proyecto</p></li></ul>"
+				}
+			]
+		},
+		"education": {
+			"title": "Educación",
+			"columns": 1,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-3001-4000-8000-000000000001",
+					"hidden": false,
+					"school": "Instituto Politécnico Nacional (IPN)",
+					"degree": "Ingeniería",
+					"area": "Sistemas Computacionales",
+					"grade": "",
+					"location": "Ciudad de México",
+					"period": "2022 – Presente",
+					"website": {
+						"url": "",
+						"label": ""
+					},
+					"description": "<p>Formación en ciencias de la computación, algoritmos, arquitectura de software y sistemas distribuidos.</p>"
+				}
+			]
+		},
+		"projects": {
+			"title": "Proyectos",
+			"columns": 1,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-4001-4000-8000-000000000001",
+					"hidden": false,
+					"options": { "showLinkInTitle": true },
+					"name": "eddn.dev — Sitio personal & portafolio",
+					"period": "2024 – Presente",
+					"website": {
+						"url": "https://eddn.dev",
+						"label": "eddn.dev"
+					},
+					"description": "<p>Portafolio y blog técnico con artículos de ingeniería, guías y soluciones algorítmicas con análisis de complejidad. Diseño propio, optimizado para rendimiento y SEO. Incluye sistema de blog, secciones multilenguaje (ES/EN) y navegación fluida.</p>"
+				},
+			]
+		},
+		"skills": {
+			"title": "Habilidades técnicas",
+			"columns": 2,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-5001-4000-8000-000000000001",
+					"hidden": false,
+					"icon": "code",
+					"name": "Frontend",
+					"proficiency": "Avanzado",
+					"level": 4,
+					"keywords": ["HTML", "CSS", "JavaScript", "TypeScript"]
+				},
+				{
+					"id": "a1b2c3d4-5001-4000-8000-000000000002",
+					"hidden": false,
+					"icon": "browsers",
+					"name": "Frameworks",
+					"proficiency": "Avanzado",
+					"level": 4,
+					"keywords": ["React", "Astro", "Next.js"]
+				},
+				{
+					"id": "a1b2c3d4-5001-4000-8000-000000000003",
+					"hidden": false,
+					"icon": "git-branch",
+					"name": "Control de versiones",
+					"proficiency": "Avanzado",
+					"level": 4,
+					"keywords": ["Git", "GitHub", "CI/CD"]
+				},
+				{
+					"id": "a1b2c3d4-5001-4000-8000-000000000004",
+					"hidden": false,
+					"icon": "chart-line-up",
+					"name": "Rendimiento web",
+					"proficiency": "Avanzado",
+					"level": 4,
+					"keywords": ["Core Web Vitals", "Optimización", "SEO"]
+				},
+				{
+					"id": "a1b2c3d4-5001-4000-8000-000000000005",
+					"hidden": false,
+					"icon": "cpu",
+					"name": "Sistemas & Backend",
+					"proficiency": "Avanzado",
+					"level": 4,
+					"keywords": ["Rust", "Node.js", "Linux"]
+				},
+				{
+					"id": "a1b2c3d4-5001-4000-8000-000000000006",
+					"hidden": false,
+					"icon": "paint-brush",
+					"name": "UI/UX",
+					"proficiency": "Intermedio",
+					"level": 3,
+					"keywords": ["Diseño responsivo", "Animaciones", "Accesibilidad"]
+				}
+			]
+		},
+		"languages": {
+			"title": "Idiomas",
+			"columns": 1,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-6001-4000-8000-000000000001",
+					"hidden": false,
+					"language": "Español",
+					"fluency": "Nativo",
+					"level": 5
+				},
+				{
+					"id": "a1b2c3d4-6001-4000-8000-000000000002",
+					"hidden": false,
+					"language": "Inglés",
+					"fluency": "Avanzado",
+					"level": 4
+				}
+			]
+		},
+		"interests": {
+			"title": "Intereses",
+			"columns": 1,
+			"hidden": false,
+			"items": [
+				{
+					"id": "a1b2c3d4-7001-4000-8000-000000000001",
+					"hidden": false,
+					"icon": "lightning",
+					"name": "Rendimiento & escalabilidad web",
+					"keywords": ["Alto tráfico", "Edge computing", "CDN"]
+				},
+				{
+					"id": "a1b2c3d4-7001-4000-8000-000000000002",
+					"hidden": false,
+					"icon": "code",
+					"name": "Diseño de lenguajes de programación",
+					"keywords": ["Compiladores", "Zero-Knowledge", "Rust"]
+				},
+				{
+					"id": "a1b2c3d4-7001-4000-8000-000000000003",
+					"hidden": false,
+					"icon": "globe",
+					"name": "Open Source & comunidad",
+					"keywords": ["GitHub", "Colaboración", "Documentación"]
+				}
+			]
+		},
+		"awards": {
+			"title": "Premios",
+			"columns": 1,
+			"hidden": true,
+			"items": []
+		},
+		"certifications": {
+			"title": "Certificaciones",
+			"columns": 1,
+			"hidden": true,
+			"items": []
+		},
+		"publications": {
+			"title": "Publicaciones",
+			"columns": 1,
+			"hidden": true,
+			"items": []
+		},
+		"volunteer": {
+			"title": "Voluntariado",
+			"columns": 1,
+			"hidden": true,
+			"items": []
+		},
+		"references": {
+			"title": "Referencias",
+			"columns": 1,
+			"hidden": true,
+			"items": []
+		}
+	},
+	"customSections": [],
+	"metadata": {
+		"template": "azurill",
+		"layout": {
+			"sidebarWidth": 30,
+			"pages": [
+				{
+					"fullWidth": false,
+					"main": ["summary", "experience", "projects", "education"],
+					"sidebar": ["profiles", "skills", "languages", "interests"]
+				}
+			]
+		},
+		"css": {
+			"enabled": false,
+			"value": ""
+		},
+		"page": {
+			"gapX": 4,
+			"gapY": 8,
+			"marginX": 16,
+			"marginY": 14,
+			"format": "a4",
+			"locale": "es-ES",
+			"hideIcons": false
+		},
+		"design": {
+			"level": {
+				"icon": "acorn",
+				"type": "circle"
+			},
+			"colors": {
+				"primary": "rgba(59, 130, 246, 1)",
+				"text": "rgba(0, 0, 0, 1)",
+				"background": "rgba(255, 255, 255, 1)"
+			}
+		},
+		"typography": {
+			"body": {
+				"fontFamily": "IBM Plex Sans",
+				"fontWeights": ["400", "600"],
+				"fontSize": 11,
+				"lineHeight": 1.5
+			},
+			"heading": {
+				"fontFamily": "IBM Plex Sans",
+				"fontWeights": ["700"],
+				"fontSize": 18,
+				"lineHeight": 1.5
+			}
+		},
+		"notes": ""
+	}
+}
