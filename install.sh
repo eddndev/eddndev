@@ -26,7 +26,7 @@ mkdir -p "$HOME/drive"
 # --------------------------------------------------
 info "Installing system packages..."
 sudo dnf install -y \
-    stow git gh \
+    stow git gh gcc \
     nodejs npm \
     postgresql-server \
     valkey \
