@@ -236,12 +236,16 @@ stow -v -t "$HOME" claude
 # --------------------------------------------------
 if command -v dconf &>/dev/null; then
     info "Applying GNOME settings..."
-    dconf load / < "$DOTFILES_DIR/gnome/gnome.dconf"
+
     # Install Dash to Dock if not present
     if ! gnome-extensions list 2>/dev/null | grep -q "dash-to-dock"; then
-        info "Install Dash to Dock from: https://extensions.gnome.org/extension/307/dash-to-dock/"
+        info "Installing Dash to Dock..."
+        sudo dnf install -y gnome-shell-extension-dash-to-dock 2>/dev/null \
+            || info "Dash to Dock not in repos. Install from: https://extensions.gnome.org/extension/307/dash-to-dock/"
     fi
-    ok "GNOME settings applied!"
+
+    dconf load / < "$DOTFILES_DIR/gnome/gnome.dconf"
+    ok "GNOME settings applied! Log out and back in for all changes to take effect"
 fi
 
 # --------------------------------------------------
