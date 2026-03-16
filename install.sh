@@ -97,6 +97,16 @@ else
 fi
 
 # --------------------------------------------------
+# Achronyme
+# --------------------------------------------------
+if ! command -v ach &>/dev/null; then
+    info "Installing Achronyme..."
+    curl -fsSL https://achrony.me/install.sh | sh
+else
+    ok "Achronyme already installed"
+fi
+
+# --------------------------------------------------
 # pnpm
 # --------------------------------------------------
 if ! command -v pnpm &>/dev/null; then
