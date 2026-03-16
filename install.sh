@@ -54,9 +54,7 @@ fi
 # --------------------------------------------------
 if ! command -v google-chrome-stable &>/dev/null; then
     info "Installing Google Chrome..."
-    sudo dnf install -y fedora-workstation-repositories
-    sudo dnf config-manager setopt google-chrome.enabled=1
-    sudo dnf install -y google-chrome-stable
+    sudo dnf install -y 'https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm'
 else
     ok "Google Chrome already installed"
 fi
