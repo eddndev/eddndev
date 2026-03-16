@@ -149,6 +149,16 @@ else
 fi
 
 # --------------------------------------------------
+# Telegram (Flatpak)
+# --------------------------------------------------
+if ! flatpak list --app | grep -q org.telegram.desktop; then
+    info "Installing Telegram..."
+    flatpak install -y flathub org.telegram.desktop
+else
+    ok "Telegram already installed"
+fi
+
+# --------------------------------------------------
 # Rclone (Google Drive mount)
 # --------------------------------------------------
 info "Setting up rclone drive mount..."
@@ -194,41 +204,6 @@ if rclone listremotes 2>/dev/null | grep -q "drive:"; then
 fi
 
 # --------------------------------------------------
-# SSH keys (decrypt or generate)
-# --------------------------------------------------
-info "Setting up SSH keys..."
-mkdir -p "$HOME/.ssh"
-chmod 700 "$HOME/.ssh"
-
-if [ -f "$DOTFILES_DIR/ssh/keys/id_ed25519.age" ]; then
-    # Encrypted keys found in repo — decrypt with rage
-    if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
-        info "Encrypted SSH keys found. Enter your passphrase to decrypt:"
-        rage -d -o "$HOME/.ssh/id_ed25519" "$DOTFILES_DIR/ssh/keys/id_ed25519.age"
-        rage -d -o "$HOME/.ssh/eddn_deploy" "$DOTFILES_DIR/ssh/keys/eddn_deploy.age"
-        chmod 600 "$HOME/.ssh/id_ed25519" "$HOME/.ssh/eddn_deploy"
-        # Derive public keys from private keys
-        ssh-keygen -y -f "$HOME/.ssh/id_ed25519" > "$HOME/.ssh/id_ed25519.pub"
-        ssh-keygen -y -f "$HOME/.ssh/eddn_deploy" > "$HOME/.ssh/eddn_deploy.pub"
-        ok "SSH keys decrypted!"
-    else
-        ok "SSH keys already exist"
-    fi
-else
-    # No encrypted keys — generate new ones
-    if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
-        info "Generating new SSH keys..."
-        ssh-keygen -t ed25519 -C "contacto@eddndev.com" -f "$HOME/.ssh/id_ed25519" -N ""
-        ssh-keygen -t ed25519 -C "deploy@eddndev.com" -f "$HOME/.ssh/eddn_deploy" -N ""
-        ok "SSH keys generated!"
-        info "Run './deploy-keys.sh' to push public keys to your servers"
-        info "Run './encrypt-keys.sh' to encrypt and store keys in this repo"
-    else
-        ok "SSH keys already exist"
-    fi
-fi
-
-# --------------------------------------------------
 # Dotfiles (GNU Stow)
 # --------------------------------------------------
 info "Linking dotfiles with stow..."
@@ -267,6 +242,42 @@ if command -v dconf &>/dev/null; then
         info "Install Dash to Dock from: https://extensions.gnome.org/extension/307/dash-to-dock/"
     fi
     ok "GNOME settings applied!"
+fi
+
+# --------------------------------------------------
+# SSH keys (decrypt or generate) — at the end so you
+# have time to grab your passphrase
+# --------------------------------------------------
+info "Setting up SSH keys..."
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
+
+if [ -f "$DOTFILES_DIR/ssh/keys/id_ed25519.age" ]; then
+    # Encrypted keys found in repo — decrypt with rage
+    if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
+        info "Encrypted SSH keys found. Enter your passphrase to decrypt:"
+        rage -d -o "$HOME/.ssh/id_ed25519" "$DOTFILES_DIR/ssh/keys/id_ed25519.age"
+        rage -d -o "$HOME/.ssh/eddn_deploy" "$DOTFILES_DIR/ssh/keys/eddn_deploy.age"
+        chmod 600 "$HOME/.ssh/id_ed25519" "$HOME/.ssh/eddn_deploy"
+        # Derive public keys from private keys
+        ssh-keygen -y -f "$HOME/.ssh/id_ed25519" > "$HOME/.ssh/id_ed25519.pub"
+        ssh-keygen -y -f "$HOME/.ssh/eddn_deploy" > "$HOME/.ssh/eddn_deploy.pub"
+        ok "SSH keys decrypted!"
+    else
+        ok "SSH keys already exist"
+    fi
+else
+    # No encrypted keys — generate new ones
+    if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
+        info "Generating new SSH keys..."
+        ssh-keygen -t ed25519 -C "contacto@eddndev.com" -f "$HOME/.ssh/id_ed25519" -N ""
+        ssh-keygen -t ed25519 -C "deploy@eddndev.com" -f "$HOME/.ssh/eddn_deploy" -N ""
+        ok "SSH keys generated!"
+        info "Run './deploy-keys.sh' to push public keys to your servers"
+        info "Run './encrypt-keys.sh' to encrypt and store keys in this repo"
+    else
+        ok "SSH keys already exist"
+    fi
 fi
 
 ok "Setup complete!"
