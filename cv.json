@@ -101,20 +101,6 @@
 					},
 					"roles": [],
 					"description": "<ul><li><p>Desarrollo del sitio web estático del festival — diseño responsivo y maquetación fiel a la identidad visual del evento</p></li><li><p>Coordinación con el equipo creativo para trasladar el diseño a web</p></li></ul>"
-				},
-				{
-					"id": "a1b2c3d4-2001-4000-8000-000000000002",
-					"hidden": false,
-					"company": "Achronyme",
-					"position": "Creador & Core Developer",
-					"location": "Remoto",
-					"period": "2025 – Presente",
-					"website": {
-						"url": "https://achrony.me",
-						"label": "achrony.me"
-					},
-					"roles": [],
-					"description": "<ul><li><p>Diseño e implementación de un lenguaje de programación moderno y compilador para circuitos Zero-Knowledge, construido en Rust</p></li><li><p>Arquitectura de software desde cero: lexer, parser, análisis semántico y generación de código</p></li><li><p>Desarrollo de documentación técnica y sitio web del proyecto</p></li></ul>"
 				}
 			]
 		},
@@ -156,6 +142,18 @@
 						"label": "eddn.dev"
 					},
 					"description": "<p>Portafolio y blog técnico con artículos de ingeniería, guías y soluciones algorítmicas con análisis de complejidad. Diseño propio, optimizado para rendimiento y SEO. Incluye sistema de blog, secciones multilenguaje (ES/EN) y navegación fluida.</p>"
+				},
+				{
+					"id": "a1b2c3d4-4001-4000-8000-000000000003",
+					"hidden": false,
+					"options": { "showLinkInTitle": true },
+					"name": "Achronyme — Lenguaje de programación & compilador",
+					"period": "2025 – Presente",
+					"website": {
+						"url": "https://achrony.me",
+						"label": "achrony.me"
+					},
+					"description": "<p>Lenguaje de programación y compilador para circuitos Zero-Knowledge, construido en Rust. Arquitectura desde cero: lexer, parser, análisis semántico y generación de código.</p>"
 				}
 			]
 		},
@@ -244,7 +242,7 @@
 		"interests": {
 			"title": "Intereses",
 			"columns": 1,
-			"hidden": false,
+			"hidden": true,
 			"items": [
 				{
 					"id": "a1b2c3d4-7001-4000-8000-000000000001",
@@ -309,7 +307,7 @@
 				{
 					"fullWidth": false,
 					"main": ["summary", "experience", "projects", "education"],
-					"sidebar": ["profiles", "skills", "languages", "interests"]
+					"sidebar": ["profiles", "skills", "languages"]
 				}
 			]
 		},
