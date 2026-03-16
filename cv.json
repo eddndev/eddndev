@@ -40,7 +40,7 @@
 		"title": "Sobre mí",
 		"columns": 1,
 		"hidden": false,
-		"content": "<p>Desarrollador web y estudiante de Ingeniería en Sistemas Computacionales en el IPN. He liderado el desarrollo frontend de sitios para eventos y construido un compilador en Rust desde cero. Publico artículos técnicos y soluciones algorítmicas en mi blog.</p>"
+		"content": "<p>Especializado en sitios estáticos de alto rendimiento desplegados en edge, con experiencia liderando desarrollo frontend para eventos de gran escala. Estudiante de Ingeniería en Sistemas Computacionales en el IPN.</p>"
 	},
 	"sections": {
 		"profiles": {
@@ -100,7 +100,7 @@
 						"label": "festivaldango.com"
 					},
 					"roles": [],
-					"description": "<ul><li><p>Desarrollo del sitio web estático del festival — diseño responsivo y maquetación fiel a la identidad visual del evento</p></li><li><p>Coordinación con el equipo creativo para trasladar el diseño a web</p></li></ul>"
+					"description": "<ul><li><p>Sitio estático optimizado para rendimiento — Lighthouse 98 en escritorio, SEO 100. Animaciones con GSAP y estilos con Tailwind CSS</p></li><li><p>Diseño responsivo fiel a la identidad visual del evento</p></li><li><p>Coordinación con el equipo creativo para trasladar el diseño a web</p></li></ul>"
 				}
 			]
 		},
@@ -141,7 +141,7 @@
 						"url": "https://eddn.dev",
 						"label": "eddn.dev"
 					},
-					"description": "<p>Portafolio y blog técnico con artículos de ingeniería, guías y soluciones algorítmicas con análisis de complejidad. Diseño propio, optimizado para rendimiento y SEO. Incluye sistema de blog, secciones multilenguaje (ES/EN) y navegación fluida.</p>"
+					"description": "<p>Portafolio y blog técnico con generación estática, internacionalización con rutas dinámicas (ES/EN) y artículos en MDX. Diseño propio, optimizado para rendimiento y SEO.</p>"
 				},
 				{
 					"id": "a1b2c3d4-4001-4000-8000-000000000003",
