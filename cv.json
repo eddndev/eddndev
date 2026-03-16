@@ -156,7 +156,7 @@
 						"label": "eddn.dev"
 					},
 					"description": "<p>Portafolio y blog técnico con artículos de ingeniería, guías y soluciones algorítmicas con análisis de complejidad. Diseño propio, optimizado para rendimiento y SEO. Incluye sistema de blog, secciones multilenguaje (ES/EN) y navegación fluida.</p>"
-				},
+				}
 			]
 		},
 		"skills": {
