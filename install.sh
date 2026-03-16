@@ -7,6 +7,13 @@ info() { printf '\033[1;34m=> %s\033[0m\n' "$*"; }
 ok()   { printf '\033[1;32m=> %s\033[0m\n' "$*"; }
 err()  { printf '\033[1;31m=> %s\033[0m\n' "$*" >&2; }
 
+ask() {
+    local prompt="$1"
+    printf '\033[1;33m=> %s [y/N] \033[0m' "$prompt"
+    read -r answer
+    [[ "$answer" =~ ^[yYsS]$ ]]
+}
+
 # --------------------------------------------------
 # Directories
 # --------------------------------------------------
@@ -28,6 +35,19 @@ sudo dnf install -y \
     blender \
     rclone \
     flatpak
+
+# --------------------------------------------------
+# GitHub CLI (auth)
+# --------------------------------------------------
+if ! gh auth status &>/dev/null; then
+    if ask "GitHub CLI installed. Authenticate now?"; then
+        gh auth login
+    else
+        info "Skipped. Run 'gh auth login' later (needed for git push)"
+    fi
+else
+    ok "GitHub CLI already authenticated"
+fi
 
 # --------------------------------------------------
 # Google Chrome
@@ -88,8 +108,12 @@ fi
 if ! command -v claude &>/dev/null; then
     info "Installing Claude Code..."
     curl -fsSL https://claude.ai/install.sh | bash
+fi
+
+if ask "Authenticate Claude Code now?"; then
+    claude auth login
 else
-    ok "Claude Code already installed"
+    info "Skipped. Run 'claude auth login' later"
 fi
 
 # --------------------------------------------------
@@ -98,8 +122,12 @@ fi
 if ! command -v gemini &>/dev/null; then
     info "Installing Gemini CLI..."
     sudo npm install -g @google/gemini-cli
+fi
+
+if ask "Authenticate Gemini CLI now?"; then
+    gemini auth
 else
-    ok "Gemini CLI already installed"
+    info "Skipped. Run 'gemini auth' later"
 fi
 
 # --------------------------------------------------
@@ -154,8 +182,14 @@ WantedBy=default.target
 EOF
 
 if ! rclone listremotes 2>/dev/null | grep -q "drive:"; then
-    info "Run 'rclone config' to set up your Google Drive remote named 'drive'"
-else
+    if ask "Rclone not configured. Set up Google Drive remote now?"; then
+        rclone config
+    else
+        info "Skipped. Run 'rclone config' later to set up a remote named 'drive'"
+    fi
+fi
+
+if rclone listremotes 2>/dev/null | grep -q "drive:"; then
     systemctl --user daemon-reload
     systemctl --user enable --now rclone-drive.service
     ok "Rclone drive mount enabled"
