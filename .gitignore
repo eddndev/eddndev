@@ -1,0 +1,18 @@
+# Claude Code
+.claude/
+CLAUDE.md
+PLAN.md
+ELEMENTS.md
+
+# SSH — NEVER commit unencrypted private keys
+ssh/keys/id_ed25519
+ssh/keys/eddn_deploy
+ssh/keys/*.pub
+
+# Only .age (encrypted) files are allowed
+!ssh/keys/*.age
+
+# OS
+*.swp
+*~
+.DS_Store

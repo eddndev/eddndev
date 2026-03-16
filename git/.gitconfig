@@ -1,0 +1,13 @@
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = eddndev
+	email = contacto@eddndev.com
+[init]
+	defaultBranch = main
+[core]
+	excludesFile = ~/.gitignore_global

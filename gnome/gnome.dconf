@@ -1,0 +1,18 @@
+[org/gnome/desktop/interface]
+accent-color='purple'
+color-scheme='prefer-dark'
+cursor-size=24
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'latam'), ('xkb', 'us')]
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/session]
+idle-delay=uint32 900
+
+[org/gnome/shell]
+enabled-extensions=['background-logo@fedorahosted.org', 'dash-to-dock@micxgx.gmail.com']
+favorite-apps=['antigravity.desktop', 'google-chrome.desktop', 'org.gnome.Ptyxis.desktop', 'org.telegram.desktop._023d4009d7ff6bfa2363e883ec2f16df.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Nautilus.desktop', 'com.discordapp.Discord.desktop']
+last-selected-power-profile='performance'
