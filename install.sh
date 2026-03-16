@@ -34,7 +34,13 @@ sudo dnf install -y \
     htop \
     blender \
     rclone \
-    flatpak
+    flatpak \
+    java-21-openjdk-devel \
+    java-latest-openjdk-devel \
+    php php-bcmath php-cli php-common php-fpm php-gd \
+    php-intl php-mbstring php-mysqlnd php-opcache php-pdo \
+    php-pecl-zip php-process php-sodium php-xml \
+    composer
 
 # --------------------------------------------------
 # GitHub CLI (auth)
